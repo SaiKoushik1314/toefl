@@ -6,18 +6,21 @@
   <title>TOEFL Reading Practice</title>
   <style>
     :root {
-      --bg: #f6f7fb;
+      --bg: #f5f7fc;
       --surface: #ffffff;
-      --surface-2: #f1f4fb;
-      --text: #182033;
-      --muted: #5f6b85;
-      --border: #dde3f0;
-      --primary: #2547d0;
-      --primary-soft: #e9eeff;
-      --success: #0f9f6f;
-      --danger: #d14343;
-      --shadow: 0 12px 32px rgba(24, 32, 51, 0.08);
-      --radius: 18px;
+      --surface-2: #edf2ff;
+      --surface-3: #f7f9fe;
+      --text: #172033;
+      --muted: #64708a;
+      --border: #dce4f3;
+      --primary: #2747d8;
+      --primary-2: #5f7cff;
+      --success: #12815a;
+      --danger: #c44545;
+      --shadow: 0 16px 40px rgba(23, 32, 51, 0.08);
+      --radius-xl: 26px;
+      --radius-lg: 18px;
+      --radius-md: 14px;
     }
 
     * { box-sizing: border-box; }
@@ -26,32 +29,32 @@
       margin: 0;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--text);
-      background: linear-gradient(180deg, #f9fbff 0%, var(--bg) 100%);
+      background: linear-gradient(180deg, #fbfcff 0%, var(--bg) 100%);
     }
 
     a { color: inherit; text-decoration: none; }
-    button { font: inherit; }
+    button, select { font: inherit; }
 
     .container {
-      width: min(1120px, calc(100% - 32px));
+      width: min(1200px, calc(100% - 28px));
       margin: 0 auto;
     }
 
     .site-header {
       position: sticky;
       top: 0;
-      z-index: 20;
-      backdrop-filter: blur(10px);
-      background: rgba(249, 251, 255, 0.88);
-      border-bottom: 1px solid rgba(221, 227, 240, 0.8);
+      z-index: 40;
+      background: rgba(251, 252, 255, 0.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(220, 228, 243, 0.88);
     }
 
     .header-row {
+      min-height: 74px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 16px;
-      min-height: 72px;
     }
 
     .brand {
@@ -63,10 +66,10 @@
     }
 
     .brand-mark {
-      width: 40px;
-      height: 40px;
+      width: 42px;
+      height: 42px;
       border-radius: 14px;
-      background: linear-gradient(135deg, var(--primary), #5a73ef);
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
       color: white;
       display: grid;
       place-items: center;
@@ -75,7 +78,6 @@
 
     .nav {
       display: flex;
-      align-items: center;
       gap: 20px;
       color: var(--muted);
       font-size: 0.95rem;
@@ -84,23 +86,26 @@
     .nav a:hover { color: var(--text); }
 
     .hero {
-      padding: 56px 0 28px;
+      padding: 42px 0 26px;
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
-      gap: 24px;
-      align-items: stretch;
+      gap: 20px;
     }
 
-    .hero-panel, .card, .practice-shell {
+    .panel,
+    .hero-card,
+    .practice-shell,
+    .mode-card,
+    .stats-card,
+    .tips-card,
+    .resource-card {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 24px;
       box-shadow: var(--shadow);
+      border-radius: var(--radius-xl);
     }
 
-    .hero-panel {
-      padding: 32px;
-    }
+    .hero-card { padding: 30px; }
 
     .eyebrow {
       display: inline-flex;
@@ -108,25 +113,25 @@
       gap: 8px;
       padding: 8px 12px;
       border-radius: 999px;
-      background: var(--primary-soft);
+      background: var(--surface-2);
       color: var(--primary);
-      font-size: 0.9rem;
       font-weight: 700;
+      font-size: 0.92rem;
     }
 
     h1, h2, h3, p { margin: 0; }
     h1 {
-      margin-top: 18px;
-      font-size: clamp(2.2rem, 4vw, 4rem);
+      margin-top: 16px;
+      font-size: clamp(2.2rem, 4vw, 4.2rem);
       line-height: 1.02;
-      letter-spacing: -0.04em;
+      letter-spacing: -0.05em;
     }
 
     .lead {
       margin-top: 16px;
       color: var(--muted);
-      font-size: 1.07rem;
-      line-height: 1.65;
+      line-height: 1.72;
+      font-size: 1.04rem;
       max-width: 60ch;
     }
 
@@ -138,665 +143,770 @@
     }
 
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
       border: 1px solid transparent;
       border-radius: 14px;
       padding: 13px 18px;
+      font-weight: 700;
       cursor: pointer;
       transition: 160ms ease;
-      font-weight: 700;
     }
 
-    .btn-primary {
-      background: var(--primary);
-      color: white;
-    }
-
-    .btn-primary:hover { transform: translateY(-1px); }
-    .btn-secondary {
-      background: var(--surface);
-      color: var(--text);
-      border-color: var(--border);
-    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: var(--primary); color: white; }
+    .btn-secondary { background: white; color: var(--text); border-color: var(--border); }
+    .btn-ghost { background: var(--surface-2); color: var(--primary); }
 
     .hero-side {
-      padding: 28px;
       display: grid;
-      gap: 16px;
+      gap: 14px;
       align-content: start;
     }
 
-    .metric {
-      padding: 18px;
-      border-radius: 18px;
-      background: var(--surface-2);
-      border: 1px solid var(--border);
-    }
-
-    .metric small {
-      color: var(--muted);
+    .stats-card { padding: 20px; }
+    .stats-card small {
       display: block;
-      margin-bottom: 6px;
+      color: var(--muted);
+      margin-bottom: 8px;
     }
 
-    .metric strong {
+    .stats-card strong {
       font-size: 1.1rem;
       letter-spacing: -0.02em;
     }
 
-    .section {
-      padding: 28px 0;
-    }
-
-    .section-head {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 18px;
-    }
-
+    .section { padding: 20px 0; }
+    .section-head { margin-bottom: 16px; }
     .section-copy {
-      color: var(--muted);
-      max-width: 65ch;
-      line-height: 1.65;
       margin-top: 8px;
+      color: var(--muted);
+      line-height: 1.68;
+      max-width: 68ch;
     }
 
-    .grid {
+    .modes-grid,
+    .tips-grid,
+    .resource-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      gap: 16px;
     }
 
-    .card {
+    .mode-card,
+    .tips-card,
+    .resource-card {
       padding: 22px;
     }
 
-    .card-badge {
-      display: inline-block;
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       padding: 6px 10px;
       border-radius: 999px;
-      background: var(--surface-2);
+      background: var(--surface-3);
       color: var(--muted);
-      font-size: 0.85rem;
       font-weight: 700;
-      margin-bottom: 16px;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
     }
 
-    .card h3 {
-      font-size: 1.25rem;
-      letter-spacing: -0.02em;
-      margin-bottom: 10px;
-    }
-
-    .card p {
+    .mode-card p,
+    .tips-card p,
+    .resource-card p {
       color: var(--muted);
       line-height: 1.65;
-      min-height: 100px;
-    }
-
-    .card .btn {
-      margin-top: 18px;
-      width: 100%;
+      margin-top: 10px;
     }
 
     .practice-shell {
-      padding: 24px;
-      margin: 18px 0 56px;
+      padding: 22px;
+      margin-top: 14px;
     }
 
-    .practice-top {
+    .toolbar {
+      display: grid;
+      grid-template-columns: 1fr auto auto auto;
+      gap: 12px;
+      align-items: end;
+      margin-bottom: 18px;
+    }
+
+    .field label {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    select {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--text);
+    }
+
+    .info-row {
       display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      align-items: center;
+      gap: 10px;
       flex-wrap: wrap;
       margin-bottom: 18px;
     }
 
-    .pill-row {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
     .pill {
-      border-radius: 999px;
       padding: 8px 12px;
+      border-radius: 999px;
       background: var(--surface-2);
-      color: var(--muted);
+      color: var(--primary);
       font-size: 0.9rem;
       font-weight: 700;
     }
 
     .practice-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
       gap: 18px;
     }
 
     .panel {
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: #fff;
       padding: 20px;
+      border-radius: var(--radius-lg);
     }
-
-    .panel h3 { margin-bottom: 12px; }
 
     .passage {
-      color: #27324c;
+      color: #24314c;
       line-height: 1.9;
-      font-size: 1.02rem;
+      font-size: 1rem;
     }
+
+    .passage p + p { margin-top: 14px; }
 
     .blank {
       display: inline-block;
-      min-width: 88px;
+      min-width: 82px;
+      text-align: center;
       padding: 2px 8px;
       border-bottom: 2px solid var(--primary);
       color: var(--primary);
-      font-weight: 700;
-      text-align: center;
+      font-weight: 800;
     }
 
     .question-block + .question-block {
-      margin-top: 20px;
-      padding-top: 20px;
+      margin-top: 18px;
+      padding-top: 18px;
       border-top: 1px solid var(--border);
     }
 
     .question-title {
       font-weight: 800;
+      line-height: 1.45;
       margin-bottom: 12px;
       letter-spacing: -0.01em;
     }
 
-    .options {
-      display: grid;
-      gap: 10px;
-    }
+    .options { display: grid; gap: 10px; }
 
     .option {
       width: 100%;
       text-align: left;
-      padding: 14px 14px;
+      padding: 13px 14px;
       border-radius: 14px;
       border: 1px solid var(--border);
-      background: #fff;
-      cursor: pointer;
+      background: white;
       color: var(--text);
+      cursor: pointer;
     }
 
-    .option:hover { border-color: #c3cde7; }
-    .option.selected {
-      border-color: var(--primary);
-      background: var(--primary-soft);
-    }
-    .option.correct {
-      border-color: rgba(15, 159, 111, 0.4);
-      background: rgba(15, 159, 111, 0.08);
-    }
-    .option.wrong {
-      border-color: rgba(209, 67, 67, 0.35);
-      background: rgba(209, 67, 67, 0.07);
-    }
+    .option:hover { border-color: #bfccee; }
+    .option.selected { border-color: var(--primary); background: var(--surface-2); }
+    .option.correct { border-color: rgba(18,129,90,0.35); background: rgba(18,129,90,0.08); }
+    .option.wrong { border-color: rgba(196,69,69,0.35); background: rgba(196,69,69,0.08); }
 
-    .footer-actions {
-      margin-top: 20px;
+    .actions {
       display: flex;
-      justify-content: space-between;
       gap: 12px;
+      justify-content: space-between;
       flex-wrap: wrap;
+      margin-top: 20px;
     }
 
     .result-box {
-      margin-top: 18px;
-      border-top: 1px solid var(--border);
-      padding-top: 18px;
       display: none;
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
     }
 
     .result-box.show { display: block; }
-
     .score {
       font-size: 2rem;
       font-weight: 800;
-      letter-spacing: -0.03em;
+      letter-spacing: -0.04em;
       margin-bottom: 8px;
+    }
+
+    .explanation {
+      margin-top: 12px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: var(--surface-3);
+      color: #2b3550;
+      line-height: 1.7;
+    }
+
+    .mini-list {
+      margin: 12px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.65;
     }
 
     .muted { color: var(--muted); }
 
-    .explanation {
-      margin-top: 14px;
-      padding: 14px;
-      border-radius: 14px;
-      background: var(--surface-2);
-      color: #2a3550;
-      line-height: 1.7;
-    }
-
-    .ad-box {
+    .footer-note {
       margin-top: 18px;
-      border: 1px dashed #c8d1ea;
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px dashed #c8d2ea;
       background: linear-gradient(180deg, #fbfcff 0%, #f5f8ff 100%);
-      border-radius: 18px;
-      padding: 18px;
       color: var(--muted);
-    }
-
-    .ad-box strong {
-      color: var(--text);
-      display: block;
-      margin-bottom: 4px;
     }
 
     .site-footer {
-      padding: 24px 0 50px;
+      padding: 24px 0 48px;
       color: var(--muted);
-      font-size: 0.95rem;
     }
 
-    .affiliate-link {
-      color: var(--primary);
-      font-weight: 700;
-    }
-
-    @media (max-width: 920px) {
-      .hero, .practice-grid, .grid {
+    @media (max-width: 980px) {
+      .hero,
+      .practice-grid,
+      .modes-grid,
+      .tips-grid,
+      .resource-grid,
+      .toolbar {
         grid-template-columns: 1fr;
       }
-      .card p { min-height: auto; }
     }
 
     @media (max-width: 640px) {
-      .container { width: min(100% - 20px, 1120px); }
-      .hero-panel, .hero-side, .practice-shell, .card { padding: 18px; }
-      h1 { font-size: 2.3rem; }
       .nav { display: none; }
+      .hero-card, .practice-shell, .panel, .mode-card, .tips-card, .resource-card, .stats-card { padding: 18px; }
+      h1 { font-size: 2.4rem; }
     }
   </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-row">
-      <a class="brand" href="#top" aria-label="TOEFL Reading home">
+      <a href="#top" class="brand" aria-label="TOEFL Reading home">
         <span class="brand-mark">T</span>
         <span>TOEFL Reading</span>
       </a>
       <nav class="nav" aria-label="Main navigation">
-        <a href="#practice-types">Practice Types</a>
-        <a href="#practice-area">Start Practice</a>
-        <a href="#about">About</a>
+        <a href="#modes">Task Types</a>
+        <a href="#practice">Practice</a>
+        <a href="#tips">Tips</a>
+        <a href="#resources">Resources</a>
       </nav>
     </div>
   </header>
 
   <main id="top">
     <section class="container hero">
-      <div class="hero-panel">
-        <span class="eyebrow">Free TOEFL Reading Practice</span>
-        <h1>Simple, familiar practice that helps you focus.</h1>
+      <div class="hero-card">
+        <span class="eyebrow">Free TOEFL-style Reading Practice</span>
+        <h1>Actual practice flow. Calm, familiar, and easy to use.</h1>
         <p class="lead">
-          Practice three TOEFL-style reading task types with a clean, calm interface: complete words from context,
-          read short daily-life texts, and answer questions about short academic passages.
+          Practice all three reading task types in one static page: complete missing words from context, read short daily-life texts, and answer questions about academic passages. Every set includes explanations and quick strategy tips.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#practice-area">Start practicing</a>
-          <a class="btn btn-secondary" href="#practice-types">Explore task types</a>
+          <a class="btn btn-primary" href="#practice">Start practice</a>
+          <a class="btn btn-secondary" href="#tips">See reading tips</a>
         </div>
       </div>
-
-      <aside class="hero-panel hero-side" aria-label="Highlights">
-        <div class="metric">
-          <small>Task types</small>
-          <strong>3 clear reading modes</strong>
+      <div class="hero-side">
+        <div class="stats-card">
+          <small>Total question bank</small>
+          <strong>90 questions across 9 practice sets</strong>
         </div>
-        <div class="metric">
-          <small>Experience</small>
-          <strong>Static, fast, GitHub Pages-friendly</strong>
+        <div class="stats-card">
+          <small>Coverage</small>
+          <strong>Vocabulary, details, inference, main idea, and academic reading</strong>
         </div>
-        <div class="metric">
-          <small>Monetization spots</small>
-          <strong>Ad block and resource recommendations</strong>
-        </div>
-      </aside>
-    </section>
-
-    <section class="container section" id="practice-types">
-      <div class="section-head">
-        <div>
-          <h2>Reading task types</h2>
-          <p class="section-copy">
-            Keep the structure simple. Each mode uses short, focused texts and asks only what the passage supports.
-          </p>
+        <div class="stats-card">
+          <small>MVP-friendly</small>
+          <strong>Single static HTML file with local progress memory</strong>
         </div>
       </div>
-
-      <div class="grid" id="taskCards"></div>
     </section>
 
-    <section class="container section" id="practice-area">
+    <section class="container section" id="modes">
       <div class="section-head">
-        <div>
-          <h2>Practice now</h2>
-          <p class="section-copy">
-            Choose a reading mode, answer the questions, and review clear explanations right away.
-          </p>
-        </div>
+        <h2>Reading task types</h2>
+        <p class="section-copy">These cards explain the three TOEFL-style reading modes included below.</p>
+      </div>
+      <div class="modes-grid">
+        <article class="mode-card">
+          <span class="badge">Vocabulary + Context</span>
+          <h3>Complete the Words</h3>
+          <p>Use context to choose the best word or phrase for each blank. This rewards careful reading, collocations, and meaning in context.</p>
+        </article>
+        <article class="mode-card">
+          <span class="badge">Practical Reading</span>
+          <h3>Read in Daily Life</h3>
+          <p>Read notices, emails, schedules, or instructions. Questions test main idea, important details, tone, and implied meaning.</p>
+        </article>
+        <article class="mode-card">
+          <span class="badge">Academic Reading</span>
+          <h3>Read an Academic Passage</h3>
+          <p>Read short academic passages and answer questions about main ideas, supporting details, vocabulary, and logical relationships.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section" id="practice">
+      <div class="section-head">
+        <h2>Practice sets</h2>
+        <p class="section-copy">Choose a task type, then choose a set. Each set has 10 questions and instant explanations.</p>
       </div>
 
       <div class="practice-shell">
-        <div class="practice-top">
-          <div>
-            <h3 id="setTitle">Choose a practice type</h3>
-            <p class="muted" id="setSubtitle">Start with one of the three reading modes below.</p>
+        <div class="toolbar">
+          <div class="field">
+            <label for="modeSelect">Task type</label>
+            <select id="modeSelect"></select>
           </div>
-          <div class="pill-row">
-            <span class="pill" id="difficultyPill">Level: —</span>
-            <span class="pill" id="questionCountPill">Questions: —</span>
+          <div class="field">
+            <label for="setSelect">Practice set</label>
+            <select id="setSelect"></select>
           </div>
+          <button class="btn btn-secondary" id="resetSetBtn" type="button">Reset answers</button>
+          <button class="btn btn-primary" id="submitBtn" type="button">Check answers</button>
+        </div>
+
+        <div class="info-row">
+          <span class="pill" id="pillType">Type: —</span>
+          <span class="pill" id="pillDifficulty">Level: —</span>
+          <span class="pill" id="pillCount">Questions: —</span>
+          <span class="pill" id="pillProgress">Saved best: —</span>
         </div>
 
         <div class="practice-grid">
           <section class="panel">
-            <h3>Reading passage</h3>
-            <div class="passage" id="passageArea">Select a task type to load a passage.</div>
+            <h3 id="setTitle">Choose a set</h3>
+            <p class="muted" id="setIntro" style="margin: 8px 0 16px; line-height: 1.7;">Your passage will appear here.</p>
+            <div class="passage" id="passageArea">Select a task type and a set to begin.</div>
+            <div class="footer-note">
+              <strong>Study tip:</strong> Read the whole passage first for purpose and structure. Then answer questions by returning to the exact sentence or paragraph that supports the answer.
+            </div>
           </section>
 
           <section class="panel">
             <h3>Questions</h3>
-            <div id="questionArea" class="muted">Questions will appear here.</div>
-            <div class="footer-actions">
-              <button class="btn btn-secondary" id="resetBtn" type="button">Reset answers</button>
-              <button class="btn btn-primary" id="submitBtn" type="button">Check answers</button>
-            </div>
+            <div id="questionArea" class="muted" style="margin-top: 10px;">Questions will appear here.</div>
             <div class="result-box" id="resultBox"></div>
           </section>
-        </div>
-
-        <div class="ad-box" aria-label="Sample ad space">
-          <strong>Ad placement preview</strong>
-          This is where a clean, non-intrusive ad can go after a practice set or between sections.
         </div>
       </div>
     </section>
 
-    <section class="container section" id="about">
+    <section class="container section" id="tips">
       <div class="section-head">
-        <div>
-          <h2>Resources</h2>
-          <p class="section-copy">
-            Keep affiliate links outside the test flow. Use them here in a study resources area or later on blog pages.
-          </p>
-        </div>
+        <h2>Tips for users</h2>
+        <p class="section-copy">Keep the strategy simple: read for purpose, locate support, eliminate weak choices, and watch for vocabulary in context.</p>
       </div>
+      <div class="tips-grid">
+        <article class="tips-card">
+          <span class="badge">Before you answer</span>
+          <h3>Read for structure first</h3>
+          <p>Identify what the passage is mainly doing: describing a process, explaining a cause, comparing two ideas, or giving instructions.</p>
+          <ul class="mini-list">
+            <li>Circle signal words like however, therefore, for example, and in contrast.</li>
+            <li>Notice whether each paragraph has one job.</li>
+          </ul>
+        </article>
+        <article class="tips-card">
+          <span class="badge">During questions</span>
+          <h3>Find evidence before choosing</h3>
+          <p>Strong answers are supported by the text. Weak answers sound reasonable but are too broad, too extreme, or not actually stated.</p>
+          <ul class="mini-list">
+            <li>Return to the relevant sentence or paragraph.</li>
+            <li>Eliminate choices that add new information.</li>
+          </ul>
+        </article>
+        <article class="tips-card">
+          <span class="badge">For vocabulary</span>
+          <h3>Use context, not memory alone</h3>
+          <p>A familiar word may mean something different in a passage. Look at nearby words, tone, and the sentence purpose before choosing.</p>
+          <ul class="mini-list">
+            <li>Replace the original word with each option mentally.</li>
+            <li>Check grammar and meaning together.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
-      <div class="card">
-        <span class="card-badge">Affiliate section placeholder</span>
-        <h3>Recommended TOEFL reading books</h3>
-        <p>
-          Example only: add a short description, a disclosure, and then your Amazon affiliate link to a helpful prep book.
-        </p>
-        <a class="affiliate-link" href="#" aria-disabled="true">Sample affiliate link placement</a>
+    <section class="container section" id="resources">
+      <div class="section-head">
+        <h2>Resource blocks for monetization</h2>
+        <p class="section-copy">Keep ads and affiliate links outside the question flow so the reading experience stays clean.</p>
+      </div>
+      <div class="resource-grid">
+        <article class="resource-card">
+          <span class="badge">Ad slot idea</span>
+          <h3>Results-page ad</h3>
+          <p>Show a quiet display ad after users submit a set, not inside the passage or between answer choices.</p>
+        </article>
+        <article class="resource-card">
+          <span class="badge">Affiliate block</span>
+          <h3>Recommended prep books</h3>
+          <p>Add a short review, a clear disclosure, and one or two study-book links in a separate resources section.</p>
+        </article>
+        <article class="resource-card">
+          <span class="badge">Retention idea</span>
+          <h3>Saved best score</h3>
+          <p>This page stores the user’s best score for each set in local storage. It makes the page feel alive even without login.</p>
+        </article>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>
-        Built as a static MVP for GitHub Pages. Add your own privacy policy, affiliate disclosure, and more practice sets before launch.
-      </p>
+      <p>Static TOEFL-style Reading MVP. Add your privacy policy, affiliate disclosure, analytics, and ad network code before launch.</p>
     </div>
   </footer>
 
   <script>
-    const practiceSets = [
-      {
-        id: 'complete-words',
-        label: 'Complete the Words',
-        badge: 'Vocabulary + Context',
-        level: 'Easy–Medium',
-        description: 'Complete partially missing words in a short text by using context clues and meaning.',
-        subtitle: 'Complete the missing words using context.',
-        passage: `Mina had only ten minutes before class started, so she stopped at the campus cafe for a quick snack. The line looked long, but it moved quickly because the staff worked very <span class="blank">efficiently</span>. She bought a sandwich and a cup of tea, then checked the time on her phone. She was relieved to see that she could still arrive <span class="blank">punctually</span>. As she left, she noticed a sign saying that reusable cups were <span class="blank">encouraged</span> in order to reduce waste.`,
-        questions: [
-          {
-            prompt: 'Which word best completes the first blank?',
-            options: ['efficiently', 'rarely', 'silently', 'politely'],
-            answer: 0,
-            explanation: 'The staff helped the line move quickly, so “efficiently” best matches the context.'
-          },
-          {
-            prompt: 'Which word best completes the second blank?',
-            options: ['suddenly', 'punctually', 'carelessly', 'briefly'],
-            answer: 1,
-            explanation: 'She was checking whether she would arrive on time. “Punctually” means at the correct time.'
-          },
-          {
-            prompt: 'Which word best completes the third blank?',
-            options: ['encouraged', 'forbidden', 'ignored', 'hidden'],
-            answer: 0,
-            explanation: 'The sign supports using reusable cups to reduce waste, so it is encouraging that behavior.'
-          }
-        ]
-      },
-      {
-        id: 'daily-life',
-        label: 'Read in Daily Life',
-        badge: 'Main Idea + Detail',
-        level: 'Medium',
-        description: 'Read short practical texts such as notices and messages, then answer main-idea and detail questions.',
-        subtitle: 'Read an everyday notice and answer the questions.',
-        passage: `Library Notice: On Friday, the second floor study area will close at 4:00 p.m. for maintenance. Students may continue to use the first floor until the library closes at 9:00 p.m. Group study rooms must still be reserved online in advance. Staff recommend arriving early in the evening because seats may be limited.`,
-        questions: [
-          {
-            prompt: 'What is the main purpose of this notice?',
-            options: [
-              'To explain how to apply for a library job',
-              'To announce a temporary change in library space availability',
-              'To advertise new books on the second floor',
-              'To warn students that the library will close permanently'
-            ],
-            answer: 1,
-            explanation: 'The notice explains that the second floor will close early and tells students what options remain available.'
-          },
-          {
-            prompt: 'What should students do if they want a group study room?',
-            options: [
-              'Ask a staff member in person',
-              'Wait until after 4:00 p.m.',
-              'Reserve it online before arriving',
-              'Sit on the first floor'
-            ],
-            answer: 2,
-            explanation: 'The text says group study rooms must still be reserved online in advance.'
-          },
-          {
-            prompt: 'Why are students advised to arrive early in the evening?',
-            options: [
-              'Maintenance begins at night',
-              'Seats may be limited',
-              'The first floor opens late',
-              'Reservations are canceled'
-            ],
-            answer: 1,
-            explanation: 'The notice directly states that staff recommend arriving early because seats may be limited.'
-          }
-        ]
-      },
-      {
-        id: 'academic-passage',
-        label: 'Read an Academic Passage',
-        badge: 'Academic Reading',
-        level: 'Medium–Hard',
-        description: 'Read a short academic-style passage and identify main ideas, supporting details, and vocabulary in context.',
-        subtitle: 'Read a short academic passage and answer the questions.',
-        passage: `In many cities, rooftop gardens are becoming a practical way to improve urban environments. Researchers note that rooftops, which are often unused, can be transformed into spaces that support plant life, reduce heat, and absorb rainwater. These gardens may also benefit residents by creating quieter and more pleasant surroundings. Although rooftop gardens require careful planning, city planners increasingly view them as a useful response to limited green space in dense urban areas.`,
-        questions: [
-          {
-            prompt: 'What is the main idea of the passage?',
-            options: [
-              'City rooftops are too weak to support plants',
-              'Rooftop gardens can provide several benefits in cities',
-              'Rainwater is the main cause of urban damage',
-              'Residents prefer parks to rooftop spaces'
-            ],
-            answer: 1,
-            explanation: 'The passage presents rooftop gardens as a practical urban solution with multiple environmental and social benefits.'
-          },
-          {
-            prompt: 'According to the passage, why are rooftop gardens useful in dense urban areas?',
-            options: [
-              'They replace all public parks',
-              'They require no planning',
-              'They help address the lack of green space',
-              'They make buildings taller'
-            ],
-            answer: 2,
-            explanation: 'The final sentence says planners view rooftop gardens as a response to limited green space.'
-          },
-          {
-            prompt: 'The word “dense” in the passage is closest in meaning to:',
-            options: ['crowded', 'quiet', 'historic', 'temporary'],
-            answer: 0,
-            explanation: 'In this context, “dense urban areas” means areas with many buildings and people close together.'
-          }
-        ]
-      }
-    ];
+    const DATA = {
+      modes: [
+        {
+          id: 'complete-words',
+          title: 'Complete the Words',
+          description: 'Choose the best word for each blank using context clues.',
+          sets: [
+            {
+              id: 'cw-1',
+              name: 'Campus Cafe and Class Schedule',
+              difficulty: 'Easy-Medium',
+              intro: 'Choose the best option for each blank. Focus on meaning, collocation, and the logic of the paragraph.',
+              passage: `<p>Mira left her dormitory a little earlier than usual because she wanted to review her notes before her biology class. On the way, she stopped at the campus cafe, where the staff worked so <span class="blank">_____</span> that the long line moved in only a few minutes. She ordered tea and fruit, then noticed a message on her phone reminding her that the lecture would begin at 8:30 <span class="blank">_____</span>. She checked her watch and felt relieved, because she still had enough time to arrive without rushing.</p><p>As she walked across the courtyard, she saw several students carrying reusable bottles. A poster near the entrance explained that the university was trying to reduce waste by <span class="blank">_____</span> students to bring their own containers. Mira liked the idea because it seemed both practical and environmentally <span class="blank">_____</span>. When she entered the building, she found a quiet seat and opened her notebook. The room was still nearly empty, which gave her a chance to read the summary of yesterday’s lesson more <span class="blank">_____</span>.</p><p>By the time the professor arrived, Mira felt calm and prepared. She had used a short amount of time in a very <span class="blank">_____</span> way. Instead of arriving late and stressed, she entered the class ready to listen and ask questions. That small routine, she realized, could make her mornings much more <span class="blank">_____</span> throughout the semester.</p>`,
+              questions: [
+                { prompt: 'Blank 1', options: ['efficiently', 'rarely', 'casually', 'secretly'], answer: 0, explanation: 'The line moved quickly, so the staff worked efficiently.' },
+                { prompt: 'Blank 2', options: ['exactly', 'carelessly', 'silently', 'otherwise'], answer: 0, explanation: 'A class start time is expressed exactly.' },
+                { prompt: 'Blank 3', options: ['warning', 'encouraging', 'forcing', 'preventing'], answer: 1, explanation: 'The poster promoted reusable containers, so encouraging fits best.' },
+                { prompt: 'Blank 4', options: ['distant', 'harmful', 'friendly', 'ordinary'], answer: 2, explanation: 'Environmentally friendly is the natural collocation.' },
+                { prompt: 'Blank 5', options: ['carelessly', 'thoroughly', 'nervously', 'accidentally'], answer: 1, explanation: 'She had quiet time to read the summary carefully and fully.' },
+                { prompt: 'Blank 6', options: ['inefficient', 'wasteful', 'purposeful', 'temporary'], answer: 2, explanation: 'She used her time in a planned and useful way.' },
+                { prompt: 'Blank 7', options: ['predictable', 'stressful', 'successful', 'expensive'], answer: 2, explanation: 'The routine improved her mornings and helped her perform better.' },
+                { prompt: 'Which word is closest in meaning to “routine” as used in the final paragraph?', options: ['habit', 'conflict', 'lecture', 'mistake'], answer: 0, explanation: 'Routine here means a regular habit or repeated pattern.' },
+                { prompt: 'Why did Mira feel relieved after checking her watch?', options: ['The class had been canceled.', 'She had enough time to arrive.', 'The professor was late.', 'The cafe was closing.'], answer: 1, explanation: 'The passage says she still had enough time to arrive without rushing.' },
+                { prompt: 'What is the best summary of the passage?', options: ['Mira dislikes early classes but enjoys tea.', 'Mira’s small morning habits help her feel prepared for class.', 'The university plans to remove all disposable cups.', 'The biology class is difficult for first-year students.'], answer: 1, explanation: 'The passage focuses on how a calm and organized routine improved her preparation.' }
+              ]
+            },
+            {
+              id: 'cw-2',
+              name: 'Library Project Team',
+              difficulty: 'Medium',
+              intro: 'Use the sentence context to choose the best word or phrase.',
+              passage: `<p>Daniel and his classmates met in the library to plan their history presentation. At first, the group had too many ideas and no clear direction, so the discussion felt somewhat <span class="blank">_____</span>. After a few minutes, however, one student suggested dividing the work into smaller tasks. This approach immediately made the project more <span class="blank">_____</span>, because each person knew what to research and when to report back.</p><p>Daniel was responsible for finding photographs and maps that would support the group’s argument. He searched several online databases and selected sources that were both reliable and <span class="blank">_____</span> to the topic. Meanwhile, another student wrote a brief outline so that the final presentation would have a logical <span class="blank">_____</span>. By the end of the meeting, the team had created a shared calendar and agreed on a deadline for every step.</p><p>When they met again a week later, the difference was obvious. Instead of repeating the same ideas, the students built on one another’s work in a much more <span class="blank">_____</span> way. Their preparation did not remove every problem, but it did make the final stages of the assignment far less <span class="blank">_____</span> than before. Daniel realized that good teamwork depends not only on talent, but also on planning and communication.</p>`,
+              questions: [
+                { prompt: 'Blank 1', options: ['productive', 'confusing', 'formal', 'brief'], answer: 1, explanation: 'The group had too many ideas and no direction, so the discussion was confusing.' },
+                { prompt: 'Blank 2', options: ['manageable', 'invisible', 'uncertain', 'delayed'], answer: 0, explanation: 'Breaking the project into tasks made it more manageable.' },
+                { prompt: 'Blank 3', options: ['relevant', 'distant', 'fictional', 'traditional'], answer: 0, explanation: 'Sources should be reliable and relevant to the topic.' },
+                { prompt: 'Blank 4', options: ['audience', 'structure', 'apology', 'location'], answer: 1, explanation: 'An outline helps a presentation have a logical structure.' },
+                { prompt: 'Blank 5', options: ['competitive', 'cooperative', 'silent', 'unexpected'], answer: 1, explanation: 'They built on one another’s work, so cooperative is best.' },
+                { prompt: 'Blank 6', options: ['stressful', 'creative', 'accurate', 'public'], answer: 0, explanation: 'Planning made the final stage less stressful.' },
+                { prompt: 'What changed the project most at the first meeting?', options: ['The teacher joined the group.', 'The group shortened the topic.', 'The work was divided into smaller tasks.', 'The students decided to meet online.'], answer: 2, explanation: 'The passage says that dividing the work gave the group direction.' },
+                { prompt: 'Why did Daniel choose photographs and maps?', options: ['They were required by the library staff.', 'They would support the group’s argument.', 'They were easier to find than books.', 'They were the only available sources.'], answer: 1, explanation: 'The passage directly states that they supported the group’s argument.' },
+                { prompt: 'The word “obvious” in the final paragraph is closest in meaning to:', options: ['uncertain', 'clear', 'minor', 'surprising'], answer: 1, explanation: 'Obvious means easy to see or clear.' },
+                { prompt: 'What lesson does Daniel learn?', options: ['Large groups should avoid deadlines.', 'Strong teamwork requires planning and communication.', 'Maps are more useful than written notes.', 'History presentations should always be short.'], answer: 1, explanation: 'The final sentence gives this main lesson explicitly.' }
+              ]
+            },
+            {
+              id: 'cw-3',
+              name: 'Community Garden Project',
+              difficulty: 'Medium',
+              intro: 'Choose the word that best fits the meaning and tone of the passage.',
+              passage: `<p>A neighborhood group recently transformed an empty lot into a community garden. Before the project began, the space looked neglected and somewhat <span class="blank">_____</span>, with broken fencing and weeds covering most of the ground. Several residents wanted to improve the area, but they knew that the work would require patience and <span class="blank">_____</span> effort over several months.</p><p>First, volunteers removed trash and repaired the fence. Next, they measured the land carefully so the garden beds could be arranged in an orderly <span class="blank">_____</span>. Local businesses donated soil, tools, and seeds, while children from a nearby school painted signs to label the vegetables. As the project developed, more neighbors became interested and offered to help. Their participation gradually turned the garden into a shared source of pride rather than a private <span class="blank">_____</span> for only a few people.</p><p>By late summer, the garden was producing tomatoes, beans, herbs, and flowers. Residents often stopped to talk there in the evening, and some said the space had made the street feel more welcoming and <span class="blank">_____</span>. Although the garden still needed regular care, the group believed the results were worth the effort. They had not only grown food; they had also created a place that strengthened the neighborhood’s sense of <span class="blank">_____</span>.</p>`,
+              questions: [
+                { prompt: 'Blank 1', options: ['abandoned', 'popular', 'efficient', 'famous'], answer: 0, explanation: 'The empty lot looked neglected, so abandoned fits best.' },
+                { prompt: 'Blank 2', options: ['sudden', 'consistent', 'careless', 'costly'], answer: 1, explanation: 'The effort needed to continue over several months, so consistent is best.' },
+                { prompt: 'Blank 3', options: ['pattern', 'schedule', 'ceremony', 'debate'], answer: 0, explanation: 'Garden beds are arranged in a physical pattern or layout.' },
+                { prompt: 'Blank 4', options: ['benefit', 'hobby', 'responsibility', 'competition'], answer: 1, explanation: 'The contrast is between shared pride and a private hobby.' },
+                { prompt: 'Blank 5', options: ['distant', 'unsafe', 'isolated', 'friendly'], answer: 3, explanation: 'The street felt more welcoming and friendly.' },
+                { prompt: 'Blank 6', options: ['humor', 'arrival', 'community', 'silence'], answer: 2, explanation: 'The garden strengthened the neighborhood’s sense of community.' },
+                { prompt: 'Why did the group measure the land carefully?', options: ['To compare it with nearby parks.', 'To arrange the garden beds neatly.', 'To decide where to build a road.', 'To estimate the cost of the fence.'], answer: 1, explanation: 'The passage states that measurement helped arrange the beds in an orderly way.' },
+                { prompt: 'What caused more neighbors to join the project?', options: ['The project became visible as it developed.', 'The school required them to help.', 'The city paid them to participate.', 'The garden produced food immediately.'], answer: 0, explanation: 'As the project developed, more neighbors became interested and offered help.' },
+                { prompt: 'Which statement best describes the garden’s effect?', options: ['It reduced the amount of local traffic.', 'It gave the neighborhood a stronger shared identity.', 'It replaced the need for grocery stores.', 'It became a private space for students.'], answer: 1, explanation: 'The final paragraph emphasizes pride, conversation, and community.' },
+                { prompt: 'The main idea of the passage is that:', options: ['gardens are difficult to maintain in cities', 'children usually enjoy outdoor painting activities', 'a shared local project can improve both a place and the people around it', 'vegetables grow faster in empty lots than in parks'], answer: 2, explanation: 'The passage shows how the garden improved the physical space and social ties.' }
+              ]
+            }
+          ]
+        },
+        {
+          id: 'daily-life',
+          title: 'Read in Daily Life',
+          description: 'Read notices, emails, and practical texts.',
+          sets: [
+            {
+              id: 'dl-1',
+              name: 'Library Renovation Notice',
+              difficulty: 'Medium',
+              intro: 'Read the notice and answer the questions about main ideas, details, and implied meaning.',
+              passage: `<p><strong>University Library Notice</strong></p><p>From Monday, May 6, through Thursday, May 16, the west wing of the library will be closed for electrical repairs. During this period, students may still use the east wing, the first-floor computer lab, and the quiet study area on the third floor. Library staff expect the building to remain open during normal hours, but some noise may occur between 10:00 a.m. and 3:00 p.m.</p><p>Books usually kept in the west wing can be requested at the front desk. Most requested items will be delivered within 20 minutes. Students who need a group study room should continue to reserve one online before arriving. Because space may be limited in the evenings, staff recommend coming early whenever possible.</p><p>If repairs are completed ahead of schedule, the library will announce the change on the student portal and on signs near the main entrance.</p>`,
+              questions: [
+                { prompt: 'What is the main purpose of the notice?', options: ['To advertise a new library service', 'To explain temporary changes during repairs', 'To warn students that the library is closing permanently', 'To ask students to volunteer at the library'], answer: 1, explanation: 'The notice explains what parts of the library are affected and what alternatives remain available.' },
+                { prompt: 'Which part of the library will be closed?', options: ['The east wing', 'The first-floor computer lab', 'The west wing', 'The third-floor quiet area'], answer: 2, explanation: 'The first sentence states that the west wing will be closed.' },
+                { prompt: 'When is noise most likely to occur?', options: ['Before 8:00 a.m.', 'Between 10:00 a.m. and 3:00 p.m.', 'After 8:00 p.m.', 'Only on weekends'], answer: 1, explanation: 'The notice directly gives this time range.' },
+                { prompt: 'How can students get books that are normally in the west wing?', options: ['By purchasing them online', 'By requesting them at the front desk', 'By visiting the quiet study area', 'By emailing the department chair'], answer: 1, explanation: 'The notice says those books can be requested at the front desk.' },
+                { prompt: 'How long will most requested items take to arrive?', options: ['Within 20 minutes', 'About one hour', 'By the next day', 'Immediately'], answer: 0, explanation: 'The passage states that most requested items will be delivered within 20 minutes.' },
+                { prompt: 'What should students do if they want a group study room?', options: ['Ask in person after arriving', 'Reserve it online in advance', 'Use the west wing', 'Wait for a portal announcement'], answer: 1, explanation: 'The notice says group study rooms should continue to be reserved online.' },
+                { prompt: 'Why are students advised to arrive early in the evening?', options: ['The library closes early on weekdays.', 'Space may be limited.', 'Electrical work begins at night.', 'The front desk is closed later in the day.'], answer: 1, explanation: 'The notice states that space may be limited in the evenings.' },
+                { prompt: 'Where will an early completion of repairs be announced?', options: ['On the student portal and on signs near the main entrance', 'Only by email', 'Only at the front desk', 'On classroom doors across campus'], answer: 0, explanation: 'The final paragraph lists both locations.' },
+                { prompt: 'What can be inferred about the library during repairs?', options: ['It will be closed every afternoon.', 'Students will still be able to study there.', 'The computer lab will be moved off campus.', 'Books cannot be borrowed.'], answer: 1, explanation: 'Several spaces remain available, so students can still study in the building.' },
+                { prompt: 'Which statement best summarizes the notice?', options: ['The library is expanding to include more study rooms.', 'The library will remain available, but students must adjust to a temporary closure and possible noise.', 'The library is reducing all online services.', 'The west wing will reopen only next year.'], answer: 1, explanation: 'This answer includes the main change and the continued availability of alternatives.' }
+              ]
+            },
+            {
+              id: 'dl-2',
+              name: 'Internship Coordinator Email',
+              difficulty: 'Medium',
+              intro: 'Read the email and answer questions about purpose, detail, and implication.',
+              passage: `<p><strong>Subject:</strong> Reminder About Summer Internship Applications</p><p>Dear Students,</p><p>This is a reminder that applications for the summer internship program are due by Friday, March 14, at 5:00 p.m. To apply, please upload your resume, an unofficial transcript, and a short statement explaining why you are interested in the program. Students who submit incomplete applications will not be considered in the first review round.</p><p>If you would like feedback on your resume before submitting it, the Career Center will offer walk-in advising sessions on Tuesday and Wednesday from 2:00 p.m. to 4:30 p.m. No appointment is necessary. Because demand is usually high during the final week, students are encouraged to arrive early.</p><p>Selected applicants will be invited to short interviews between March 25 and March 28. Final decisions will be sent by email in early April.</p><p>Sincerely,<br/>Lena Ortiz<br/>Internship Coordinator</p>`,
+              questions: [
+                { prompt: 'Why was this email sent?', options: ['To announce internship interview results', 'To remind students about application requirements and deadlines', 'To cancel the summer internship program', 'To ask students to work at the Career Center'], answer: 1, explanation: 'The email is clearly a reminder about how and when to apply.' },
+                { prompt: 'When are applications due?', options: ['Tuesday at 2:00 p.m.', 'Wednesday at 4:30 p.m.', 'Friday, March 14, at 5:00 p.m.', 'Early April'], answer: 2, explanation: 'The first paragraph gives the exact deadline.' },
+                { prompt: 'Which item is NOT listed as part of the application?', options: ['Resume', 'Unofficial transcript', 'Statement of interest', 'Letter from a professor'], answer: 3, explanation: 'A professor’s letter is not mentioned.' },
+                { prompt: 'What happens to incomplete applications?', options: ['They are automatically extended.', 'They are reviewed last.', 'They are not considered in the first review round.', 'They are returned by mail.'], answer: 2, explanation: 'This is stated directly in the first paragraph.' },
+                { prompt: 'What service does the Career Center provide?', options: ['Internship interviews', 'Resume feedback during walk-in hours', 'Application fee waivers', 'Transcript printing'], answer: 1, explanation: 'The email says students can get feedback on resumes during walk-in advising sessions.' },
+                { prompt: 'Do students need an appointment for advising?', options: ['Yes, for all sessions', 'Yes, but only on Wednesday', 'No, appointments are not necessary', 'Only if they need transcript help'], answer: 2, explanation: 'The second paragraph explicitly says no appointment is necessary.' },
+                { prompt: 'Why are students encouraged to arrive early for advising?', options: ['The office may close before 4:30 p.m.', 'Demand is usually high during the final week', 'The coordinator prefers morning visits', 'Interviews are scheduled there'], answer: 1, explanation: 'The email states that demand is usually high during the final week.' },
+                { prompt: 'When will selected applicants be interviewed?', options: ['Between March 25 and March 28', 'On March 14', 'In early April', 'Every Tuesday and Wednesday'], answer: 0, explanation: 'The third paragraph gives the interview window.' },
+                { prompt: 'When will final decisions be sent?', options: ['The day after the interview', 'In early April', 'By the end of March', 'At the end of the advising sessions'], answer: 1, explanation: 'The final sentence provides this information.' },
+                { prompt: 'Which statement best reflects the email’s tone?', options: ['Angry and critical', 'Formal and helpful', 'Humorous and casual', 'Uncertain and apologetic'], answer: 1, explanation: 'The email is professional, clear, and supportive.' }
+              ]
+            },
+            {
+              id: 'dl-3',
+              name: 'Museum Visit Guide',
+              difficulty: 'Medium',
+              intro: 'Read the visitor guide and answer questions about purpose, detail, and recommendation.',
+              passage: `<p><strong>Visitor Guide: City Museum of Science</strong></p><p>The museum is open from 9:00 a.m. to 6:00 p.m. Tuesday through Sunday and is closed on Mondays. Tickets may be purchased online or at the front desk. Visitors who buy tickets online can enter through the east entrance, which is usually faster during busy hours.</p><p>The special exhibition on ocean exploration is located on the second floor and requires a timed-entry pass. These passes are free, but they are available in limited numbers each day. Families with young children may prefer to begin their visit on the first floor, where the interactive energy gallery allows visitors to touch many of the displays.</p><p>Photography is permitted in most permanent galleries, but flash photography is not allowed. Large backpacks must be checked near the main entrance. The museum cafe serves light meals until 4:30 p.m., while the gift shop remains open until closing time.</p>`,
+              questions: [
+                { prompt: 'What is the purpose of the guide?', options: ['To review a museum exhibition', 'To give visitors practical information about a museum visit', 'To explain how to apply for museum jobs', 'To compare several local museums'], answer: 1, explanation: 'The guide provides opening hours, ticketing, rules, and recommendations for visitors.' },
+                { prompt: 'When is the museum closed?', options: ['Every Sunday', 'On Mondays', 'After 4:30 p.m.', 'Only during winter'], answer: 1, explanation: 'The first paragraph states that the museum is closed on Mondays.' },
+                { prompt: 'Which entrance is usually faster for online ticket holders?', options: ['Main entrance', 'West entrance', 'East entrance', 'North entrance'], answer: 2, explanation: 'The east entrance is described as usually faster during busy hours.' },
+                { prompt: 'What is required for the ocean exploration exhibition?', options: ['A student ID', 'An extra payment', 'A timed-entry pass', 'A guidebook from the gift shop'], answer: 2, explanation: 'The second paragraph says the exhibition requires a timed-entry pass.' },
+                { prompt: 'What is true about timed-entry passes?', options: ['They are expensive.', 'They are available only online.', 'They are free but limited each day.', 'They are needed for all floors.'], answer: 2, explanation: 'The passage states that they are free but limited.' },
+                { prompt: 'Why might families with young children begin on the first floor?', options: ['The cafe is there.', 'The gift shop is quieter there.', 'The gallery there includes hands-on exhibits.', 'The second floor is closed in the morning.'], answer: 2, explanation: 'The energy gallery allows visitors to touch many displays, which may suit young children.' },
+                { prompt: 'What kind of photography is not allowed?', options: ['Outdoor photography', 'Flash photography', 'Phone photography', 'Black-and-white photography'], answer: 1, explanation: 'The guide explicitly prohibits flash photography.' },
+                { prompt: 'What must visitors do with large backpacks?', options: ['Carry them only on the first floor', 'Leave them near the cafe', 'Check them near the main entrance', 'Store them in the gift shop'], answer: 2, explanation: 'The third paragraph states this directly.' },
+                { prompt: 'Until what time does the museum cafe serve light meals?', options: ['4:30 p.m.', '5:00 p.m.', '6:00 p.m.', '9:00 a.m.'], answer: 0, explanation: 'The guide says the cafe serves light meals until 4:30 p.m.' },
+                { prompt: 'What can be inferred about the gift shop?', options: ['It closes before the cafe.', 'It opens only on weekends.', 'It stays open later than the cafe.', 'It requires a timed-entry pass.'], answer: 2, explanation: 'The gift shop remains open until closing time, while the cafe stops serving earlier.' }
+              ]
+            }
+          ]
+        },
+        {
+          id: 'academic-passage',
+          title: 'Read an Academic Passage',
+          description: 'Read short academic passages and answer idea/detail/vocabulary questions.',
+          sets: [
+            {
+              id: 'ap-1',
+              name: 'Why Coral Reefs Matter',
+              difficulty: 'Medium-Hard',
+              intro: 'Read the passage and answer questions about the main idea, details, vocabulary, and inference.',
+              passage: `<p>Coral reefs are among the most diverse ecosystems on Earth, even though they occupy only a small part of the ocean floor. Built over long periods by tiny coral animals, reefs provide shelter and feeding grounds for many species of fish, crustaceans, and other marine organisms. Because so many forms of life depend on them, reefs are often compared to underwater cities.</p><p>Reefs also benefit human communities. In some coastal regions, they reduce the force of incoming waves and help protect shorelines from erosion. They can support tourism and fishing industries as well. Yet coral reefs are highly sensitive to changes in water temperature and chemistry. When ocean conditions become stressful, corals may expel the algae that live inside their tissues. This process, known as bleaching, leaves the corals pale and weak. If stressful conditions continue for too long, the corals may die.</p><p>Scientists therefore study reefs not only because they are biologically rich, but also because they can reveal how marine ecosystems respond to environmental change. Protecting reefs often requires local action, such as reducing pollution, as well as broader efforts to address global climate patterns. Although reefs are resilient in some circumstances, recovery is usually slow, especially after repeated damage.</p>`,
+              questions: [
+                { prompt: 'What is the main idea of the passage?', options: ['Coral reefs are colorful but not especially important.', 'Coral reefs support marine life and human communities but are vulnerable to environmental change.', 'Coral reefs exist only in deep cold water.', 'Coral reefs are mainly valuable for tourism.'], answer: 1, explanation: 'The passage discusses both the importance of reefs and the threats they face.' },
+                { prompt: 'According to paragraph 1, why are reefs compared to underwater cities?', options: ['They are located near large ports.', 'Many kinds of living things depend on them.', 'They are built from metal structures.', 'They are easy for humans to map.'], answer: 1, explanation: 'The comparison reflects the many species that live in and around reefs.' },
+                { prompt: 'Which of the following is mentioned as a human benefit of reefs?', options: ['They create drinking water.', 'They speed up coastal erosion.', 'They support tourism and fishing.', 'They reduce air pollution.'], answer: 2, explanation: 'The passage explicitly names tourism and fishing.' },
+                { prompt: 'What happens during coral bleaching?', options: ['Corals grow more quickly than normal.', 'Corals move to cooler water.', 'Corals expel algae and become pale.', 'Corals form a harder skeleton.'], answer: 2, explanation: 'The second paragraph defines bleaching directly.' },
+                { prompt: 'The word “sensitive” in paragraph 2 is closest in meaning to:', options: ['responsive', 'hidden', 'permanent', 'expensive'], answer: 0, explanation: 'Sensitive here means easily affected or responsive to changes.' },
+                { prompt: 'Why do scientists study reefs?', options: ['Because reefs are easier to observe than forests.', 'Because reefs can show how marine ecosystems react to change.', 'Because reefs no longer support fish populations.', 'Because reefs grow only in polluted water.'], answer: 1, explanation: 'The third paragraph explains that reefs reveal ecosystem responses to environmental change.' },
+                { prompt: 'What does the passage suggest about reef recovery?', options: ['It is usually fast after repeated damage.', 'It depends only on tourism rules.', 'It can be slow, especially when damage happens more than once.', 'It occurs automatically in all cases.'], answer: 2, explanation: 'The final sentence says recovery is usually slow, especially after repeated damage.' },
+                { prompt: 'Which action is presented as part of reef protection?', options: ['Increasing shoreline construction', 'Reducing pollution', 'Removing all algae from reefs', 'Expanding wave force'], answer: 1, explanation: 'The passage explicitly mentions reducing pollution.' },
+                { prompt: 'What can be inferred about algae in reefs?', options: ['They are unrelated to coral health.', 'They help corals under normal conditions.', 'They destroy coral tissues during bleaching.', 'They replace fish in reef ecosystems.'], answer: 1, explanation: 'If losing algae weakens corals, then algae normally play a helpful role.' },
+                { prompt: 'Which statement best summarizes paragraph 2?', options: ['Reefs are useful to humans but easily harmed by changing ocean conditions.', 'Reefs exist only where tourism is strong.', 'Bleaching always kills coral immediately.', 'Wave force is the only threat to shorelines.'], answer: 0, explanation: 'Paragraph 2 combines human benefits with vulnerability to stress and bleaching.' }
+              ]
+            },
+            {
+              id: 'ap-2',
+              name: 'Sleep and Memory',
+              difficulty: 'Medium-Hard',
+              intro: 'Answer questions about main idea, support, vocabulary, and inference.',
+              passage: `<p>Sleep is often described as a period of rest, but researchers increasingly view it as an active stage of mental processing. During sleep, the brain does not simply shut down. Instead, it continues to organize information, regulate biological systems, and support processes related to learning and memory.</p><p>One reason sleep interests scientists is its apparent role in memory consolidation. This term refers to the process by which newly learned information becomes more stable over time. Studies have shown that people often perform better on certain tasks after a full night of sleep than after staying awake for the same length of time. In some experiments, participants who sleep after practice are better able to remember word pairs, movement patterns, or problem-solving strategies.</p><p>Researchers do not claim that sleep automatically improves every kind of learning. Factors such as stress, prior knowledge, and the difficulty of the material also matter. Even so, the evidence suggests that sleep helps the brain strengthen some memories while reducing interference from competing information. For students, this means that studying late into the night may be less effective than combining focused review with adequate rest.</p>`,
+              questions: [
+                { prompt: 'What is the main idea of the passage?', options: ['Sleep is a passive state with little effect on learning.', 'Sleep plays an active role in processing information and supporting memory.', 'Memory depends only on prior knowledge.', 'Students should never study at night.'], answer: 1, explanation: 'The passage emphasizes sleep as an active process that supports memory.' },
+                { prompt: 'According to paragraph 1, what does the brain do during sleep?', options: ['It stops all mental activity.', 'It organizes information and supports important processes.', 'It forgets recently learned material completely.', 'It focuses only on physical movement.'], answer: 1, explanation: 'Paragraph 1 states that the brain continues to organize information and support learning-related processes.' },
+                { prompt: 'What does “memory consolidation” mean in the passage?', options: ['The loss of old memories', 'The process by which new learning becomes more stable', 'The act of reading quickly', 'The replacement of one memory with another'], answer: 1, explanation: 'The passage defines the term directly.' },
+                { prompt: 'What have some studies shown?', options: ['People learn equally well whether or not they sleep.', 'People often perform better after sleeping than after staying awake for the same amount of time.', 'Only movement-based tasks improve after sleep.', 'Sleep matters only for children.'], answer: 1, explanation: 'This is stated in paragraph 2.' },
+                { prompt: 'Which example is given of a task improved after sleep?', options: ['Driving in heavy traffic', 'Remembering word pairs', 'Speaking a new language perfectly', 'Writing longer essays'], answer: 1, explanation: 'Word pairs are listed among the examples.' },
+                { prompt: 'The word “apparent” in paragraph 2 is closest in meaning to:', options: ['obvious-seeming', 'imaginary', 'irrelevant', 'permanent'], answer: 0, explanation: 'Apparent here means seeming or evident.' },
+                { prompt: 'Which factor does the passage say also affects learning?', options: ['The color of the classroom', 'Stress', 'The season of the year', 'Handwriting style'], answer: 1, explanation: 'Paragraph 3 lists stress, prior knowledge, and difficulty of material.' },
+                { prompt: 'What does the passage suggest about all-night studying?', options: ['It is always the best strategy before a test.', 'It may be less effective than study combined with rest.', 'It has no relationship to memory.', 'It improves all kinds of learning equally.'], answer: 1, explanation: 'The conclusion suggests rest should accompany focused review.' },
+                { prompt: 'What does sleep help reduce, according to paragraph 3?', options: ['Reading speed', 'Competing information that interferes with memory', 'Prior knowledge', 'The need for practice'], answer: 1, explanation: 'The passage says sleep may reduce interference from competing information.' },
+                { prompt: 'Which statement best summarizes the passage?', options: ['Sleep is useful mainly because it saves time.', 'Sleep appears to support memory and learning, although other factors also matter.', 'Only scientists benefit from sleep research.', 'Memory improves only during stressful situations.'], answer: 1, explanation: 'This answer captures both the central claim and the caution that sleep is not the only factor.' }
+              ]
+            },
+            {
+              id: 'ap-3',
+              name: 'Urban Trees and City Climate',
+              difficulty: 'Medium-Hard',
+              intro: 'Read the passage and answer idea, detail, vocabulary, and inference questions.',
+              passage: `<p>In many cities, summer temperatures are higher than those of nearby rural areas. This pattern, often called the urban heat island effect, results partly from the large amount of concrete, asphalt, and dark roofing materials in built environments. Such surfaces absorb and retain heat, especially during long sunny days.</p><p>Urban trees can help reduce this effect in several ways. First, their shade limits the amount of solar energy that reaches streets, sidewalks, and buildings. Second, trees release water vapor through their leaves, a process that can have a cooling influence on the surrounding air. For these reasons, neighborhoods with more tree cover often feel more comfortable during hot weather than areas with little vegetation.</p><p>However, planting trees is not a simple solution by itself. Different species vary in how well they tolerate drought, pollution, compacted soil, and limited rooting space. City planners must therefore consider long-term maintenance, local climate conditions, and the needs of nearby residents when choosing where and what to plant. Even with these challenges, urban trees are increasingly valued not only for their beauty, but also for their practical role in creating healthier and more livable cities.</p>`,
+              questions: [
+                { prompt: 'What is the main topic of the passage?', options: ['Why rural areas need more roads', 'How urban trees can help reduce city heat and improve urban living', 'Why dark roofs are more expensive than light roofs', 'How cities can eliminate all summer heat'], answer: 1, explanation: 'The passage explains urban heat and then focuses on how trees help address it.' },
+                { prompt: 'What contributes to the urban heat island effect?', options: ['Too many lakes', 'Large amounts of heat-absorbing built surfaces', 'Excessive tree shade', 'Low building density'], answer: 1, explanation: 'Paragraph 1 attributes the effect partly to concrete, asphalt, and dark roofs.' },
+                { prompt: 'How does shade from trees help?', options: ['It increases solar energy on buildings.', 'It reduces the amount of solar energy reaching surfaces.', 'It removes all pollution from the air.', 'It prevents all drought conditions.'], answer: 1, explanation: 'The second paragraph states this directly.' },
+                { prompt: 'What is one additional cooling effect of trees?', options: ['They reflect sound waves.', 'They release water vapor through their leaves.', 'They create underground tunnels.', 'They store electricity in roots.'], answer: 1, explanation: 'The passage describes release of water vapor as another cooling influence.' },
+                { prompt: 'The word “tolerate” in paragraph 3 is closest in meaning to:', options: ['withstand', 'measure', 'predict', 'replace'], answer: 0, explanation: 'Here tolerate means endure or withstand conditions such as drought or pollution.' },
+                { prompt: 'Why is tree planting not a complete solution by itself?', options: ['Trees always raise city temperatures.', 'All tree species grow equally well anywhere.', 'Species differ and planners must consider maintenance and local conditions.', 'Residents usually dislike trees near homes.'], answer: 2, explanation: 'Paragraph 3 explains that species differences and long-term planning matter.' },
+                { prompt: 'What must city planners consider when planting trees?', options: ['Only the color of the leaves', 'Long-term maintenance, climate, and local needs', 'Only whether trees grow quickly', 'The number of nearby parking spaces only'], answer: 1, explanation: 'These factors are listed in paragraph 3.' },
+                { prompt: 'What can be inferred about neighborhoods with more tree cover?', options: ['They may be more comfortable during hot weather.', 'They are always less crowded.', 'They receive more rainfall every day.', 'They have no paved surfaces.'], answer: 0, explanation: 'The second paragraph says such neighborhoods often feel more comfortable in hot weather.' },
+                { prompt: 'Why are urban trees increasingly valued?', options: ['Only because they are decorative', 'Because they are easy to maintain', 'Because they combine beauty with practical environmental benefits', 'Because they replace the need for buildings'], answer: 2, explanation: 'The final sentence emphasizes both beauty and practical role.' },
+                { prompt: 'Which statement best summarizes paragraph 3?', options: ['Tree planting is impossible in cities.', 'Choosing and maintaining urban trees requires careful planning.', 'Residents care only about tree appearance.', 'Drought affects all tree species in exactly the same way.'], answer: 1, explanation: 'Paragraph 3 focuses on the planning challenges and considerations involved.' }
+              ]
+            }
+          ]
+        }
+      ]
+    };
 
-    const taskCards = document.getElementById('taskCards');
+    const modeSelect = document.getElementById('modeSelect');
+    const setSelect = document.getElementById('setSelect');
+    const setTitle = document.getElementById('setTitle');
+    const setIntro = document.getElementById('setIntro');
     const passageArea = document.getElementById('passageArea');
     const questionArea = document.getElementById('questionArea');
-    const setTitle = document.getElementById('setTitle');
-    const setSubtitle = document.getElementById('setSubtitle');
-    const difficultyPill = document.getElementById('difficultyPill');
-    const questionCountPill = document.getElementById('questionCountPill');
     const resultBox = document.getElementById('resultBox');
     const submitBtn = document.getElementById('submitBtn');
-    const resetBtn = document.getElementById('resetBtn');
+    const resetSetBtn = document.getElementById('resetSetBtn');
+    const pillType = document.getElementById('pillType');
+    const pillDifficulty = document.getElementById('pillDifficulty');
+    const pillCount = document.getElementById('pillCount');
+    const pillProgress = document.getElementById('pillProgress');
 
+    let currentMode = null;
     let currentSet = null;
     let selectedAnswers = [];
 
-    function renderTaskCards() {
-      taskCards.innerHTML = practiceSets.map(set => `
-        <article class="card">
-          <span class="card-badge">${set.badge}</span>
-          <h3>${set.label}</h3>
-          <p>${set.description}</p>
-          <button class="btn btn-primary" type="button" onclick="loadSet('${set.id}')">Start ${set.label}</button>
-        </article>
-      `).join('');
+    function getBestScoreKey(setId) {
+      return `toefl-reading-best-${setId}`;
     }
 
-    function loadSet(id) {
-      currentSet = practiceSets.find(set => set.id === id);
+    function loadModeOptions() {
+      modeSelect.innerHTML = DATA.modes.map(mode => `<option value="${mode.id}">${mode.title}</option>`).join('');
+      currentMode = DATA.modes[0];
+      modeSelect.value = currentMode.id;
+      loadSetOptions();
+    }
+
+    function loadSetOptions() {
+      currentMode = DATA.modes.find(mode => mode.id === modeSelect.value);
+      setSelect.innerHTML = currentMode.sets.map(set => `<option value="${set.id}">${set.name}</option>`).join('');
+      currentSet = currentMode.sets[0];
+      setSelect.value = currentSet.id;
+      loadCurrentSet();
+    }
+
+    function loadCurrentSet() {
+      currentSet = currentMode.sets.find(set => set.id === setSelect.value);
       selectedAnswers = new Array(currentSet.questions.length).fill(null);
       resultBox.className = 'result-box';
       resultBox.innerHTML = '';
 
-      setTitle.textContent = currentSet.label;
-      setSubtitle.textContent = currentSet.subtitle;
-      difficultyPill.textContent = `Level: ${currentSet.level}`;
-      questionCountPill.textContent = `Questions: ${currentSet.questions.length}`;
+      setTitle.textContent = currentSet.name;
+      setIntro.textContent = currentSet.intro;
       passageArea.innerHTML = currentSet.passage;
+      pillType.textContent = `Type: ${currentMode.title}`;
+      pillDifficulty.textContent = `Level: ${currentSet.difficulty}`;
+      pillCount.textContent = `Questions: ${currentSet.questions.length}`;
 
-      renderQuestions();
-      document.getElementById('practice-area').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const best = localStorage.getItem(getBestScoreKey(currentSet.id));
+      pillProgress.textContent = `Saved best: ${best ? `${best}/${currentSet.questions.length}` : '—'}`;
+
+      renderQuestions(false);
     }
 
-    function renderQuestions(showResults = false) {
-      if (!currentSet) {
-        questionArea.innerHTML = '<p class="muted">Questions will appear here.</p>';
-        return;
-      }
-
+    function renderQuestions(showResults) {
       questionArea.innerHTML = currentSet.questions.map((question, qIndex) => {
         const optionsHtml = question.options.map((option, oIndex) => {
           let className = 'option';
           if (selectedAnswers[qIndex] === oIndex) className += ' selected';
-
           if (showResults) {
             if (oIndex === question.answer) className += ' correct';
             if (selectedAnswers[qIndex] === oIndex && oIndex !== question.answer) className += ' wrong';
           }
-
-          return `
-            <button
-              type="button"
-              class="${className}"
-              onclick="chooseAnswer(${qIndex}, ${oIndex})"
-            >${String.fromCharCode(65 + oIndex)}. ${option}</button>
-          `;
+          return `<button type="button" class="${className}" onclick="chooseAnswer(${qIndex}, ${oIndex})">${String.fromCharCode(65 + oIndex)}. ${option}</button>`;
         }).join('');
-
-        const explanation = showResults
-          ? `<div class="explanation"><strong>Explanation:</strong> ${question.explanation}</div>`
-          : '';
 
         return `
           <div class="question-block">
             <div class="question-title">${qIndex + 1}. ${question.prompt}</div>
             <div class="options">${optionsHtml}</div>
-            ${explanation}
+            ${showResults ? `<div class="explanation"><strong>Explanation:</strong> ${question.explanation}</div>` : ''}
           </div>
         `;
       }).join('');
     }
 
     function chooseAnswer(questionIndex, optionIndex) {
-      if (!currentSet) return;
       selectedAnswers[questionIndex] = optionIndex;
       renderQuestions(resultBox.classList.contains('show'));
     }
 
     function resetAnswers() {
-      if (!currentSet) return;
       selectedAnswers = new Array(currentSet.questions.length).fill(null);
       resultBox.className = 'result-box';
       resultBox.innerHTML = '';
       renderQuestions(false);
     }
 
-    function checkAnswers() {
-      if (!currentSet) return;
-
+    function submitAnswers() {
       const unanswered = selectedAnswers.some(answer => answer === null);
       if (unanswered) {
         resultBox.className = 'result-box show';
-        resultBox.innerHTML = '<p class="muted">Please answer all questions before checking your results.</p>';
+        resultBox.innerHTML = '<p class="muted">Please answer all questions before checking your set.</p>';
         return;
       }
 
       let score = 0;
-      currentSet.questions.forEach((question, index) => {
-        if (selectedAnswers[index] === question.answer) score += 1;
+      currentSet.questions.forEach((question, idx) => {
+        if (selectedAnswers[idx] === question.answer) score += 1;
       });
 
+      const bestKey = getBestScoreKey(currentSet.id);
+      const previousBest = Number(localStorage.getItem(bestKey) || 0);
+      if (score > previousBest) localStorage.setItem(bestKey, String(score));
+      pillProgress.textContent = `Saved best: ${Math.max(score, previousBest)}/${currentSet.questions.length}`;
+
       const percent = Math.round((score / currentSet.questions.length) * 100);
+      let message = 'Good start. Review the explanations and look closely at how the correct choice is supported by the text.';
+      if (percent >= 90) message = 'Excellent work. Your choices match the passage very closely.';
+      else if (percent >= 70) message = 'Strong result. Focus on the few questions where the passage wording or logic was subtle.';
+
       resultBox.className = 'result-box show';
       resultBox.innerHTML = `
         <div class="score">${score}/${currentSet.questions.length}</div>
         <p class="muted">You answered ${percent}% correctly.</p>
+        <div class="explanation"><strong>Tip for this set:</strong> ${message}</div>
       `;
-
       renderQuestions(true);
+      document.getElementById('practice').scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
-    submitBtn.addEventListener('click', checkAnswers);
-    resetBtn.addEventListener('click', resetAnswers);
+    modeSelect.addEventListener('change', loadSetOptions);
+    setSelect.addEventListener('change', loadCurrentSet);
+    submitBtn.addEventListener('click', submitAnswers);
+    resetSetBtn.addEventListener('click', resetAnswers);
 
-    renderTaskCards();
-    window.loadSet = loadSet;
     window.chooseAnswer = chooseAnswer;
+    loadModeOptions();
   </script>
 </body>
 </html>
