@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TOEFL Reading Practice</title>
+  <style>
+    :root {
+      --bg: #f6f7fb;
+      --surface: #ffffff;
+      --surface-2: #f1f4fb;
+      --text: #182033;
+      --muted: #5f6b85;
+      --border: #dde3f0;
+      --primary: #2547d0;
+      --primary-soft: #e9eeff;
+      --success: #0f9f6f;
+      --danger: #d14343;
+      --shadow: 0 12px 32px rgba(24, 32, 51, 0.08);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #f9fbff 0%, var(--bg) 100%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+
+    .container {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(10px);
+      background: rgba(249, 251, 255, 0.88);
+      border-bottom: 1px solid rgba(221, 227, 240, 0.8);
+    }
+
+    .header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 72px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--primary), #5a73ef);
+      color: white;
+      display: grid;
+      place-items: center;
+      box-shadow: var(--shadow);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .nav a:hover { color: var(--text); }
+
+    .hero {
+      padding: 56px 0 28px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .hero-panel, .card, .practice-shell {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-panel {
+      padding: 32px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    h1, h2, h3, p { margin: 0; }
+    h1 {
+      margin-top: 18px;
+      font-size: clamp(2.2rem, 4vw, 4rem);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+    }
+
+    .lead {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 1.07rem;
+      line-height: 1.65;
+      max-width: 60ch;
+    }
+
+    .hero-actions {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px solid transparent;
+      border-radius: 14px;
+      padding: 13px 18px;
+      cursor: pointer;
+      transition: 160ms ease;
+      font-weight: 700;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover { transform: translateY(-1px); }
+    .btn-secondary {
+      background: var(--surface);
+      color: var(--text);
+      border-color: var(--border);
+    }
+
+    .hero-side {
+      padding: 28px;
+      display: grid;
+      gap: 16px;
+      align-content: start;
+    }
+
+    .metric {
+      padding: 18px;
+      border-radius: 18px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+    }
+
+    .metric small {
+      color: var(--muted);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .metric strong {
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section {
+      padding: 28px 0;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .section-copy {
+      color: var(--muted);
+      max-width: 65ch;
+      line-height: 1.65;
+      margin-top: 8px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      padding: 22px;
+    }
+
+    .card-badge {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--surface-2);
+      color: var(--muted);
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--muted);
+      line-height: 1.65;
+      min-height: 100px;
+    }
+
+    .card .btn {
+      margin-top: 18px;
+      width: 100%;
+    }
+
+    .practice-shell {
+      padding: 24px;
+      margin: 18px 0 56px;
+    }
+
+    .practice-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .pill-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .pill {
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: var(--surface-2);
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .practice-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+    }
+
+    .panel {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: #fff;
+      padding: 20px;
+    }
+
+    .panel h3 { margin-bottom: 12px; }
+
+    .passage {
+      color: #27324c;
+      line-height: 1.9;
+      font-size: 1.02rem;
+    }
+
+    .blank {
+      display: inline-block;
+      min-width: 88px;
+      padding: 2px 8px;
+      border-bottom: 2px solid var(--primary);
+      color: var(--primary);
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .question-block + .question-block {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+
+    .question-title {
+      font-weight: 800;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    .options {
+      display: grid;
+      gap: 10px;
+    }
+
+    .option {
+      width: 100%;
+      text-align: left;
+      padding: 14px 14px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: #fff;
+      cursor: pointer;
+      color: var(--text);
+    }
+
+    .option:hover { border-color: #c3cde7; }
+    .option.selected {
+      border-color: var(--primary);
+      background: var(--primary-soft);
+    }
+    .option.correct {
+      border-color: rgba(15, 159, 111, 0.4);
+      background: rgba(15, 159, 111, 0.08);
+    }
+    .option.wrong {
+      border-color: rgba(209, 67, 67, 0.35);
+      background: rgba(209, 67, 67, 0.07);
+    }
+
+    .footer-actions {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .result-box {
+      margin-top: 18px;
+      border-top: 1px solid var(--border);
+      padding-top: 18px;
+      display: none;
+    }
+
+    .result-box.show { display: block; }
+
+    .score {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 8px;
+    }
+
+    .muted { color: var(--muted); }
+
+    .explanation {
+      margin-top: 14px;
+      padding: 14px;
+      border-radius: 14px;
+      background: var(--surface-2);
+      color: #2a3550;
+      line-height: 1.7;
+    }
+
+    .ad-box {
+      margin-top: 18px;
+      border: 1px dashed #c8d1ea;
+      background: linear-gradient(180deg, #fbfcff 0%, #f5f8ff 100%);
+      border-radius: 18px;
+      padding: 18px;
+      color: var(--muted);
+    }
+
+    .ad-box strong {
+      color: var(--text);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .site-footer {
+      padding: 24px 0 50px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .affiliate-link {
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    @media (max-width: 920px) {
+      .hero, .practice-grid, .grid {
+        grid-template-columns: 1fr;
+      }
+      .card p { min-height: auto; }
+    }
+
+    @media (max-width: 640px) {
+      .container { width: min(100% - 20px, 1120px); }
+      .hero-panel, .hero-side, .practice-shell, .card { padding: 18px; }
+      h1 { font-size: 2.3rem; }
+      .nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="#top" aria-label="TOEFL Reading home">
+        <span class="brand-mark">T</span>
+        <span>TOEFL Reading</span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#practice-types">Practice Types</a>
+        <a href="#practice-area">Start Practice</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="container hero">
+      <div class="hero-panel">
+        <span class="eyebrow">Free TOEFL Reading Practice</span>
+        <h1>Simple, familiar practice that helps you focus.</h1>
+        <p class="lead">
+          Practice three TOEFL-style reading task types with a clean, calm interface: complete words from context,
+          read short daily-life texts, and answer questions about short academic passages.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#practice-area">Start practicing</a>
+          <a class="btn btn-secondary" href="#practice-types">Explore task types</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel hero-side" aria-label="Highlights">
+        <div class="metric">
+          <small>Task types</small>
+          <strong>3 clear reading modes</strong>
+        </div>
+        <div class="metric">
+          <small>Experience</small>
+          <strong>Static, fast, GitHub Pages-friendly</strong>
+        </div>
+        <div class="metric">
+          <small>Monetization spots</small>
+          <strong>Ad block and resource recommendations</strong>
+        </div>
+      </aside>
+    </section>
+
+    <section class="container section" id="practice-types">
+      <div class="section-head">
+        <div>
+          <h2>Reading task types</h2>
+          <p class="section-copy">
+            Keep the structure simple. Each mode uses short, focused texts and asks only what the passage supports.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid" id="taskCards"></div>
+    </section>
+
+    <section class="container section" id="practice-area">
+      <div class="section-head">
+        <div>
+          <h2>Practice now</h2>
+          <p class="section-copy">
+            Choose a reading mode, answer the questions, and review clear explanations right away.
+          </p>
+        </div>
+      </div>
+
+      <div class="practice-shell">
+        <div class="practice-top">
+          <div>
+            <h3 id="setTitle">Choose a practice type</h3>
+            <p class="muted" id="setSubtitle">Start with one of the three reading modes below.</p>
+          </div>
+          <div class="pill-row">
+            <span class="pill" id="difficultyPill">Level: —</span>
+            <span class="pill" id="questionCountPill">Questions: —</span>
+          </div>
+        </div>
+
+        <div class="practice-grid">
+          <section class="panel">
+            <h3>Reading passage</h3>
+            <div class="passage" id="passageArea">Select a task type to load a passage.</div>
+          </section>
+
+          <section class="panel">
+            <h3>Questions</h3>
+            <div id="questionArea" class="muted">Questions will appear here.</div>
+            <div class="footer-actions">
+              <button class="btn btn-secondary" id="resetBtn" type="button">Reset answers</button>
+              <button class="btn btn-primary" id="submitBtn" type="button">Check answers</button>
+            </div>
+            <div class="result-box" id="resultBox"></div>
+          </section>
+        </div>
+
+        <div class="ad-box" aria-label="Sample ad space">
+          <strong>Ad placement preview</strong>
+          This is where a clean, non-intrusive ad can go after a practice set or between sections.
+        </div>
+      </div>
+    </section>
+
+    <section class="container section" id="about">
+      <div class="section-head">
+        <div>
+          <h2>Resources</h2>
+          <p class="section-copy">
+            Keep affiliate links outside the test flow. Use them here in a study resources area or later on blog pages.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="card-badge">Affiliate section placeholder</span>
+        <h3>Recommended TOEFL reading books</h3>
+        <p>
+          Example only: add a short description, a disclosure, and then your Amazon affiliate link to a helpful prep book.
+        </p>
+        <a class="affiliate-link" href="#" aria-disabled="true">Sample affiliate link placement</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        Built as a static MVP for GitHub Pages. Add your own privacy policy, affiliate disclosure, and more practice sets before launch.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const practiceSets = [
+      {
+        id: 'complete-words',
+        label: 'Complete the Words',
+        badge: 'Vocabulary + Context',
+        level: 'Easy–Medium',
+        description: 'Complete partially missing words in a short text by using context clues and meaning.',
+        subtitle: 'Complete the missing words using context.',
+        passage: `Mina had only ten minutes before class started, so she stopped at the campus cafe for a quick snack. The line looked long, but it moved quickly because the staff worked very <span class="blank">efficiently</span>. She bought a sandwich and a cup of tea, then checked the time on her phone. She was relieved to see that she could still arrive <span class="blank">punctually</span>. As she left, she noticed a sign saying that reusable cups were <span class="blank">encouraged</span> in order to reduce waste.`,
+        questions: [
+          {
+            prompt: 'Which word best completes the first blank?',
+            options: ['efficiently', 'rarely', 'silently', 'politely'],
+            answer: 0,
+            explanation: 'The staff helped the line move quickly, so “efficiently” best matches the context.'
+          },
+          {
+            prompt: 'Which word best completes the second blank?',
+            options: ['suddenly', 'punctually', 'carelessly', 'briefly'],
+            answer: 1,
+            explanation: 'She was checking whether she would arrive on time. “Punctually” means at the correct time.'
+          },
+          {
+            prompt: 'Which word best completes the third blank?',
+            options: ['encouraged', 'forbidden', 'ignored', 'hidden'],
+            answer: 0,
+            explanation: 'The sign supports using reusable cups to reduce waste, so it is encouraging that behavior.'
+          }
+        ]
+      },
+      {
+        id: 'daily-life',
+        label: 'Read in Daily Life',
+        badge: 'Main Idea + Detail',
+        level: 'Medium',
+        description: 'Read short practical texts such as notices and messages, then answer main-idea and detail questions.',
+        subtitle: 'Read an everyday notice and answer the questions.',
+        passage: `Library Notice: On Friday, the second floor study area will close at 4:00 p.m. for maintenance. Students may continue to use the first floor until the library closes at 9:00 p.m. Group study rooms must still be reserved online in advance. Staff recommend arriving early in the evening because seats may be limited.`,
+        questions: [
+          {
+            prompt: 'What is the main purpose of this notice?',
+            options: [
+              'To explain how to apply for a library job',
+              'To announce a temporary change in library space availability',
+              'To advertise new books on the second floor',
+              'To warn students that the library will close permanently'
+            ],
+            answer: 1,
+            explanation: 'The notice explains that the second floor will close early and tells students what options remain available.'
+          },
+          {
+            prompt: 'What should students do if they want a group study room?',
+            options: [
+              'Ask a staff member in person',
+              'Wait until after 4:00 p.m.',
+              'Reserve it online before arriving',
+              'Sit on the first floor'
+            ],
+            answer: 2,
+            explanation: 'The text says group study rooms must still be reserved online in advance.'
+          },
+          {
+            prompt: 'Why are students advised to arrive early in the evening?',
+            options: [
+              'Maintenance begins at night',
+              'Seats may be limited',
+              'The first floor opens late',
+              'Reservations are canceled'
+            ],
+            answer: 1,
+            explanation: 'The notice directly states that staff recommend arriving early because seats may be limited.'
+          }
+        ]
+      },
+      {
+        id: 'academic-passage',
+        label: 'Read an Academic Passage',
+        badge: 'Academic Reading',
+        level: 'Medium–Hard',
+        description: 'Read a short academic-style passage and identify main ideas, supporting details, and vocabulary in context.',
+        subtitle: 'Read a short academic passage and answer the questions.',
+        passage: `In many cities, rooftop gardens are becoming a practical way to improve urban environments. Researchers note that rooftops, which are often unused, can be transformed into spaces that support plant life, reduce heat, and absorb rainwater. These gardens may also benefit residents by creating quieter and more pleasant surroundings. Although rooftop gardens require careful planning, city planners increasingly view them as a useful response to limited green space in dense urban areas.`,
+        questions: [
+          {
+            prompt: 'What is the main idea of the passage?',
+            options: [
+              'City rooftops are too weak to support plants',
+              'Rooftop gardens can provide several benefits in cities',
+              'Rainwater is the main cause of urban damage',
+              'Residents prefer parks to rooftop spaces'
+            ],
+            answer: 1,
+            explanation: 'The passage presents rooftop gardens as a practical urban solution with multiple environmental and social benefits.'
+          },
+          {
+            prompt: 'According to the passage, why are rooftop gardens useful in dense urban areas?',
+            options: [
+              'They replace all public parks',
+              'They require no planning',
+              'They help address the lack of green space',
+              'They make buildings taller'
+            ],
+            answer: 2,
+            explanation: 'The final sentence says planners view rooftop gardens as a response to limited green space.'
+          },
+          {
+            prompt: 'The word “dense” in the passage is closest in meaning to:',
+            options: ['crowded', 'quiet', 'historic', 'temporary'],
+            answer: 0,
+            explanation: 'In this context, “dense urban areas” means areas with many buildings and people close together.'
+          }
+        ]
+      }
+    ];
+
+    const taskCards = document.getElementById('taskCards');
+    const passageArea = document.getElementById('passageArea');
+    const questionArea = document.getElementById('questionArea');
+    const setTitle = document.getElementById('setTitle');
+    const setSubtitle = document.getElementById('setSubtitle');
+    const difficultyPill = document.getElementById('difficultyPill');
+    const questionCountPill = document.getElementById('questionCountPill');
+    const resultBox = document.getElementById('resultBox');
+    const submitBtn = document.getElementById('submitBtn');
+    const resetBtn = document.getElementById('resetBtn');
+
+    let currentSet = null;
+    let selectedAnswers = [];
+
+    function renderTaskCards() {
+      taskCards.innerHTML = practiceSets.map(set => `
+        <article class="card">
+          <span class="card-badge">${set.badge}</span>
+          <h3>${set.label}</h3>
+          <p>${set.description}</p>
+          <button class="btn btn-primary" type="button" onclick="loadSet('${set.id}')">Start ${set.label}</button>
+        </article>
+      `).join('');
+    }
+
+    function loadSet(id) {
+      currentSet = practiceSets.find(set => set.id === id);
+      selectedAnswers = new Array(currentSet.questions.length).fill(null);
+      resultBox.className = 'result-box';
+      resultBox.innerHTML = '';
+
+      setTitle.textContent = currentSet.label;
+      setSubtitle.textContent = currentSet.subtitle;
+      difficultyPill.textContent = `Level: ${currentSet.level}`;
+      questionCountPill.textContent = `Questions: ${currentSet.questions.length}`;
+      passageArea.innerHTML = currentSet.passage;
+
+      renderQuestions();
+      document.getElementById('practice-area').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function renderQuestions(showResults = false) {
+      if (!currentSet) {
+        questionArea.innerHTML = '<p class="muted">Questions will appear here.</p>';
+        return;
+      }
+
+      questionArea.innerHTML = currentSet.questions.map((question, qIndex) => {
+        const optionsHtml = question.options.map((option, oIndex) => {
+          let className = 'option';
+          if (selectedAnswers[qIndex] === oIndex) className += ' selected';
+
+          if (showResults) {
+            if (oIndex === question.answer) className += ' correct';
+            if (selectedAnswers[qIndex] === oIndex && oIndex !== question.answer) className += ' wrong';
+          }
+
+          return `
+            <button
+              type="button"
+              class="${className}"
+              onclick="chooseAnswer(${qIndex}, ${oIndex})"
+            >${String.fromCharCode(65 + oIndex)}. ${option}</button>
+          `;
+        }).join('');
+
+        const explanation = showResults
+          ? `<div class="explanation"><strong>Explanation:</strong> ${question.explanation}</div>`
+          : '';
+
+        return `
+          <div class="question-block">
+            <div class="question-title">${qIndex + 1}. ${question.prompt}</div>
+            <div class="options">${optionsHtml}</div>
+            ${explanation}
+          </div>
+        `;
+      }).join('');
+    }
+
+    function chooseAnswer(questionIndex, optionIndex) {
+      if (!currentSet) return;
+      selectedAnswers[questionIndex] = optionIndex;
+      renderQuestions(resultBox.classList.contains('show'));
+    }
+
+    function resetAnswers() {
+      if (!currentSet) return;
+      selectedAnswers = new Array(currentSet.questions.length).fill(null);
+      resultBox.className = 'result-box';
+      resultBox.innerHTML = '';
+      renderQuestions(false);
+    }
+
+    function checkAnswers() {
+      if (!currentSet) return;
+
+      const unanswered = selectedAnswers.some(answer => answer === null);
+      if (unanswered) {
+        resultBox.className = 'result-box show';
+        resultBox.innerHTML = '<p class="muted">Please answer all questions before checking your results.</p>';
+        return;
+      }
+
+      let score = 0;
+      currentSet.questions.forEach((question, index) => {
+        if (selectedAnswers[index] === question.answer) score += 1;
+      });
+
+      const percent = Math.round((score / currentSet.questions.length) * 100);
+      resultBox.className = 'result-box show';
+      resultBox.innerHTML = `
+        <div class="score">${score}/${currentSet.questions.length}</div>
+        <p class="muted">You answered ${percent}% correctly.</p>
+      `;
+
+      renderQuestions(true);
+    }
+
+    submitBtn.addEventListener('click', checkAnswers);
+    resetBtn.addEventListener('click', resetAnswers);
+
+    renderTaskCards();
+    window.loadSet = loadSet;
+    window.chooseAnswer = chooseAnswer;
+  </script>
+</body>
+</html>
