@@ -1,0 +1,50 @@
+id: cw-1
+mode: complete-words
+name: Campus Cafe and Class Schedule
+difficulty: Easy-Medium
+intro: Choose the best option for each blank. Focus on meaning, collocation, and the logic of the paragraph.
+passage: |
+  <p>Mira left her dormitory a little earlier than usual because she wanted to review her notes before her biology class. On the way, she stopped at the campus cafe, where the staff worked so <span class="blank">_____</span> that the long line moved in only a few minutes. She ordered tea and fruit, then noticed a message on her phone reminding her that the lecture would begin at 8:30 <span class="blank">_____</span>. She checked her watch and felt relieved, because she still had enough time to arrive without rushing.</p>
+  <p>As she walked across the courtyard, she saw several students carrying reusable bottles. A poster near the entrance explained that the university was trying to reduce waste by <span class="blank">_____</span> students to bring their own containers. Mira liked the idea because it seemed both practical and environmentally <span class="blank">_____</span>. When she entered the building, she found a quiet seat and opened her notebook. The room was still nearly empty, which gave her a chance to read the summary of yesterday&#39;s lesson more <span class="blank">_____</span>.</p>
+  <p>By the time the professor arrived, Mira felt calm and prepared. She had used a short amount of time in a very <span class="blank">_____</span> way. Instead of arriving late and stressed, she entered the class ready to listen and ask questions. That small routine, she realized, could make her mornings much more <span class="blank">_____</span> throughout the semester.</p>
+questions:
+  - prompt: "Blank 1"
+    options: [efficiently, rarely, casually, secretly]
+    answer: 0
+    explanation: The line moved quickly, so the staff worked efficiently.
+  - prompt: "Blank 2"
+    options: [exactly, carelessly, silently, otherwise]
+    answer: 0
+    explanation: A class start time is expressed exactly.
+  - prompt: "Blank 3"
+    options: [warning, encouraging, forcing, preventing]
+    answer: 1
+    explanation: The poster promoted reusable containers, so encouraging fits best.
+  - prompt: "Blank 4"
+    options: [distant, harmful, friendly, ordinary]
+    answer: 2
+    explanation: Environmentally friendly is the natural collocation.
+  - prompt: "Blank 5"
+    options: [carelessly, thoroughly, nervously, accidentally]
+    answer: 1
+    explanation: She had quiet time to read the summary carefully and fully.
+  - prompt: "Blank 6"
+    options: [inefficient, wasteful, purposeful, temporary]
+    answer: 2
+    explanation: She used her time in a planned and useful way.
+  - prompt: "Blank 7"
+    options: [predictable, stressful, successful, expensive]
+    answer: 2
+    explanation: The routine improved her mornings and helped her perform better.
+  - prompt: Which word is closest in meaning to "routine" as used in the final paragraph?
+    options: [habit, conflict, lecture, mistake]
+    answer: 0
+    explanation: Routine here means a regular habit or repeated pattern.
+  - prompt: Why did Mira feel relieved after checking her watch?
+    options: [The class had been canceled., She had enough time to arrive., The professor was late., The cafe was closing.]
+    answer: 1
+    explanation: The passage says she still had enough time to arrive without rushing.
+  - prompt: What is the best summary of the passage?
+    options: [Mira dislikes early classes but enjoys tea., "Mira's small morning habits help her feel prepared for class.", The university plans to remove all disposable cups., The biology class is difficult for first-year students.]
+    answer: 1
+    explanation: The passage focuses on how a calm and organized routine improved her preparation.
