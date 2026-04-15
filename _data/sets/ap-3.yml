@@ -1,0 +1,50 @@
+id: ap-3
+mode: academic-passage
+name: Urban Trees and City Climate
+difficulty: Medium-Hard
+intro: Read the passage and answer idea, detail, vocabulary, and inference questions.
+passage: |
+  <p>In many cities, summer temperatures are higher than those of nearby rural areas. This pattern, often called the urban heat island effect, results partly from the large amount of concrete, asphalt, and dark roofing materials in built environments. Such surfaces absorb and retain heat, especially during long sunny days.</p>
+  <p>Urban trees can help reduce this effect in several ways. First, their shade limits the amount of solar energy that reaches streets, sidewalks, and buildings. Second, trees release water vapor through their leaves, a process that can have a cooling influence on the surrounding air. For these reasons, neighborhoods with more tree cover often feel more comfortable during hot weather than areas with little vegetation.</p>
+  <p>However, planting trees is not a simple solution by itself. Different species vary in how well they tolerate drought, pollution, compacted soil, and limited rooting space. City planners must therefore consider long-term maintenance, local climate conditions, and the needs of nearby residents when choosing where and what to plant. Even with these challenges, urban trees are increasingly valued not only for their beauty, but also for their practical role in creating healthier and more livable cities.</p>
+questions:
+  - prompt: What is the main topic of the passage?
+    options: [Why rural areas need more roads, How urban trees can help reduce city heat and improve urban living, Why dark roofs are more expensive than light roofs, How cities can eliminate all summer heat]
+    answer: 1
+    explanation: The passage explains urban heat and then focuses on how trees help address it.
+  - prompt: What contributes to the urban heat island effect?
+    options: [Too many lakes, Large amounts of heat-absorbing built surfaces, Excessive tree shade, Low building density]
+    answer: 1
+    explanation: "Paragraph 1 attributes the effect partly to concrete, asphalt, and dark roofs."
+  - prompt: How does shade from trees help?
+    options: [It increases solar energy on buildings., It reduces the amount of solar energy reaching surfaces., It removes all pollution from the air., It prevents all drought conditions.]
+    answer: 1
+    explanation: The second paragraph states this directly.
+  - prompt: What is one additional cooling effect of trees?
+    options: [They reflect sound waves., They release water vapor through their leaves., They create underground tunnels., They store electricity in roots.]
+    answer: 1
+    explanation: The passage describes release of water vapor as another cooling influence.
+  - prompt: "The word \"tolerate\" in paragraph 3 is closest in meaning to:"
+    options: [withstand, measure, predict, replace]
+    answer: 0
+    explanation: "Here tolerate means endure or withstand conditions such as drought or pollution."
+  - prompt: Why is tree planting not a complete solution by itself?
+    options: [Trees always raise city temperatures., All tree species grow equally well anywhere., "Species differ and planners must consider maintenance and local conditions.", Residents usually dislike trees near homes.]
+    answer: 2
+    explanation: Paragraph 3 explains that species differences and long-term planning matter.
+  - prompt: What must city planners consider when planting trees?
+    options: [Only the color of the leaves, "Long-term maintenance, climate, and local needs", Only whether trees grow quickly, The number of nearby parking spaces only]
+    answer: 1
+    explanation: These factors are listed in paragraph 3.
+  - prompt: What can be inferred about neighborhoods with more tree cover?
+    options: [They may be more comfortable during hot weather., They are always less crowded., They receive more rainfall every day., They have no paved surfaces.]
+    answer: 0
+    explanation: The second paragraph says such neighborhoods often feel more comfortable in hot weather.
+  - prompt: Why are urban trees increasingly valued?
+    options: [Only because they are decorative, Because they are easy to maintain, Because they combine beauty with practical environmental benefits, Because they replace the need for buildings]
+    answer: 2
+    explanation: The final sentence emphasizes both beauty and practical role.
+  - prompt: Which statement best summarizes paragraph 3?
+    options: [Tree planting is impossible in cities., Choosing and maintaining urban trees requires careful planning., Residents care only about tree appearance., Drought affects all tree species in exactly the same way.]
+    answer: 1
+    explanation: Paragraph 3 focuses on the planning challenges and considerations involved.
