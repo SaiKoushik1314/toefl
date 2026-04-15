@@ -1,0 +1,51 @@
+id: dl-1
+mode: daily-life
+name: Library Renovation Notice
+difficulty: Medium
+intro: Read the notice and answer the questions about main ideas, details, and implied meaning.
+passage: |
+  <p><strong>University Library Notice</strong></p>
+  <p>From Monday, May 6, through Thursday, May 16, the west wing of the library will be closed for electrical repairs. During this period, students may still use the east wing, the first-floor computer lab, and the quiet study area on the third floor. Library staff expect the building to remain open during normal hours, but some noise may occur between 10:00 a.m. and 3:00 p.m.</p>
+  <p>Books usually kept in the west wing can be requested at the front desk. Most requested items will be delivered within 20 minutes. Students who need a group study room should continue to reserve one online before arriving. Because space may be limited in the evenings, staff recommend coming early whenever possible.</p>
+  <p>If repairs are completed ahead of schedule, the library will announce the change on the student portal and on signs near the main entrance.</p>
+questions:
+  - prompt: What is the main purpose of the notice?
+    options: [To advertise a new library service, To explain temporary changes during repairs, To warn students that the library is closing permanently, To ask students to volunteer at the library]
+    answer: 1
+    explanation: The notice explains what parts of the library are affected and what alternatives remain available.
+  - prompt: Which part of the library will be closed?
+    options: [The east wing, The first-floor computer lab, The west wing, The third-floor quiet area]
+    answer: 2
+    explanation: The first sentence states that the west wing will be closed.
+  - prompt: When is noise most likely to occur?
+    options: [Before 8:00 a.m., "Between 10:00 a.m. and 3:00 p.m.", After 8:00 p.m., Only on weekends]
+    answer: 1
+    explanation: The notice directly gives this time range.
+  - prompt: How can students get books that are normally in the west wing?
+    options: [By purchasing them online, By requesting them at the front desk, By visiting the quiet study area, By emailing the department chair]
+    answer: 1
+    explanation: The notice says those books can be requested at the front desk.
+  - prompt: How long will most requested items take to arrive?
+    options: [Within 20 minutes, About one hour, By the next day, Immediately]
+    answer: 0
+    explanation: The passage states that most requested items will be delivered within 20 minutes.
+  - prompt: What should students do if they want a group study room?
+    options: [Ask in person after arriving, Reserve it online in advance, Use the west wing, Wait for a portal announcement]
+    answer: 1
+    explanation: The notice says group study rooms should continue to be reserved online.
+  - prompt: Why are students advised to arrive early in the evening?
+    options: [The library closes early on weekdays., Space may be limited., Electrical work begins at night., The front desk is closed later in the day.]
+    answer: 1
+    explanation: The notice states that space may be limited in the evenings.
+  - prompt: Where will an early completion of repairs be announced?
+    options: [On the student portal and on signs near the main entrance, Only by email, Only at the front desk, On classroom doors across campus]
+    answer: 0
+    explanation: The final paragraph lists both locations.
+  - prompt: What can be inferred about the library during repairs?
+    options: [It will be closed every afternoon., Students will still be able to study there., The computer lab will be moved off campus., Books cannot be borrowed.]
+    answer: 1
+    explanation: Several spaces remain available, so students can still study in the building.
+  - prompt: Which statement best summarizes the notice?
+    options: [The library is expanding to include more study rooms., "The library will remain available, but students must adjust to a temporary closure and possible noise.", The library is reducing all online services., The west wing will reopen only next year.]
+    answer: 1
+    explanation: This answer includes the main change and the continued availability of alternatives.
