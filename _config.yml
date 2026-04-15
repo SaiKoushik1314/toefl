@@ -1,0 +1,7 @@
+title: TOEFL Reading Practice
+description: Free TOEFL-style reading practice — vocabulary, daily life, and academic passages.
+baseurl: "/toefl"
+url: "https://saikoushik1314.github.io"
+
+plugins:
+  - jekyll-seo-tag
