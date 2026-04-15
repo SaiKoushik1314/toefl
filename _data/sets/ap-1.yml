@@ -1,0 +1,50 @@
+id: ap-1
+mode: academic-passage
+name: Why Coral Reefs Matter
+difficulty: Medium-Hard
+intro: Read the passage and answer questions about the main idea, details, vocabulary, and inference.
+passage: |
+  <p>Coral reefs are among the most diverse ecosystems on Earth, even though they occupy only a small part of the ocean floor. Built over long periods by tiny coral animals, reefs provide shelter and feeding grounds for many species of fish, crustaceans, and other marine organisms. Because so many forms of life depend on them, reefs are often compared to underwater cities.</p>
+  <p>Reefs also benefit human communities. In some coastal regions, they reduce the force of incoming waves and help protect shorelines from erosion. They can support tourism and fishing industries as well. Yet coral reefs are highly sensitive to changes in water temperature and chemistry. When ocean conditions become stressful, corals may expel the algae that live inside their tissues. This process, known as bleaching, leaves the corals pale and weak. If stressful conditions continue for too long, the corals may die.</p>
+  <p>Scientists therefore study reefs not only because they are biologically rich, but also because they can reveal how marine ecosystems respond to environmental change. Protecting reefs often requires local action, such as reducing pollution, as well as broader efforts to address global climate patterns. Although reefs are resilient in some circumstances, recovery is usually slow, especially after repeated damage.</p>
+questions:
+  - prompt: What is the main idea of the passage?
+    options: [Coral reefs are colorful but not especially important., Coral reefs support marine life and human communities but are vulnerable to environmental change., Coral reefs exist only in deep cold water., Coral reefs are mainly valuable for tourism.]
+    answer: 1
+    explanation: The passage discusses both the importance of reefs and the threats they face.
+  - prompt: According to paragraph 1, why are reefs compared to underwater cities?
+    options: [They are located near large ports., Many kinds of living things depend on them., They are built from metal structures., They are easy for humans to map.]
+    answer: 1
+    explanation: The comparison reflects the many species that live in and around reefs.
+  - prompt: Which of the following is mentioned as a human benefit of reefs?
+    options: [They create drinking water., They speed up coastal erosion., They support tourism and fishing., They reduce air pollution.]
+    answer: 2
+    explanation: The passage explicitly names tourism and fishing.
+  - prompt: What happens during coral bleaching?
+    options: [Corals grow more quickly than normal., Corals move to cooler water., Corals expel algae and become pale., Corals form a harder skeleton.]
+    answer: 2
+    explanation: The second paragraph defines bleaching directly.
+  - prompt: "The word \"sensitive\" in paragraph 2 is closest in meaning to:"
+    options: [responsive, hidden, permanent, expensive]
+    answer: 0
+    explanation: Sensitive here means easily affected or responsive to changes.
+  - prompt: Why do scientists study reefs?
+    options: [Because reefs are easier to observe than forests., Because reefs can show how marine ecosystems react to change., Because reefs no longer support fish populations., Because reefs grow only in polluted water.]
+    answer: 1
+    explanation: The third paragraph explains that reefs reveal ecosystem responses to environmental change.
+  - prompt: What does the passage suggest about reef recovery?
+    options: [It is usually fast after repeated damage., It depends only on tourism rules., "It can be slow, especially when damage happens more than once.", It occurs automatically in all cases.]
+    answer: 2
+    explanation: The final sentence says recovery is usually slow, especially after repeated damage.
+  - prompt: Which action is presented as part of reef protection?
+    options: [Increasing shoreline construction, Reducing pollution, Removing all algae from reefs, Expanding wave force]
+    answer: 1
+    explanation: The passage explicitly mentions reducing pollution.
+  - prompt: What can be inferred about algae in reefs?
+    options: [They are unrelated to coral health., They help corals under normal conditions., They destroy coral tissues during bleaching., They replace fish in reef ecosystems.]
+    answer: 1
+    explanation: If losing algae weakens corals, then algae normally play a helpful role.
+  - prompt: Which statement best summarizes paragraph 2?
+    options: [Reefs are useful to humans but easily harmed by changing ocean conditions., Reefs exist only where tourism is strong., Bleaching always kills coral immediately., Wave force is the only threat to shorelines.]
+    answer: 0
+    explanation: Paragraph 2 combines human benefits with vulnerability to stress and bleaching.
