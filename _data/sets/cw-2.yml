@@ -1,0 +1,50 @@
+id: cw-2
+mode: complete-words
+name: Library Project Team
+difficulty: Medium
+intro: Use the sentence context to choose the best word or phrase.
+passage: |
+  <p>Daniel and his classmates met in the library to plan their history presentation. At first, the group had too many ideas and no clear direction, so the discussion felt somewhat <span class="blank">_____</span>. After a few minutes, however, one student suggested dividing the work into smaller tasks. This approach immediately made the project more <span class="blank">_____</span>, because each person knew what to research and when to report back.</p>
+  <p>Daniel was responsible for finding photographs and maps that would support the group&#39;s argument. He searched several online databases and selected sources that were both reliable and <span class="blank">_____</span> to the topic. Meanwhile, another student wrote a brief outline so that the final presentation would have a logical <span class="blank">_____</span>. By the end of the meeting, the team had created a shared calendar and agreed on a deadline for every step.</p>
+  <p>When they met again a week later, the difference was obvious. Instead of repeating the same ideas, the students built on one another&#39;s work in a much more <span class="blank">_____</span> way. Their preparation did not remove every problem, but it did make the final stages of the assignment far less <span class="blank">_____</span> than before. Daniel realized that good teamwork depends not only on talent, but also on planning and communication.</p>
+questions:
+  - prompt: "Blank 1"
+    options: [productive, confusing, formal, brief]
+    answer: 1
+    explanation: The group had too many ideas and no direction, so the discussion was confusing.
+  - prompt: "Blank 2"
+    options: [manageable, invisible, uncertain, delayed]
+    answer: 0
+    explanation: Breaking the project into tasks made it more manageable.
+  - prompt: "Blank 3"
+    options: [relevant, distant, fictional, traditional]
+    answer: 0
+    explanation: Sources should be reliable and relevant to the topic.
+  - prompt: "Blank 4"
+    options: [audience, structure, apology, location]
+    answer: 1
+    explanation: An outline helps a presentation have a logical structure.
+  - prompt: "Blank 5"
+    options: [competitive, cooperative, silent, unexpected]
+    answer: 1
+    explanation: "They built on one another's work, so cooperative is best."
+  - prompt: "Blank 6"
+    options: [stressful, creative, accurate, public]
+    answer: 0
+    explanation: Planning made the final stage less stressful.
+  - prompt: What changed the project most at the first meeting?
+    options: [The teacher joined the group., The group shortened the topic., The work was divided into smaller tasks., The students decided to meet online.]
+    answer: 2
+    explanation: The passage says that dividing the work gave the group direction.
+  - prompt: Why did Daniel choose photographs and maps?
+    options: [They were required by the library staff., "They would support the group's argument.", They were easier to find than books., They were the only available sources.]
+    answer: 1
+    explanation: The passage directly states that they supported the group's argument.
+  - prompt: The word "obvious" in the final paragraph is closest in meaning to
+    options: [uncertain, clear, minor, surprising]
+    answer: 1
+    explanation: Obvious means easy to see or clear.
+  - prompt: What lesson does Daniel learn?
+    options: [Large groups should avoid deadlines., Strong teamwork requires planning and communication., Maps are more useful than written notes., History presentations should always be short.]
+    answer: 1
+    explanation: The final sentence gives this main lesson explicitly.
