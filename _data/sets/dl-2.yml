@@ -1,0 +1,53 @@
+id: dl-2
+mode: daily-life
+name: Internship Coordinator Email
+difficulty: Medium
+intro: Read the email and answer questions about purpose, detail, and implication.
+passage: |
+  <p><strong>Subject:</strong> Reminder About Summer Internship Applications</p>
+  <p>Dear Students,</p>
+  <p>This is a reminder that applications for the summer internship program are due by Friday, March 14, at 5:00 p.m. To apply, please upload your resume, an unofficial transcript, and a short statement explaining why you are interested in the program. Students who submit incomplete applications will not be considered in the first review round.</p>
+  <p>If you would like feedback on your resume before submitting it, the Career Center will offer walk-in advising sessions on Tuesday and Wednesday from 2:00 p.m. to 4:30 p.m. No appointment is necessary. Because demand is usually high during the final week, students are encouraged to arrive early.</p>
+  <p>Selected applicants will be invited to short interviews between March 25 and March 28. Final decisions will be sent by email in early April.</p>
+  <p>Sincerely,<br/>Lena Ortiz<br/>Internship Coordinator</p>
+questions:
+  - prompt: Why was this email sent?
+    options: [To announce internship interview results, To remind students about application requirements and deadlines, To cancel the summer internship program, To ask students to work at the Career Center]
+    answer: 1
+    explanation: The email is clearly a reminder about how and when to apply.
+  - prompt: When are applications due?
+    options: ["Tuesday at 2:00 p.m.", "Wednesday at 4:30 p.m.", "Friday, March 14, at 5:00 p.m.", Early April]
+    answer: 2
+    explanation: The first paragraph gives the exact deadline.
+  - prompt: Which item is NOT listed as part of the application?
+    options: [Resume, Unofficial transcript, Statement of interest, Letter from a professor]
+    answer: 3
+    explanation: "A professor's letter is not mentioned."
+  - prompt: What happens to incomplete applications?
+    options: [They are automatically extended., They are reviewed last., They are not considered in the first review round., They are returned by mail.]
+    answer: 2
+    explanation: This is stated directly in the first paragraph.
+  - prompt: What service does the Career Center provide?
+    options: [Internship interviews, Resume feedback during walk-in hours, Application fee waivers, Transcript printing]
+    answer: 1
+    explanation: The email says students can get feedback on resumes during walk-in advising sessions.
+  - prompt: Do students need an appointment for advising?
+    options: [Yes, for all sessions, Yes, but only on Wednesday, No, appointments are not necessary, Only if they need transcript help]
+    answer: 2
+    explanation: The second paragraph explicitly says no appointment is necessary.
+  - prompt: Why are students encouraged to arrive early for advising?
+    options: [The office may close before 4:30 p.m., Demand is usually high during the final week, The coordinator prefers morning visits, Interviews are scheduled there]
+    answer: 1
+    explanation: The email states that demand is usually high during the final week.
+  - prompt: When will selected applicants be interviewed?
+    options: [Between March 25 and March 28, On March 14, In early April, Every Tuesday and Wednesday]
+    answer: 0
+    explanation: The third paragraph gives the interview window.
+  - prompt: When will final decisions be sent?
+    options: [The day after the interview, In early April, By the end of March, At the end of the advising sessions]
+    answer: 1
+    explanation: The final sentence provides this information.
+  - prompt: "Which statement best reflects the email's tone?"
+    options: [Angry and critical, Formal and helpful, Humorous and casual, Uncertain and apologetic]
+    answer: 1
+    explanation: The email is professional, clear, and supportive.
