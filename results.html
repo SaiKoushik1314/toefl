@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Results – TOEFL Prep Hub</title>
+  <title>Your Results – TOEFL Prep Hub</title>
+  <meta name="description" content="View your TOEFL 2026 practice test results. Score breakdown, section feedback, and tips to improve your TOEFL iBT score."/>
+  <meta name="robots" content="noindex"/>
+  <link rel="canonical" href="https://master-toefl.com/results.html"/>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9028393226994516" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css"/>
   <style>
     .results-wrap { max-width: 780px; margin: 0 auto; padding: 32px 0; }
@@ -31,9 +36,8 @@
     .band-seg { flex: 1; height: 10px; border-radius: 99px; background: var(--border); }
     .band-seg.filled { background: linear-gradient(90deg, var(--primary), var(--secondary)); }
     .disclaimer { font-size: 0.78rem; color: var(--text-light); text-align: center; margin-top: 24px; }
+    .ad-slot { display: block; text-align: center; margin: 24px 0; }
   </style>
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9028393226994516" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -49,11 +53,27 @@
 </nav>
 
 <div class="container">
-  <div class="ad-banner ad-banner-top" style="margin-top:16px;">📢 Advertisement – Google AdSense</div>
 
-  <div class="results-wrap" id="resultsWrap">
-    <!-- Populated by JS from sessionStorage -->
-  </div>
+  <!-- TOP AD -->
+  <ins class="adsbygoogle ad-slot"
+       style="display:block;width:100%;height:90px;margin-top:16px;"
+       data-ad-client="ca-pub-9028393226994516"
+       data-ad-slot="auto"
+       data-ad-format="horizontal"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  <div class="results-wrap" id="resultsWrap"></div>
+
+  <!-- BOTTOM AD -->
+  <ins class="adsbygoogle ad-slot"
+       style="display:block;width:100%;height:90px;margin-bottom:32px;"
+       data-ad-client="ca-pub-9028393226994516"
+       data-ad-slot="auto"
+       data-ad-format="horizontal"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
 </div>
 
 <footer>
@@ -61,120 +81,104 @@
 </footer>
 
 <script>
-  const wrap = document.getElementById('resultsWrap');
+const wrap = document.getElementById('resultsWrap');
+const raw = sessionStorage.getItem('toeflResults');
 
-  // Read results saved to sessionStorage by mock-test.js or reading/writing JS
-  const raw = sessionStorage.getItem('toeflResults');
+if (!raw) {
+  wrap.innerHTML = `
+    <div class="empty-state">
+      <div class="icon">📋</div>
+      <h2>No Results Yet</h2>
+      <p style="max-width:400px;margin:0 auto 24px;">Complete a practice section or full mock test to see your results here.</p>
+      <div class="action-row">
+        <a href="reading.html" class="btn btn-primary">📖 Practice Reading</a>
+        <a href="writing.html" class="btn btn-secondary">✍️ Practice Writing</a>
+        <a href="mock-test.html" class="btn btn-secondary">🎯 Mock Test</a>
+      </div>
+    </div>`;
+} else {
+  renderResults(JSON.parse(raw));
+}
 
-  if (!raw) {
-    wrap.innerHTML = `
-      <div class="empty-state">
-        <div class="icon">📋</div>
-        <h2>No Results Yet</h2>
-        <p style="max-width:400px;margin:0 auto 24px;">Complete a practice section or full mock test to see your results here.</p>
-        <div class="action-row">
-          <a href="reading.html" class="btn btn-primary">📖 Practice Reading</a>
-          <a href="writing.html" class="btn btn-secondary">✍️ Practice Writing</a>
-          <a href="mock-test.html" class="btn btn-secondary">🎯 Mock Test</a>
+function scoreColor(pct) { return pct >= 80 ? 'good' : pct >= 55 ? 'ok' : 'poor'; }
+function emoji(pct) { return pct >= 80 ? '🎉' : pct >= 60 ? '👍' : '📚'; }
+
+function feedbackForScore(pct, section) {
+  if (section === 'Reading') {
+    if (pct >= 80) return ['Strong vocabulary and comprehension skills.','You identified main ideas and details accurately.','Keep practicing Academic Reading for even higher scores.'];
+    if (pct >= 55) return ['Review vocabulary questions — they are the quickest wins.','For daily life passages, focus on why documents are written.','Practice skimming academic passages before reading questions.'];
+    return ['Spend 10 min/day on the Academic Word List.','Re-read each passage carefully before answering.','Watch out for distractors that use words from the text.'];
+  } else {
+    if (pct >= 80) return ['Your writing shows strong grammar and vocabulary range.','Good structure and coherence in your responses.','Try to add more complex sentence types to push your score higher.'];
+    if (pct >= 55) return ['Make sure to cover all required points in emails.','Aim for 130+ words in email tasks and 120+ in discussion tasks.','Use polite hedging phrases: "Would it be possible to…"'];
+    return ['Focus on sentence structure — mix simple and complex sentences.','Always include a specific example in your discussion responses.','Proofread carefully for grammar errors before submitting.'];
+  }
+}
+
+function renderResults(data) {
+  const sections = data.sections || [];
+  const totalC = sections.reduce((a, s) => a + (s.correct || 0), 0);
+  const totalT = sections.reduce((a, s) => a + (s.total || 0), 0);
+  const overallPct = totalT > 0 ? Math.round((totalC / totalT) * 100) : 0;
+  const date = data.timestamp ? new Date(data.timestamp).toLocaleDateString('en-US', { month:'long', day:'numeric', year:'numeric' }) : 'Today';
+
+  let html = `
+    <div class="overall-card">
+      <h1>${emoji(overallPct)} Practice Results</h1>
+      <p>${date}</p>
+      <div class="big-score">${overallPct}%</div>
+      <div class="big-score-label">Overall Score</div>
+      <div style="display:flex;gap:6px;justify-content:center;flex-wrap:wrap;">
+        <span class="badge">✅ ${totalC} correct</span>
+        <span class="badge">📝 ${totalT} total</span>
+      </div>
+    </div>`;
+
+  sections.forEach(sec => {
+    const pct = sec.total > 0 ? Math.round((sec.correct / sec.total) * 100) : 0;
+    const tips = feedbackForScore(pct, sec.name);
+    const icon = sec.name === 'Reading' ? '📖' : '✍️';
+    const filledSegs = Math.round(pct / 20);
+    html += `
+      <div class="section-result">
+        <h2>${icon} ${sec.name} Section
+          <span class="task-score ${scoreColor(pct)}" style="margin-left:auto;font-size:1.3rem;">${pct}%</span>
+        </h2>
+        <div class="band-bar">${[...Array(5)].map((_,i)=>`<div class="band-seg ${i<filledSegs?'filled':''}"></div>`).join('')}</div>
+        <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:14px;">${sec.correct} / ${sec.total} correct</p>
+        ${(sec.tasks||[]).map(t=>{
+          const tp=t.total>0?Math.round((t.correct/t.total)*100):null;
+          return `<div class="task-row"><span>${t.name}</span><span class="task-score ${tp!==null?scoreColor(tp):''}">${tp!==null?tp+'%':'Written ✓'}</span></div>`;
+        }).join('')}
+        <div class="feedback-summary">
+          <h3>💡 Feedback & Tips</h3>
+          <ul>${tips.map(t=>`<li>${t}</li>`).join('')}</ul>
         </div>
       </div>`;
-  } else {
-    const data = JSON.parse(raw);
-    renderResults(data);
-  }
+  });
 
-  function scoreColor(pct) {
-    if (pct >= 80) return 'good';
-    if (pct >= 55) return 'ok';
-    return 'poor';
-  }
+  // Mid-results ad
+  html += `
+    <ins class="adsbygoogle ad-slot"
+         style="display:block;width:100%;min-height:100px;"
+         data-ad-client="ca-pub-9028393226994516"
+         data-ad-slot="auto"
+         data-ad-format="fluid"
+         data-ad-layout="in-article"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script>`;
 
-  function emoji(pct) {
-    if (pct >= 80) return '🎉';
-    if (pct >= 60) return '👍';
-    return '📚';
-  }
+  html += `
+    <div class="action-row">
+      <a href="mock-test.html" class="btn btn-primary">🔄 Retake Mock Test</a>
+      <a href="reading.html" class="btn btn-secondary">📖 Practice Reading</a>
+      <a href="writing.html" class="btn btn-secondary">✍️ Practice Writing</a>
+      <a href="index.html" class="btn btn-secondary">🏠 Home</a>
+    </div>
+    <p class="disclaimer">⚠️ This score is for practice only and does not reflect your official TOEFL iBT score.</p>`;
 
-  function feedbackForScore(pct, section) {
-    if (section === 'Reading') {
-      if (pct >= 80) return ['Strong vocabulary and comprehension skills.', 'You identified main ideas and details accurately.', 'Keep practicing Academic Reading for even higher scores.'];
-      if (pct >= 55) return ['Review vocabulary questions — they are the quickest wins.', 'For daily life passages, focus on why documents are written.', 'Practice skimming academic passages before reading questions.'];
-      return ['Spend 10 min/day on the Academic Word List.', 'Re-read each passage carefully before answering.', 'Watch out for distractors that use words from the text.'];
-    } else {
-      if (pct >= 80) return ['Your writing shows strong grammar and vocabulary range.', 'Good structure and coherence in your responses.', 'Try to add more complex sentence types to push your score higher.'];
-      if (pct >= 55) return ['Make sure to cover all required points in emails.', 'Aim for 130+ words in email tasks and 120+ in discussion tasks.', 'Use polite hedging phrases: "Would it be possible to…"'];
-      return ['Focus on sentence structure — mix simple and complex sentences.', 'Always include a specific example in your discussion responses.', 'Proofread carefully for grammar errors before submitting.'];
-    }
-  }
-
-  function renderResults(data) {
-    // data = { sections: [{ name, correct, total, tasks: [{ name, correct, total }] }], timestamp }
-    const sections = data.sections || [];
-    const totalC = sections.reduce((a, s) => a + (s.correct || 0), 0);
-    const totalT = sections.reduce((a, s) => a + (s.total || 0), 0);
-    const overallPct = totalT > 0 ? Math.round((totalC / totalT) * 100) : 0;
-    const date = data.timestamp ? new Date(data.timestamp).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : 'Today';
-
-    let html = `
-      <div class="overall-card">
-        <h1>${emoji(overallPct)} Practice Results</h1>
-        <p>${date}</p>
-        <div class="big-score">${overallPct}%</div>
-        <div class="big-score-label">Overall Score</div>
-        <div style="display:flex;gap:6px;justify-content:center;flex-wrap:wrap;">
-          <span class="badge">✅ ${totalC} correct</span>
-          <span class="badge">📝 ${totalT} total questions</span>
-        </div>
-      </div>
-    `;
-
-    sections.forEach(sec => {
-      const pct = sec.total > 0 ? Math.round((sec.correct / sec.total) * 100) : 0;
-      const cls = scoreColor(pct);
-      const tips = feedbackForScore(pct, sec.name);
-      const icon = sec.name === 'Reading' ? '📖' : '✍️';
-      const filledSegs = Math.round(pct / 20); // 5 segments
-
-      html += `
-        <div class="section-result">
-          <h2>${icon} ${sec.name} Section
-            <span class="task-score ${cls}" style="margin-left:auto;font-size:1.3rem;">${pct}%</span>
-          </h2>
-          <div class="band-bar">
-            ${[...Array(5)].map((_, i) => `<div class="band-seg ${i < filledSegs ? 'filled' : ''}"></div>`).join('')}
-          </div>
-          <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:14px;">${sec.correct} / ${sec.total} questions correct</p>
-          ${(sec.tasks || []).map(t => {
-            const tpct = t.total > 0 ? Math.round((t.correct / t.total) * 100) : null;
-            return `
-              <div class="task-row">
-                <span>${t.name}</span>
-                <span class="task-score ${tpct !== null ? scoreColor(tpct) : ''}">
-                  ${tpct !== null ? tpct + '%' : 'Written ✓'}
-                </span>
-              </div>`;
-          }).join('')}
-          <div class="feedback-summary">
-            <h3>💡 Feedback & Tips</h3>
-            <ul>${tips.map(t => `<li>${t}</li>`).join('')}</ul>
-          </div>
-        </div>
-      `;
-    });
-
-    html += `
-      <div class="action-row">
-        <a href="mock-test.html" class="btn btn-primary">🔄 Retake Mock Test</a>
-        <a href="reading.html" class="btn btn-secondary">📖 Practice Reading</a>
-        <a href="writing.html" class="btn btn-secondary">✍️ Practice Writing</a>
-        <a href="index.html" class="btn btn-secondary">🏠 Home</a>
-      </div>
-      <p class="disclaimer">⚠️ This score is for practice only and does not reflect your official TOEFL iBT score.</p>
-    `;
-
-    wrap.innerHTML = html;
-  }
+  wrap.innerHTML = html;
+}
 </script>
-
 </body>
 </html>
