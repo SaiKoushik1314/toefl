@@ -1,36 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Writing Practice – TOEFL Prep Hub</title>
-  <link rel="stylesheet" href="css/style.css"/>
-  <style>
-    .task-selector { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 20px; margin: 32px 0; }
-    .task-btn { background: var(--surface); border: 2px solid var(--border); border-radius: var(--radius); padding: 28px 24px; cursor: pointer; text-align: left; transition: all 0.2s; }
-    .task-btn:hover { border-color: var(--secondary); transform: translateY(-3px); box-shadow: var(--shadow); }
-    .task-btn .t-icon { font-size: 2rem; margin-bottom: 12px; }
-    .task-btn h3 { margin-bottom: 6px; font-size: 1.05rem; }
-    .task-btn p { font-size: 0.83rem; color: var(--text-muted); }
-    .task-btn .meta { margin-top: 12px; font-size: 0.78rem; color: var(--secondary); font-weight: 600; }
-    #practiceArea { display: none; }
-    .discussion-context { background: #f8faff; border: 1px solid #ddd6fe; border-radius: var(--radius-sm); padding: 20px 24px; margin-bottom: 16px; }
-    .student-response { background: var(--surface2); border-radius: var(--radius-sm); padding: 16px; margin-bottom: 10px; border-left: 3px solid var(--primary-light); }
-    .student-response strong { color: var(--primary); }
-    .score-card { background: linear-gradient(135deg,#f0f9ff,#fdf4ff); border-radius: var(--radius-sm); padding: 20px; margin-bottom: 12px; }
-    .score-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
-    .score-row:last-child { border: none; }
-    .score-dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; margin-right: 6px; }
-    .score-dot.good { background: var(--success); }
-    .score-dot.ok { background: var(--warning); }
-    .score-dot.poor { background: var(--danger); }
-    .sample-toggle { background: none; border: 1px solid var(--primary); color: var(--primary); padding: 8px 18px; border-radius: var(--radius-sm); cursor: pointer; font-size: 0.87rem; margin-top: 12px; }
-    .sample-answer { display: none; background: #f0fdf4; border-left: 4px solid var(--success); border-radius: var(--radius-sm); padding: 16px 20px; margin-top: 12px; font-size: 0.93rem; line-height: 1.75; white-space: pre-line; }
-    .required-points { background: #fffbeb; border: 1px solid #fcd34d; border-radius: var(--radius-sm); padding: 16px; margin-bottom: 16px; }
-    .required-points h4 { color: var(--accent); margin-bottom: 8px; }
-    .required-points li { font-size: 0.9rem; margin-bottom: 4px; }
-  </style>
-</head>
+<!-- ============================================================
+  REPLACE the <head> block in reading.html with this:
+  ============================================================ -->
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>TOEFL Reading Practice 2026 – Complete the Words, Daily Life & Academic Reading</title>
+    <meta name="description" content="Free TOEFL 2026 Reading section practice. Practice Complete the Words, Reading in Daily Life, and Academic Reading with the new adaptive format. Tips, timed practice, and instant feedback."/>
+    <meta name="keywords" content="TOEFL reading practice 2026, complete the words TOEFL, reading in daily life TOEFL, TOEFL academic reading, TOEFL adaptive format, free TOEFL reading test"/>
+    <meta name="robots" content="index, follow"/>
+    <link rel="canonical" href="https://saikoushik1314.github.io/toefl/reading.html"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="TOEFL Reading Practice 2026 – New Format"/>
+    <meta property="og:description" content="Practice the new 2026 TOEFL Reading section for free. Complete the Words, Reading in Daily Life, and Academic Reading with instant feedback."/>
+    <meta property="og:url" content="https://saikoushik1314.github.io/toefl/reading.html"/>
+    <meta property="og:image" content="https://saikoushik1314.github.io/toefl/og-image.png"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="TOEFL Reading Practice 2026 – New Format"/>
+    <meta name="twitter:description" content="Practice the new 2026 TOEFL Reading section for free. Instant feedback included."/>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "TOEFL Reading Practice 2026",
+      "description": "Free practice for the new 2026 TOEFL iBT Reading section including Complete the Words, Reading in Daily Life, and Academic Reading tasks.",
+      "provider": { "@type": "Organization", "name": "TOEFL Prep Hub", "url": "https://saikoushik1314.github.io/toefl/" },
+      "url": "https://saikoushik1314.github.io/toefl/reading.html",
+      "isAccessibleForFree": true,
+      "courseMode": "online",
+      "educationalLevel": "Advanced",
+      "teaches": ["TOEFL Reading", "Academic Vocabulary", "Reading Comprehension", "Complete the Words", "Reading in Daily Life"]
+    }
+    </script>
+    <link rel="stylesheet" href="css/style.css"/>
+  </head>
+  
+  
+  <!-- ============================================================
+    REPLACE the <head> block in writing.html with this:
+    ============================================================ -->
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>TOEFL Writing Practice 2026 – Build a Sentence, Write an Email, Academic Discussion</title>
+    <meta name="description" content="Free TOEFL 2026 Writing section practice. Practice Build a Sentence (drag and drop), Write an Email, and Write for an Academic Discussion. Tips, sample answers, and instant feedback."/>
+    <meta name="keywords" content="TOEFL writing practice 2026, build a sentence TOEFL, write an email TOEFL, TOEFL academic discussion, TOEFL writing tips 2026, free TOEFL writing test"/>
+    <meta name="robots" content="index, follow"/>
+    <link rel="canonical" href="https://saikoushik1314.github.io/toefl/writing.html"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="TOEFL Writing Practice 2026 – New Format"/>
+    <meta property="og:description" content="Practice the new 2026 TOEFL Writing section for free. Build a Sentence, Write an Email, and Academic Discussion with sample answers."/>
+    <meta property="og:url" content="https://saikoushik1314.github.io/toefl/writing.html"/>
+    <meta property="og:image" content="https://saikoushik1314.github.io/toefl/og-image.png"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="TOEFL Writing Practice 2026 – New Format"/>
+    <meta name="twitter:description" content="Practice the new 2026 TOEFL Writing section for free. Sample answers included."/>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "TOEFL Writing Practice 2026",
+      "description": "Free practice for the new 2026 TOEFL iBT Writing section including Build a Sentence, Write an Email, and Write for an Academic Discussion.",
+      "provider": { "@type": "Organization", "name": "TOEFL Prep Hub", "url": "https://saikoushik1314.github.io/toefl/" },
+      "url": "https://saikoushik1314.github.io/toefl/writing.html",
+      "isAccessibleForFree": true,
+      "courseMode": "online",
+      "educationalLevel": "Advanced",
+      "teaches": ["TOEFL Writing", "Academic Discussion", "Email Writing", "Sentence Building", "Grammar"]
+    }
+    </script>
+    <link rel="stylesheet" href="css/style.css"/>
+  </head>
+  
+  
+  <!-- ============================================================
+    REPLACE the <head> block in mock-test.html with this:
+    ============================================================ -->
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Free TOEFL Mock Test 2026 – Full Timed Reading & Writing Practice</title>
+    <meta name="description" content="Take a free full-length TOEFL iBT 2026 mock test. Covers Reading and Writing sections under real timed conditions. Get a complete score report with feedback. No signup required."/>
+    <meta name="keywords" content="TOEFL mock test 2026, free TOEFL practice test, TOEFL full test 2026, TOEFL timed practice, TOEFL iBT simulation 2026"/>
+    <meta name="robots" content="index, follow"/>
+    <link rel="canonical" href="https://saikoushik1314.github.io/toefl/mock-test.html"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Free TOEFL Mock Test 2026 – Full Timed Practice"/>
+    <meta property="og:description" content="Take a free full-length TOEFL 2026 mock test covering Reading and Writing. Get a complete score report. No signup needed."/>
+    <meta property="og:url" content="https://saikoushik1314.github.io/toefl/mock-test.html"/>
+    <meta property="og:image" content="https://saikoushik1314.github.io/toefl/og-image.png"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Free TOEFL Mock Test 2026"/>
+    <meta name="twitter:description" content="Full timed TOEFL 2026 mock test — Reading and Writing sections with score report."/>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "TOEFL Full Mock Test 2026",
+      "description": "Free full-length timed TOEFL iBT 2026 mock test covering Reading and Writing sections with complete score report.",
+      "provider": { "@type": "Organization", "name": "TOEFL Prep Hub", "url": "https://saikoushik1314.github.io/toefl/" },
+      "url": "https://saikoushik1314.github.io/toefl/mock-test.html",
+      "isAccessibleForFree": true,
+      "courseMode": "online",
+      "educationalLevel": "Advanced",
+      "teaches": ["TOEFL Reading", "TOEFL Writing", "Test Strategy", "Time Management"]
+    }
+    </script>
+    <link rel="stylesheet" href="css/style.css"/>
+  </head>
 <body>
 
 <nav class="navbar">
