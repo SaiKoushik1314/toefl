@@ -1,0 +1,85 @@
+{
+    "taskType": "write-email",
+    "taskTitle": "Write an Email",
+    "timeSeconds": 420,
+    "instructions": "Read the scenario carefully. Write a professional, polite email that addresses all three required points. Aim for 130–140 words.",
+    "prompts": [
+      {
+        "id": "we-1",
+        "scenario": "You are a student in Professor Martinez's history class. You missed last Thursday's lecture because you were ill. You have since found out that the professor announced an important change to the final exam format during that class. Your classmate tried to explain it to you, but you are still not entirely clear on the details.",
+        "requiredPoints": [
+          "Explain why you were absent from the lecture.",
+          "Ask for clarification about the changes to the final exam.",
+          "Ask if there are any notes or materials from the missed class you can access."
+        ],
+        "recipient": "Professor Martinez",
+        "sender": "a student in the class",
+        "sampleResponse": "Dear Professor Martinez,\n\nI am writing to apologize for missing last Thursday's lecture. Unfortunately, I was quite unwell that day and was unable to attend class. I understand that you announced some important changes to the final exam format during the session.\n\nA classmate did her best to explain the changes to me, but I am not entirely sure I understood all the details correctly. Would it be possible for you to briefly outline the new format so that I can prepare appropriately? I want to make sure I am studying in the right direction.\n\nAdditionally, I was wondering whether there are any slides or notes from last week's class that I could review. I would not want to fall behind on the material.\n\nThank you very much for your understanding.\n\nSincerely,\nAlex Chen",
+        "scoringRubric": {
+          "completeness": "All three required points are addressed.",
+          "politeness": "Uses polite, formal language (would it be possible, I was wondering, thank you).",
+          "cohesion": "Ideas flow naturally between sentences and paragraphs.",
+          "grammar": "Correct use of tenses, subject-verb agreement, and sentence structure.",
+          "vocabulary": "Uses a variety of words; avoids excessive repetition.",
+          "length": "Approximately 130–140 words."
+        }
+      },
+      {
+        "id": "we-2",
+        "scenario": "You ordered a laptop bag from an online store two weeks ago. The tracking information says the package was delivered, but you never received it. When you checked with your building's mail room, they had no record of the delivery either. You need the bag urgently for an upcoming trip.",
+        "requiredPoints": [
+          "Explain the problem clearly, including what the tracking information says.",
+          "Mention that you checked with your building's mail room.",
+          "Ask what steps the company will take to resolve the issue and by when."
+        ],
+        "recipient": "Customer Service Team",
+        "sender": "a customer",
+        "sampleResponse": "Dear Customer Service Team,\n\nI am writing regarding an order I placed two weeks ago for a laptop bag. According to the tracking information on your website, the package was marked as delivered five days ago. However, I have not received it at my address.\n\nI have already spoken with the staff at my building's mail room, and they confirmed that no package was received on my behalf on that date. I am concerned that the item may have been delivered to the wrong address.\n\nAs I have an important trip coming up shortly, I urgently need this matter to be resolved. Could you please let me know what steps your team will take to locate or replace my order, and provide an estimated timeframe for the resolution?\n\nThank you for your prompt attention to this matter.\n\nKind regards,\nSamira Holt",
+        "scoringRubric": {
+          "completeness": "All three required points are addressed.",
+          "politeness": "Uses polite, formal language and hedging phrases.",
+          "cohesion": "Ideas are organized clearly across two paragraphs.",
+          "grammar": "Correct use of passive voice, conditionals, and formal sentence structures.",
+          "vocabulary": "Uses formal vocabulary; avoids informal or conversational words.",
+          "length": "Approximately 130–140 words."
+        }
+      },
+      {
+        "id": "we-3",
+        "scenario": "You are a member of a student environmental club at your university. The club's next monthly meeting was scheduled for this Friday, but you have just learned that the room you usually book has been double-booked by another department. You need to contact the events coordinator to resolve the situation.",
+        "requiredPoints": [
+          "Explain the room booking conflict and when you discovered it.",
+          "Ask if a different room of similar size is available this Friday.",
+          "Provide your contact information and ask them to respond as soon as possible."
+        ],
+        "recipient": "Events Coordinator",
+        "sender": "a student club member",
+        "sampleResponse": "Dear Events Coordinator,\n\nI am writing on behalf of the Student Environmental Club regarding a room booking issue. We have been regularly using Room 204 in the Collins Building for our monthly meetings, and our next meeting is scheduled for this Friday at 6 p.m. However, I was informed this morning that another department has also booked the same room on that date.\n\nI would be grateful if you could check whether another room of a similar size — able to accommodate approximately 25 people — is available this Friday evening. We would be flexible regarding the exact location within the building.\n\nAs our meeting is only a few days away, I would greatly appreciate a response as soon as possible. Please feel free to reach me at j.rivera@university.edu or at 555-0192.\n\nThank you for your assistance.\n\nBest regards,\nJordan Rivera",
+        "scoringRubric": {
+          "completeness": "All three required points are addressed.",
+          "politeness": "Uses polite hedging language; avoids demands.",
+          "cohesion": "Organized into two clear paragraphs with logical flow.",
+          "grammar": "Correct use of formal structures, passive voice, and conditionals.",
+          "vocabulary": "Formal and varied vocabulary; appropriate register.",
+          "length": "Approximately 130–140 words."
+        }
+      }
+    ],
+    "tips": [
+      "Include all three required points — missing even one will hurt your score.",
+      "Add extra details beyond the prompt to strengthen your email (use your imagination!).",
+      "Be very polite: use phrases like 'would it be possible to,' 'I was wondering if,' 'please let me know.'",
+      "Aim for 130–140 words — there is no penalty for writing more.",
+      "Split your email into two paragraphs for clarity.",
+      "Use compound and complex sentences to show grammar range.",
+      "Avoid repeating the same words — use synonyms.",
+      "Start with 'Dear [Name],' and end with a polite closing like 'Thank you' or 'Kind regards.'"
+    ],
+    "whatToExpect": [
+      "A social or campus scenario with three specific things you must include.",
+      "7 minutes to write your email.",
+      "Scored on: adherence to all points, politeness, cohesion, grammar, vocabulary, and punctuation.",
+      "Recommended length: 130–140 words.",
+      "Likely scored by AI on the real test."
+    ]
+  }

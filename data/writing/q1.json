@@ -1,0 +1,134 @@
+{
+    "taskType": "build-a-sentence",
+    "taskTitle": "Build a Sentence",
+    "timeSeconds": 420,
+    "instructions": "Drag and drop the words into the correct order to form a grammatically correct sentence. One word may be extra and should not be used.",
+    "questions": [
+      {
+        "id": "bas-1",
+        "context": "You just told your friend you missed your morning alarm.",
+        "prompt": "What did your friend suggest you do?",
+        "fixedStart": "She suggested that",
+        "fixedEnd": ".",
+        "words": ["I", "set", "two", "alarms", "should", "tomorrow", "missed"],
+        "extraWord": "missed",
+        "answer": ["I", "should", "set", "two", "alarms", "tomorrow"],
+        "fullSentence": "She suggested that I should set two alarms tomorrow."
+      },
+      {
+        "id": "bas-2",
+        "context": "You are talking about a new policy at your university.",
+        "prompt": "What does your classmate want to know?",
+        "fixedStart": "",
+        "fixedEnd": "?",
+        "words": ["when", "the", "new", "policy", "will", "take", "effect", "does"],
+        "extraWord": "does",
+        "answer": ["when", "will", "the", "new", "policy", "take", "effect"],
+        "fullSentence": "When will the new policy take effect?"
+      },
+      {
+        "id": "bas-3",
+        "context": "You are discussing a group project with a teammate.",
+        "prompt": "What did your professor remind the class about?",
+        "fixedStart": "The professor reminded us that",
+        "fixedEnd": ".",
+        "words": ["the", "report", "must", "be", "submitted", "by", "Friday", "midnight", "morning"],
+        "extraWord": "morning",
+        "answer": ["the", "report", "must", "be", "submitted", "by", "Friday", "midnight"],
+        "fullSentence": "The professor reminded us that the report must be submitted by Friday midnight."
+      },
+      {
+        "id": "bas-4",
+        "context": "You ran into a neighbor who is curious about your studies.",
+        "prompt": "What did your neighbor ask you?",
+        "fixedStart": "",
+        "fixedEnd": "?",
+        "words": ["what", "are", "you", "planning", "to", "major", "in", "study"],
+        "extraWord": "study",
+        "answer": ["what", "are", "you", "planning", "to", "major", "in"],
+        "fullSentence": "What are you planning to major in?"
+      },
+      {
+        "id": "bas-5",
+        "context": "A friend is asking about your weekend plans.",
+        "prompt": "What would you like to do if the weather is nice?",
+        "fixedStart": "I was thinking",
+        "fixedEnd": ".",
+        "words": ["we", "could", "go", "for", "a", "hike", "in", "the", "park", "swim"],
+        "extraWord": "swim",
+        "answer": ["we", "could", "go", "for", "a", "hike", "in", "the", "park"],
+        "fullSentence": "I was thinking we could go for a hike in the park."
+      },
+      {
+        "id": "bas-6",
+        "context": "Your roommate is complaining about noise in the library.",
+        "prompt": "What did the librarian announce?",
+        "fixedStart": "The librarian announced that",
+        "fixedEnd": ".",
+        "words": ["the", "quiet", "study", "zone", "would", "be", "enforced", "more", "strictly", "loudly"],
+        "extraWord": "loudly",
+        "answer": ["the", "quiet", "study", "zone", "would", "be", "enforced", "more", "strictly"],
+        "fullSentence": "The librarian announced that the quiet study zone would be enforced more strictly."
+      },
+      {
+        "id": "bas-7",
+        "context": "You are talking to your advisor about your schedule.",
+        "prompt": "What did your advisor ask you to consider?",
+        "fixedStart": "My advisor asked me to consider",
+        "fixedEnd": ".",
+        "words": ["taking", "fewer", "courses", "next", "semester", "harder", "to", "balance", "my", "workload"],
+        "extraWord": "harder",
+        "answer": ["taking", "fewer", "courses", "next", "semester", "to", "balance", "my", "workload"],
+        "fullSentence": "My advisor asked me to consider taking fewer courses next semester to balance my workload."
+      },
+      {
+        "id": "bas-8",
+        "context": "You are explaining why you were late to a meeting.",
+        "prompt": "What did you tell your manager?",
+        "fixedStart": "I apologized and explained that",
+        "fixedEnd": ".",
+        "words": ["the", "train", "had", "been", "delayed", "by", "over", "thirty", "minutes", "seconds"],
+        "extraWord": "seconds",
+        "answer": ["the", "train", "had", "been", "delayed", "by", "over", "thirty", "minutes"],
+        "fullSentence": "I apologized and explained that the train had been delayed by over thirty minutes."
+      },
+      {
+        "id": "bas-9",
+        "context": "You are discussing a scholarship with a friend.",
+        "prompt": "What does your friend want to know about the deadline?",
+        "fixedStart": "",
+        "fixedEnd": "?",
+        "words": ["do", "you", "know", "when", "the", "scholarship", "applications", "are", "due", "open"],
+        "extraWord": "open",
+        "answer": ["do", "you", "know", "when", "the", "scholarship", "applications", "are", "due"],
+        "fullSentence": "Do you know when the scholarship applications are due?"
+      },
+      {
+        "id": "bas-10",
+        "context": "You are helping a new student find their classroom.",
+        "prompt": "What did the new student ask you?",
+        "fixedStart": "",
+        "fixedEnd": "?",
+        "words": ["could", "you", "tell", "me", "where", "the", "science", "building", "is", "located", "found"],
+        "extraWord": "found",
+        "answer": ["could", "you", "tell", "me", "where", "the", "science", "building", "is", "located"],
+        "fullSentence": "Could you tell me where the science building is located?"
+      }
+    ],
+    "tips": [
+      "Read the context sentence and prompt carefully — it tells you the meaning of the answer.",
+      "Identify whether the answer is a question or a statement first.",
+      "Questions usually start with a question word (what, where, when, could, do, etc.).",
+      "Look for subject-verb agreement clues among the words.",
+      "One word in the bank will not be used — don't force it in.",
+      "You get one point only if the sentence is perfectly correct — double-check before moving on."
+    ],
+    "whatToExpect": [
+      "10 sentences total — some are questions, some are statements.",
+      "Each sentence response is about 5–8 words long.",
+      "You drag and drop words from a word bank into the correct order.",
+      "Sometimes one extra word is included that should not be used.",
+      "You have about 7 minutes for all 10 sentences.",
+      "You score 1 point per perfectly correct sentence, 0 for any mistake."
+    ]
+  }

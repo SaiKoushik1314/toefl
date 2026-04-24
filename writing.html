@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Writing Practice – TOEFL Prep Hub</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .task-selector { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 20px; margin: 32px 0; }
+    .task-btn { background: var(--surface); border: 2px solid var(--border); border-radius: var(--radius); padding: 28px 24px; cursor: pointer; text-align: left; transition: all 0.2s; }
+    .task-btn:hover { border-color: var(--secondary); transform: translateY(-3px); box-shadow: var(--shadow); }
+    .task-btn .t-icon { font-size: 2rem; margin-bottom: 12px; }
+    .task-btn h3 { margin-bottom: 6px; font-size: 1.05rem; }
+    .task-btn p { font-size: 0.83rem; color: var(--text-muted); }
+    .task-btn .meta { margin-top: 12px; font-size: 0.78rem; color: var(--secondary); font-weight: 600; }
+    #practiceArea { display: none; }
+    .discussion-context { background: #f8faff; border: 1px solid #ddd6fe; border-radius: var(--radius-sm); padding: 20px 24px; margin-bottom: 16px; }
+    .student-response { background: var(--surface2); border-radius: var(--radius-sm); padding: 16px; margin-bottom: 10px; border-left: 3px solid var(--primary-light); }
+    .student-response strong { color: var(--primary); }
+    .score-card { background: linear-gradient(135deg,#f0f9ff,#fdf4ff); border-radius: var(--radius-sm); padding: 20px; margin-bottom: 12px; }
+    .score-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+    .score-row:last-child { border: none; }
+    .score-dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; margin-right: 6px; }
+    .score-dot.good { background: var(--success); }
+    .score-dot.ok { background: var(--warning); }
+    .score-dot.poor { background: var(--danger); }
+    .sample-toggle { background: none; border: 1px solid var(--primary); color: var(--primary); padding: 8px 18px; border-radius: var(--radius-sm); cursor: pointer; font-size: 0.87rem; margin-top: 12px; }
+    .sample-answer { display: none; background: #f0fdf4; border-left: 4px solid var(--success); border-radius: var(--radius-sm); padding: 16px 20px; margin-top: 12px; font-size: 0.93rem; line-height: 1.75; white-space: pre-line; }
+    .required-points { background: #fffbeb; border: 1px solid #fcd34d; border-radius: var(--radius-sm); padding: 16px; margin-bottom: 16px; }
+    .required-points h4 { color: var(--accent); margin-bottom: 8px; }
+    .required-points li { font-size: 0.9rem; margin-bottom: 4px; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">📘 <span>TOEFL</span> Prep Hub</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="reading.html">Reading</a></li>
+    <li><a href="writing.html" class="active">Writing</a></li>
+    <li><a href="mock-test.html">Mock Test</a></li>
+  </ul>
+  <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+</nav>
+
+<!-- VIDEO AD OVERLAY -->
+<div class="video-ad-overlay" id="videoAd" style="display:none;">
+  <div class="video-ad-box">
+    <div class="video-ad-label">Advertisement</div>
+    <div class="video-ad-placeholder">
+      <div class="ad-icon">📺</div>
+      <p>Video Ad Placeholder<br><small>Your Google IMA ad will appear here</small></p>
+    </div>
+  </div>
+  <div class="video-ad-timer">⏱ Ad ends in <span id="adCountdown">30</span>s</div>
+  <button class="skip-btn" id="skipBtn" onclick="closeAd()">Skip Ad ›</button>
+</div>
+
+<!-- INTRO MODAL -->
+<div class="intro-overlay" id="introOverlay" style="display:none;">
+  <div class="intro-modal">
+    <div class="task-type-badge" id="modalBadge">Task Type</div>
+    <h2 id="modalTitle">Task Overview</h2>
+    <p id="modalDesc" style="color:var(--text-muted); margin-bottom:16px; font-size:0.93rem;"></p>
+    <div class="tip-box">
+      <h3>📋 What to Expect</h3>
+      <ul id="modalExpect"></ul>
+    </div>
+    <div class="tip-box" style="border-color: var(--accent);">
+      <h3 style="color:var(--accent);">🎯 Tips for Success</h3>
+      <ul id="modalTips"></ul>
+    </div>
+    <button class="btn btn-primary" style="margin-top:20px; width:100%;" onclick="startTask()">Start Practice →</button>
+  </div>
+</div>
+
+<div class="container page-wrap">
+  <div class="ad-banner ad-banner-top">📢 Advertisement – Google AdSense Banner</div>
+
+  <div class="two-col">
+    <div>
+      <!-- TASK SELECTION -->
+      <div id="taskSelection">
+        <div class="section-intro" style="background: linear-gradient(135deg, #0891b2, #06b6d4);">
+          <h1>✍️ Writing Section Practice</h1>
+          <p>The 2026 TOEFL Writing section has three distinct tasks. Practice each one with tips, examples, and instant scoring feedback.</p>
+          <div class="badges">
+            <span class="badge">⏱ 23 min total</span>
+            <span class="badge">📝 3 task types</span>
+            <span class="badge">🤖 Rule-based feedback</span>
+          </div>
+        </div>
+
+        <h2 style="margin-bottom:16px;">Choose a Writing Task</h2>
+        <div class="task-selector">
+          <button class="task-btn" onclick="loadTask('build-a-sentence')">
+            <div class="t-icon">🧩</div>
+            <h3>Build a Sentence</h3>
+            <p>Rearrange scrambled words into a grammatically correct sentence. One word may be extra.</p>
+            <div class="meta">~7 min · 10 sentences · Drag & Drop</div>
+          </button>
+          <button class="task-btn" onclick="loadTask('write-email')">
+            <div class="t-icon">📧</div>
+            <h3>Write an Email</h3>
+            <p>Write a polite, professional email addressing three required points in a real-world scenario.</p>
+            <div class="meta">~7 min per prompt · 130–140 words</div>
+          </button>
+          <button class="task-btn" onclick="loadTask('academic-discussion')">
+            <div class="t-icon">💬</div>
+            <h3>Academic Discussion</h3>
+            <p>Read a professor's question and two student responses, then add your own contribution to the discussion.</p>
+            <div class="meta">~10 min per prompt · 120+ words</div>
+          </button>
+        </div>
+
+        <div class="tip-box">
+          <h3>✍️ About the 2026 Writing Section</h3>
+          <ul>
+            <li>The writing section lasts <strong>approximately 23 minutes</strong> total.</li>
+            <li>"Build a Sentence" and "Write an Email" each take about 7 minutes.</li>
+            <li>"Write for an Academic Discussion" takes about 10 minutes.</li>
+            <li>Writing tasks are likely scored by AI on the actual test.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- PRACTICE AREA -->
+      <div id="practiceArea">
+        <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; margin-bottom:20px;">
+          <div>
+            <h2 id="taskHeading" style="font-size:1.3rem;"></h2>
+            <p id="qProgress" style="font-size:0.85rem; color:var(--text-muted);"></p>
+          </div>
+          <div class="timer-display" id="timerDisplay">⏱ --:--</div>
+        </div>
+        <div class="progress-bar-wrap" style="margin-bottom:24px;">
+          <div class="progress-bar-fill" id="progressFill" style="width:0%"></div>
+        </div>
+        <div id="questionArea"></div>
+        <div style="display:flex; gap:12px; margin-top:20px; flex-wrap:wrap;" id="navBtns">
+          <button class="btn btn-secondary" id="prevBtn" onclick="prevQ()" style="display:none;">← Previous</button>
+          <button class="btn btn-primary" id="nextBtn" onclick="nextQ()">Next →</button>
+          <button class="btn btn-success" id="submitBtn" onclick="finishTask()" style="display:none;">Finish & See Score</button>
+        </div>
+        <div id="scoreSummary" style="display:none; margin-top:24px;"></div>
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="ad-banner ad-banner-sidebar">📢 Ad Sidebar</div>
+      <div class="card" id="rubricsCard" style="display:none;">
+        <h3 style="margin-bottom:10px; font-size:1rem;">📊 Scoring Criteria</h3>
+        <ul style="list-style:none; font-size:0.82rem; color:var(--text-muted);" id="rubricList"></ul>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom:10px; font-size:1rem;">🔗 Quick Links</h3>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:8px;">
+          <li><a href="reading.html" style="color:var(--primary); font-size:0.9rem;">📖 Reading Practice</a></li>
+          <li><a href="mock-test.html" style="color:var(--primary); font-size:0.9rem;">🎯 Full Mock Test</a></li>
+        </ul>
+      </div>
+      <div class="ad-banner ad-banner-sidebar">📢 Ad Sidebar 2</div>
+    </aside>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 TOEFL Prep Hub · Not affiliated with ETS · TOEFL® is a registered trademark of ETS</p>
+</footer>
+
+<script src="js/writing.js"></script>
+</body>
+</html>

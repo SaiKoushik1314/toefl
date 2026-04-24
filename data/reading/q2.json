@@ -1,0 +1,154 @@
+{
+    "taskType": "reading-daily-life",
+    "taskTitle": "Reading in Daily Life",
+    "timeSeconds": 420,
+    "passages": [
+      {
+        "id": "rdl-1",
+        "type": "short",
+        "label": "Text Message",
+        "text": "From: Marcus Chen\nTo: Priya Patel\n\nThe building manager just confirmed the elevator will be out of service this Friday from 8 a.m. to 3 p.m. for its annual inspection. Since we're on the 6th floor, could you let the delivery company know to reschedule our furniture order for a different day? I'll be in meetings all morning and can't make the call myself. Thanks!",
+        "questions": [
+          {
+            "id": "q1",
+            "text": "Why did Marcus send this message to Priya?",
+            "options": [
+              "To ask her to reschedule a delivery",
+              "To report an elevator malfunction",
+              "To invite her to a building inspection",
+              "To request furniture recommendations"
+            ],
+            "answer": 0,
+            "explanation": "Marcus explains the elevator situation and directly asks Priya to contact the delivery company to reschedule — that is the main purpose of the message."
+          },
+          {
+            "id": "q2",
+            "text": "What is the reason Marcus cannot make the phone call himself?",
+            "options": [
+              "He does not have the delivery company's number",
+              "He will be busy in meetings",
+              "He is not in the office that day",
+              "He is waiting for the building manager"
+            ],
+            "answer": 1,
+            "explanation": "Marcus states he'll be 'in meetings all morning and can't make the call myself.'"
+          }
+        ]
+      },
+      {
+        "id": "rdl-2",
+        "type": "long",
+        "label": "Official Notice",
+        "text": "Subject: Annual Campus Fitness Center Membership Renewal\n\nDear Student,\n\nWelcome back to the new semester! This is a reminder that your Fitness Center membership expired on August 31. To continue using the facility, you must renew your membership by September 15 to avoid the late renewal fee of $25.\n\nRenewal can be completed online through the Student Services Portal using your university login. You may choose from three membership tiers: Basic (gym access only), Standard (gym + group classes), or Premium (gym + classes + personal training sessions). Payment must be made in full at the time of renewal.\n\nOnce renewed, your membership card will be reactivated within 24 hours. Please note that the Fitness Center will be closed for maintenance on September 10 and 11. If you have any questions, contact the Student Services office at services@university.edu.\n\nWarm regards,\nStudent Services Office",
+        "questions": [
+          {
+            "id": "q1",
+            "text": "What is the main purpose of this notice?",
+            "options": [
+              "To announce the opening of a new fitness center",
+              "To remind students to renew their membership",
+              "To inform students of a fee increase",
+              "To describe new fitness classes available this semester"
+            ],
+            "answer": 1,
+            "explanation": "The notice is primarily a reminder about membership renewal, including the deadline and the process to renew."
+          },
+          {
+            "id": "q2",
+            "text": "What will happen if a student renews after September 15?",
+            "options": [
+              "Their membership will be permanently cancelled",
+              "They will need to visit the office in person",
+              "They will be charged an additional $25",
+              "Their access will be limited to gym only"
+            ],
+            "answer": 2,
+            "explanation": "The notice states students must renew by September 15 'to avoid the late renewal fee of $25.'"
+          },
+          {
+            "id": "q3",
+            "text": "Which membership tier would a student choose if they want group classes but NOT personal training?",
+            "options": [
+              "Basic",
+              "Standard",
+              "Premium",
+              "Any tier includes group classes"
+            ],
+            "answer": 1,
+            "explanation": "Standard includes 'gym + group classes' but not personal training, which is only in Premium."
+          },
+          {
+            "id": "q4",
+            "text": "When will a renewed membership card be usable again?",
+            "options": [
+              "Immediately after payment",
+              "After September 15",
+              "Within 24 hours of renewal",
+              "On the first day of the new month"
+            ],
+            "answer": 2,
+            "explanation": "The notice says 'your membership card will be reactivated within 24 hours' after renewal."
+          }
+        ]
+      },
+      {
+        "id": "rdl-3",
+        "type": "long",
+        "label": "Email",
+        "text": "From: Jordan Rivera\nTo: Neighborhood Watch Group\n\nHello everyone,\n\nI wanted to give a quick update following last week's community safety meeting. As discussed, we have agreed to launch a neighborhood watch schedule starting October 1. Volunteers will walk the main streets in pairs every Tuesday and Thursday evening from 7 to 9 p.m.\n\nTo sign up, please reply to this email with your preferred dates for October. Try to select at least two evenings. We have a total of eight slots to fill each month, and we want to make sure no single person is overloaded.\n\nFor those who could not attend the meeting, a summary of the new reporting procedures has been attached to this email. Please read it before your first patrol. All incidents should now be reported via the city's new app rather than by calling the non-emergency line.\n\nThank you for your continued support in keeping our neighborhood safe.\n\nBest,\nJordan Rivera\nNeighborhood Watch Coordinator",
+        "questions": [
+          {
+            "id": "q1",
+            "text": "What is Jordan asking recipients to do?",
+            "options": [
+              "Attend a community safety meeting",
+              "Download the city's new app",
+              "Reply with their availability for patrols",
+              "Read the reporting procedures and call the non-emergency line"
+            ],
+            "answer": 2,
+            "explanation": "Jordan asks everyone to 'reply to this email with your preferred dates for October' — that is the main action requested."
+          },
+          {
+            "id": "q2",
+            "text": "How should incidents be reported according to the new procedures?",
+            "options": [
+              "By calling the non-emergency police line",
+              "By contacting Jordan Rivera directly",
+              "Through the city's new app",
+              "By attending the next community meeting"
+            ],
+            "answer": 2,
+            "explanation": "Jordan states 'All incidents should now be reported via the city's new app rather than by calling the non-emergency line.'"
+          },
+          {
+            "id": "q3",
+            "text": "What does Jordan want to avoid by limiting each person to at least two evenings?",
+            "options": [
+              "Having the same people patrol too frequently",
+              "Leaving some slots empty",
+              "Overloading individual volunteers",
+              "Conflicts between patrol pairs"
+            ],
+            "answer": 2,
+            "explanation": "Jordan says 'we want to make sure no single person is overloaded,' which is why participation is managed."
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Scan the whole document quickly before reading questions — these are short!",
+      "Identify the purpose of the document: Why was this email/notice written?",
+      "Pay attention to who is doing what — keep roles and responsibilities clear.",
+      "Watch for tricky distractors that use words from the text but give wrong answers.",
+      "Make simple inferences — not everything is stated directly.",
+      "Answer quickly and move on; don't overthink short passages."
+    ],
+    "whatToExpect": [
+      "Short passages (40–50 words) with 2 questions.",
+      "Long passages (100–140 words) with 3–4 questions.",
+      "Content includes emails, notices, text messages, pamphlets, invoices.",
+      "Topics involve everyday campus or social situations.",
+      "Questions ask about main purpose, specific details, and simple inferences."
+    ]
+  }

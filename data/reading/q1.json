@@ -1,0 +1,58 @@
+{
+    "taskType": "complete-the-words",
+    "taskTitle": "Complete the Words",
+    "timeSeconds": 240,
+    "passages": [
+      {
+        "id": "ctw-1",
+        "intro": "Fill in the missing letters to complete each word in the passage.",
+        "fullText": "Sociology is the scientific study of human society and social behavior, examining how individuals interact within groups and institutions. Researchers investi____ how peo____ form comm____ities and devel____ shared norms over time. It is esse____ial to anal____ data care____ and consi____ both large-scale structures and individual experi____ces. Understanding sociological concepts helps students recog____ patterns of inequality, cooperation, and change in modern society.",
+        "segments": [
+          { "before": "Sociology is the scientific study of human society and social behavior, examining how individuals interact within groups and institutions. Researchers ", "word": "investigate", "hint": "investi", "blanks": 4, "id": "w1" },
+          { "before": " how ", "word": "people", "hint": "peo", "blanks": 3, "id": "w2" },
+          { "before": " form ", "word": "communities", "hint": "comm", "blanks": 7, "id": "w3" },
+          { "before": " and ", "word": "develop", "hint": "devel", "blanks": 2, "id": "w4" },
+          { "before": " shared norms over time. It is ", "word": "essential", "hint": "esse", "blanks": 5, "id": "w5" },
+          { "before": " to ", "word": "analyze", "hint": "anal", "blanks": 3, "id": "w6" },
+          { "before": " data ", "word": "carefully", "hint": "care", "blanks": 5, "id": "w7" },
+          { "before": " and ", "word": "consider", "hint": "consi", "blanks": 3, "id": "w8" },
+          { "before": " both large-scale structures and individual ", "word": "experiences", "hint": "experi", "blanks": 5, "id": "w9" },
+          { "before": ". Understanding sociological concepts helps students ", "word": "recognize", "hint": "recog", "blanks": 4, "id": "w10" },
+          { "before": " patterns of inequality, cooperation, and change in modern society.", "word": "", "hint": "", "blanks": 0, "id": "end" }
+        ]
+      },
+      {
+        "id": "ctw-2",
+        "intro": "Fill in the missing letters to complete each word in the passage.",
+        "fullText": "Environmental science explores the relationships between living organisms and their surroundings. Scientists collec____ data by meas____ing factors such as temperature, humidity, and pollu____ levels in various ecosystems. They also invest____te how human activ____ies impact natural habitats and biodiv____ity. It is criti____ to interp____ findings accur____ly and apply critical think____ when developing solutions to environmental challenges.",
+        "segments": [
+          { "before": "Environmental science explores the relationships between living organisms and their surroundings. Scientists ", "word": "collect", "hint": "collec", "blanks": 1, "id": "w1" },
+          { "before": " data by ", "word": "measuring", "hint": "meas", "blanks": 5, "id": "w2" },
+          { "before": " factors such as temperature, humidity, and ", "word": "pollution", "hint": "pollu", "blanks": 4, "id": "w3" },
+          { "before": " levels in various ecosystems. They also ", "word": "investigate", "hint": "invest", "blanks": 5, "id": "w4" },
+          { "before": " how human ", "word": "activities", "hint": "activ", "blanks": 5, "id": "w5" },
+          { "before": " impact natural habitats and ", "word": "biodiversity", "hint": "biodiv", "blanks": 6, "id": "w6" },
+          { "before": ". It is ", "word": "critical", "hint": "criti", "blanks": 3, "id": "w7" },
+          { "before": " to ", "word": "interpret", "hint": "interp", "blanks": 3, "id": "w8" },
+          { "before": " findings ", "word": "accurately", "hint": "accur", "blanks": 5, "id": "w9" },
+          { "before": " and apply critical ", "word": "thinking", "hint": "think", "blanks": 3, "id": "w10" },
+          { "before": " when developing solutions to environmental challenges.", "word": "", "hint": "", "blanks": 0, "id": "end" }
+        ]
+      }
+    ],
+    "tips": [
+      "Quickly scan the full paragraph first — context activates your vocabulary.",
+      "Think about word stems and suffixes (e.g., -ly, -tion, -ing, -ity).",
+      "Ask yourself: is the missing word a noun, verb, adjective, or adverb?",
+      "If you're stuck, make your best guess and move on — don't waste time.",
+      "Words come from academic vocabulary — studying the Academic Word List helps.",
+      "The missing letters are always in the second half of the word."
+    ],
+    "whatToExpect": [
+      "One or two paragraphs of about 70 words each.",
+      "Ten words per paragraph have missing letters in their second half.",
+      "You type the missing letters into blank fields inline.",
+      "The topic is usually academic but not overly technical.",
+      "You get about 3–4 minutes per passage."
+    ]
+  }

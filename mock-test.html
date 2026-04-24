@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Full Mock Test – TOEFL Prep Hub</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .mock-intro { max-width: 700px; margin: 0 auto; }
+    .section-block { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 16px; display: flex; align-items: center; gap: 20px; }
+    .section-block .s-icon { font-size: 2.5rem; }
+    .section-block h3 { margin-bottom: 4px; }
+    .section-block p { font-size: 0.88rem; color: var(--text-muted); }
+    .mock-rules { background: #fef9c3; border: 1px solid #fde047; border-radius: var(--radius-sm); padding: 20px 24px; margin: 24px 0; }
+    .mock-rules h3 { color: #92400e; margin-bottom: 10px; }
+    .mock-rules li { font-size: 0.9rem; margin-bottom: 6px; }
+    .current-section-label { display: inline-block; background: var(--primary); color: white; padding: 4px 14px; border-radius: 99px; font-size: 0.8rem; font-weight: 600; margin-bottom: 12px; }
+    .transition-screen { text-align: center; padding: 60px 20px; }
+    .transition-screen .big-icon { font-size: 4rem; margin-bottom: 20px; }
+    .transition-screen h2 { font-size: 1.8rem; margin-bottom: 12px; }
+    .transition-screen p { color: var(--text-muted); max-width: 500px; margin: 0 auto 24px; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">📘 <span>TOEFL</span> Prep Hub</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="reading.html">Reading</a></li>
+    <li><a href="writing.html">Writing</a></li>
+    <li><a href="mock-test.html" class="active">Mock Test</a></li>
+  </ul>
+  <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+</nav>
+
+<!-- VIDEO AD OVERLAY -->
+<div class="video-ad-overlay" id="videoAd" style="display:none;">
+  <div class="video-ad-box">
+    <div class="video-ad-label">Advertisement</div>
+    <div class="video-ad-placeholder">
+      <div class="ad-icon">📺</div>
+      <p>Video Ad Placeholder<br><small>Your Google IMA ad will appear here</small></p>
+    </div>
+  </div>
+  <div class="video-ad-timer">⏱ Ad ends in <span id="adCountdown">30</span>s</div>
+  <button class="skip-btn" id="skipBtn" onclick="closeAd()">Skip Ad ›</button>
+</div>
+
+<div class="container page-wrap">
+  <div class="ad-banner ad-banner-top">📢 Advertisement – Google AdSense Banner</div>
+
+  <!-- INTRO -->
+  <div id="mockIntro" class="mock-intro">
+    <div class="section-intro" style="background: linear-gradient(135deg, #f59e0b, #f97316);">
+      <h1>🎯 Full Mock Test</h1>
+      <p>Simulate the complete 2026 TOEFL Reading and Writing sections under timed conditions. A video ad will play between each section.</p>
+      <div class="badges">
+        <span class="badge">⏱ ~53 minutes</span>
+        <span class="badge">📖 Reading + ✍️ Writing</span>
+        <span class="badge">🎯 Full Score Report</span>
+      </div>
+    </div>
+
+    <h2 style="margin: 32px 0 16px;">Test Structure</h2>
+    <div class="section-block">
+      <div class="s-icon">📖</div>
+      <div>
+        <h3>Section 1 – Reading</h3>
+        <p>Complete the Words · Reading in Daily Life · Academic Reading<br><strong>Time: 30 minutes</strong></p>
+      </div>
+    </div>
+    <div class="section-block" style="border: 2px dashed var(--border); justify-content:center; padding:16px;">
+      <div style="text-align:center;">
+        <div style="font-size:1.5rem;">📺</div>
+        <p style="margin:4px 0; font-size:0.85rem; color:var(--text-muted);">Video ad break (30 seconds)</p>
+      </div>
+    </div>
+    <div class="section-block">
+      <div class="s-icon">✍️</div>
+      <div>
+        <h3>Section 2 – Writing</h3>
+        <p>Build a Sentence · Write an Email · Academic Discussion<br><strong>Time: 23 minutes</strong></p>
+      </div>
+    </div>
+
+    <div class="mock-rules">
+      <h3>📋 Before You Begin</h3>
+      <ul style="padding-left:20px;">
+        <li>Set aside at least 60 minutes in a quiet environment.</li>
+        <li>Do not use any external resources during the test.</li>
+        <li>You can navigate between questions within a section, but not back to a previous section.</li>
+        <li>Your score will be shown at the end of both sections.</li>
+        <li>This is practice only — it does not affect your real TOEFL score.</li>
+      </ul>
+    </div>
+
+    <button class="btn btn-primary btn-lg" onclick="startMock()" style="width:100%;">🚀 Start Mock Test</button>
+  </div>
+
+  <!-- TEST AREA -->
+  <div id="testArea" style="display:none;">
+    <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; margin-bottom:20px;">
+      <div>
+        <div class="current-section-label" id="sectionLabel">Section 1 – Reading</div>
+        <h2 id="testHeading" style="font-size:1.3rem;"></h2>
+        <p id="testProgress" style="font-size:0.85rem; color:var(--text-muted);"></p>
+      </div>
+      <div class="timer-display" id="testTimer">⏱ --:--</div>
+    </div>
+    <div class="progress-bar-wrap" style="margin-bottom:24px;">
+      <div class="progress-bar-fill" id="testProgressFill" style="width:0%"></div>
+    </div>
+    <div id="testQuestionArea"></div>
+    <div style="display:flex; gap:12px; margin-top:20px; flex-wrap:wrap;">
+      <button class="btn btn-secondary" id="testPrevBtn" onclick="testPrev()" style="display:none;">← Previous</button>
+      <button class="btn btn-primary" id="testNextBtn" onclick="testNext()">Next →</button>
+      <button class="btn btn-success" id="testSubmitBtn" onclick="submitSection()" style="display:none;">Submit Section →</button>
+    </div>
+  </div>
+
+  <!-- TRANSITION -->
+  <div id="transitionArea" style="display:none;">
+    <div class="transition-screen">
+      <div class="big-icon" id="transIcon">🎉</div>
+      <h2 id="transTitle">Section Complete!</h2>
+      <p id="transMsg"></p>
+      <button class="btn btn-primary btn-lg" id="transContinueBtn" onclick="continueToNext()">Continue →</button>
+    </div>
+  </div>
+
+  <!-- FINAL RESULTS -->
+  <div id="finalResults" style="display:none; max-width:700px; margin:0 auto; padding: 32px 0;"></div>
+</div>
+
+<footer>
+  <p>© 2026 TOEFL Prep Hub · Not affiliated with ETS · TOEFL® is a registered trademark of ETS</p>
+</footer>
+
+<script src="js/mock-test.js"></script>
+</body>
+</html>

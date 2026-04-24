@@ -1,0 +1,86 @@
+{
+    "taskType": "academic-discussion",
+    "taskTitle": "Write for an Academic Discussion",
+    "timeSeconds": 600,
+    "instructions": "Read the professor's question and the two student responses. Write your own response contributing to the discussion. Aim for 120+ words.",
+    "prompts": [
+      {
+        "id": "ad-1",
+        "professor": {
+          "name": "Professor Williams",
+          "question": "This week we have been exploring the relationship between technology and human connection. Some argue that social media and messaging apps have made it easier for people to maintain friendships and stay connected across distances. Others believe these tools have actually made relationships more shallow and superficial. What do you think? Has technology improved or harmed the quality of human relationships? Why?"
+        },
+        "students": [
+          {
+            "name": "David",
+            "response": "Personally, I think technology has done more good than harm when it comes to relationships. My family lives in a different country, and without video calls and messaging apps, I would rarely be able to speak with them. Technology has allowed me to stay close to people I care about despite the distance. I think the key is how you use it."
+          },
+          {
+            "name": "Leila",
+            "response": "I disagree with David to some extent. In my experience, many people spend so much time communicating through screens that they neglect the people right in front of them. I've noticed that even when my friends are together in person, everyone is on their phone. This kind of behavior suggests to me that technology is reducing the depth of our connections."
+          }
+        ],
+        "sampleResponse": "While David makes a compelling point about maintaining long-distance relationships, I find myself agreeing more with Leila's concern about the impact of technology on the quality of our everyday interactions. In my view, technology has created an illusion of connection without necessarily fostering genuine closeness. For example, while we may send birthday messages to dozens of acquaintances online, we often fail to invest the time and effort needed to develop truly meaningful friendships. A recent study I read suggested that people who spend more time on social media report higher levels of loneliness, which seems paradoxical given how connected we appear to be. That said, I recognize that technology itself is not the problem — it is our relationship with it. We need to be more intentional about using digital tools to complement, rather than replace, face-to-face interaction.",
+        "keywords": ["technology", "relationships", "social media", "connection", "shallow", "meaningful", "in-person", "communication", "quality", "interaction"],
+        "topicHints": ["Give your own clear opinion", "Use a personal or hypothetical example", "Engage with what the students said", "Don't just repeat their arguments"]
+      },
+      {
+        "id": "ad-2",
+        "professor": {
+          "name": "Professor Nguyen",
+          "question": "In recent years, many universities have introduced mandatory community service requirements for graduation. Supporters argue that requiring students to volunteer helps build civic responsibility and real-world skills. Critics say that forced volunteering is counterproductive and undermines the spirit of genuine service. Do you think universities should require students to complete community service? Why or why not?"
+        },
+        "students": [
+          {
+            "name": "Marcus",
+            "response": "I support mandatory community service because many students simply would not volunteer on their own. A requirement ensures that everyone gets the experience of contributing to their community, which can be genuinely eye-opening. Some of my best memories from high school came from volunteer work I was initially reluctant to do."
+          },
+          {
+            "name": "Aisha",
+            "response": "I don't think forcing students to volunteer is a good idea. Volunteering should come from genuine desire to help others. When it becomes an obligation, it loses its meaning, and students may simply go through the motions without truly engaging or learning anything valuable from the experience."
+          }
+        ],
+        "sampleResponse": "I agree with Aisha's position that mandatory volunteering risks undermining the core purpose of community service. When students are compelled to volunteer simply to fulfill a graduation requirement, their motivation is external rather than intrinsic, which research in psychology suggests leads to lower quality engagement and less personal growth. In my own experience, I have seen classmates treat required service hours as just another task to check off, rushing through assignments without reflecting on the communities they were supposed to help. However, I think universities can find a middle ground. Rather than mandating a fixed number of hours, institutions could offer a range of experiential learning options — community service, internships, or research projects — allowing students to choose based on their own interests and values. This approach respects individual autonomy while still encouraging meaningful engagement with the wider world.",
+        "keywords": ["community service", "mandatory", "volunteering", "civic", "responsibility", "genuine", "motivation", "requirement", "graduation", "engagement"],
+        "topicHints": ["State your position clearly in the first or second sentence", "Use a specific example", "Try to engage with both students", "Save a few seconds to proofread"]
+      },
+      {
+        "id": "ad-3",
+        "professor": {
+          "name": "Professor Ahmed",
+          "question": "As automation continues to reshape the global economy, many low-skill jobs are being replaced by machines and software. Some economists believe governments should introduce a universal basic income — a fixed monthly payment to all citizens regardless of employment — to address growing inequality. Others argue this would reduce the incentive to work and create long-term economic problems. What is your view on universal basic income? Should governments adopt this policy?"
+        },
+        "students": [
+          {
+            "name": "Elena",
+            "response": "I strongly support universal basic income. As more jobs disappear due to automation, people will need a safety net to survive. UBI would ensure that everyone has their basic needs met, which would reduce poverty and allow people to pursue education or start small businesses without the fear of financial ruin."
+          },
+          {
+            "name": "Tom",
+            "response": "I am not convinced by UBI. Giving people money without requiring them to work could reduce motivation and lead to a shrinking workforce. Governments would also need to fund this somehow, likely through higher taxes, which could slow economic growth and harm businesses."
+          }
+        ],
+        "sampleResponse": "The debate around universal basic income touches on fundamental questions about the role of government and the future of work. While I appreciate Tom's concern about incentives and funding, I believe Elena's argument is more persuasive given the speed at which automation is advancing. The reality is that entire industries are being disrupted faster than workers can retrain, and traditional social safety nets — unemployment insurance, for example — were not designed for this scale of disruption. A universal basic income could provide the stability people need to adapt, retrain, and contribute productively to a changing economy. That said, I think the design of such a policy matters enormously. A modest, targeted UBI that supplements income rather than fully replacing work-based wages would be more fiscally sustainable and less likely to discourage employment. Countries like Finland have already piloted variations of this approach with encouraging results.",
+        "keywords": ["universal basic income", "automation", "inequality", "safety net", "employment", "government", "poverty", "economic", "workforce", "policy"],
+        "topicHints": ["Don't spend more than 90 seconds reading the question and responses", "120+ words is the target", "Include an example — personal or from the news", "Proofread at the end"]
+      }
+    ],
+    "tips": [
+      "Don't spend too long reading — skim the question and student responses, then write.",
+      "State your opinion clearly in the first sentence or two.",
+      "Aim for 120–130 words minimum. More is fine — there's no penalty.",
+      "Include a specific example (personal experience or hypothetical).",
+      "Use a mix of sentence types: simple, compound, and complex.",
+      "Avoid repeating the same words — use synonyms.",
+      "You can reference what the students said, but don't just repeat their arguments.",
+      "Save 30–60 seconds at the end to proofread for grammar errors."
+    ],
+    "whatToExpect": [
+      "A professor's question on an academic or social topic.",
+      "Two student responses showing different perspectives.",
+      "10 minutes to read and write your response.",
+      "Scored on: content relevance, grammar, vocabulary, and development.",
+      "Recommended length: 120+ words.",
+      "This task is the same format as the old TOEFL (2023–2025)."
+    ]
+  }

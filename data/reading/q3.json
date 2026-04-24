@@ -1,0 +1,156 @@
+{
+    "taskType": "academic-reading",
+    "taskTitle": "Academic Reading",
+    "timeSeconds": 600,
+    "passages": [
+      {
+        "id": "ar-1",
+        "title": "Urban Bees",
+        "text": "Honeybees and other pollinators have long been associated with rural farmland, but in recent decades, cities have emerged as surprisingly hospitable environments for these insects. Urban gardens, flowering street trees, and rooftop green spaces provide a diverse and nearly continuous supply of nectar throughout the growing season, unlike monoculture farms that bloom only briefly. As a result, urban bee colonies have been found to produce more honey than their rural counterparts in certain regions.\n\nBeyond honey production, urban bees play a critical role in supporting local biodiversity. By pollinating a wide variety of flowering plants in parks and community gardens, they help sustain ecosystems that benefit both wildlife and human residents. Some cities have even introduced formal urban beekeeping programs, providing training and hive equipment to residents who wish to participate.\n\nHowever, urban beekeeping is not without challenges. The density of bee populations in cities can create competition for limited floral resources, particularly during dry summer months when fewer plants are in bloom. Additionally, urban bees are frequently exposed to pesticides used in private gardens and public green spaces, which can weaken colonies over time. Researchers are therefore calling for stricter regulation of pesticide use in urban areas and for city planners to prioritize the planting of bee-friendly flora in new developments.",
+        "questions": [
+          {
+            "id": "q1",
+            "text": "According to the passage, why do cities provide good conditions for bees?",
+            "options": [
+              "Cities have fewer natural predators than rural areas.",
+              "Urban areas have a consistent and varied supply of nectar.",
+              "City bees do not face competition from other insects.",
+              "Urban gardens are larger than rural farms."
+            ],
+            "answer": 1,
+            "explanation": "The passage states that urban gardens and green spaces 'provide a diverse and nearly continuous supply of nectar throughout the growing season,' unlike rural farms that bloom only briefly."
+          },
+          {
+            "id": "q2",
+            "text": "Which of the following is NOT mentioned as a benefit of urban bees?",
+            "options": [
+              "Supporting local biodiversity",
+              "Producing large quantities of honey",
+              "Reducing pesticide use in cities",
+              "Pollinating community garden plants"
+            ],
+            "answer": 2,
+            "explanation": "The passage does not say urban bees reduce pesticide use — in fact, it says bees are harmed by pesticides. The other three are mentioned as benefits."
+          },
+          {
+            "id": "q3",
+            "text": "Why does the author discuss dry summer months?",
+            "options": [
+              "To explain why beekeeping is more popular in summer",
+              "To show when urban honey production peaks",
+              "To illustrate when floral competition becomes a problem",
+              "To argue that cities should plant more trees"
+            ],
+            "answer": 2,
+            "explanation": "The passage mentions dry summer months as a time when fewer plants bloom, making competition for floral resources more intense — this supports the discussion of urban beekeeping challenges."
+          },
+          {
+            "id": "q4",
+            "text": "The word 'sustain' in the passage is closest in meaning to which word?",
+            "options": [
+              "Destroy",
+              "Maintain",
+              "Expand",
+              "Examine"
+            ],
+            "answer": 1,
+            "explanation": "'Sustain' means to keep something going or maintain it over time. In context, bees help 'sustain ecosystems,' meaning they help keep those ecosystems functioning."
+          },
+          {
+            "id": "q5",
+            "text": "How does paragraph 3 relate to paragraphs 1 and 2?",
+            "options": [
+              "It provides evidence that contradicts the claims in paragraphs 1 and 2.",
+              "It describes challenges that balance the benefits discussed earlier.",
+              "It gives examples of the honey production mentioned in paragraph 1.",
+              "It explains why urban beekeeping programs were introduced."
+            ],
+            "answer": 1,
+            "explanation": "Paragraphs 1 and 2 discuss the benefits of urban bees. Paragraph 3 introduces the challenges and problems, creating a balanced view — it does not contradict but qualifies the earlier content."
+          }
+        ]
+      },
+      {
+        "id": "ar-2",
+        "title": "The Psychology of Clutter",
+        "text": "Most people assume that clutter is simply a visual problem — an untidy space that can be easily ignored. However, research in environmental psychology suggests that living and working in cluttered spaces has measurable effects on mental health and cognitive performance. Studies have found that individuals in messy environments experience higher levels of the stress hormone cortisol compared to those in organized surroundings, and this effect is more pronounced in women than in men.\n\nClutter also appears to impair concentration. When the visual field is crowded with unnecessary objects, the brain must work harder to filter out irrelevant information, leaving fewer mental resources for the task at hand. This phenomenon, known as cognitive overload, has been linked to decreased productivity and increased rates of procrastination. Students studying in cluttered rooms, for instance, have been found to perform worse on memory tests than those in tidy environments.\n\nDespite these findings, researchers caution against concluding that all clutter is harmful. Some studies indicate that a degree of disorder can stimulate creative thinking by encouraging unconventional associations between objects and ideas. The key, researchers suggest, is intentionality — organizing spaces in a way that reflects one's goals and working style, rather than imposing a single standard of tidiness on everyone.",
+        "questions": [
+          {
+            "id": "q1",
+            "text": "What is the main idea of the passage?",
+            "options": [
+              "Clutter causes serious psychological disorders in most people.",
+              "Organized spaces are always better for mental health.",
+              "Clutter has real cognitive effects, but its impact is nuanced.",
+              "Women are more affected by clutter than men in all situations."
+            ],
+            "answer": 2,
+            "explanation": "The passage covers both the negative effects of clutter and the potential benefits of some disorder, concluding that intentionality matters — making the overall message nuanced."
+          },
+          {
+            "id": "q2",
+            "text": "According to the passage, what is cognitive overload?",
+            "options": [
+              "A condition caused by studying for too long",
+              "The brain's struggle to filter irrelevant visual information",
+              "A type of stress hormone released in cluttered spaces",
+              "Decreased performance on memory tests"
+            ],
+            "answer": 1,
+            "explanation": "The passage defines cognitive overload as what occurs 'when the visual field is crowded with unnecessary objects' and 'the brain must work harder to filter out irrelevant information.'"
+          },
+          {
+            "id": "q3",
+            "text": "Which of the following is NOT mentioned as a negative effect of clutter?",
+            "options": [
+              "Higher cortisol levels",
+              "Reduced creativity",
+              "Increased procrastination",
+              "Poorer memory test performance"
+            ],
+            "answer": 1,
+            "explanation": "The passage actually suggests clutter might increase creative thinking — it does NOT mention reduced creativity as a negative effect. The other three are explicitly stated."
+          },
+          {
+            "id": "q4",
+            "text": "The word 'pronounced' in the passage is closest in meaning to which word?",
+            "options": [
+              "Spoken",
+              "Surprising",
+              "Noticeable",
+              "Common"
+            ],
+            "answer": 2,
+            "explanation": "In this context, 'pronounced' means clearly noticeable or more intense. The stress effect is 'more pronounced in women,' meaning it is more noticeable."
+          },
+          {
+            "id": "q5",
+            "text": "What is the purpose of the third paragraph?",
+            "options": [
+              "To contradict the research presented in paragraphs 1 and 2",
+              "To introduce a qualification to the earlier findings",
+              "To explain why some people prefer cluttered spaces",
+              "To recommend specific organizational strategies"
+            ],
+            "answer": 1,
+            "explanation": "The third paragraph doesn't contradict earlier findings — it adds nuance by noting that some disorder can help with creativity, qualifying the claim that all clutter is harmful."
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Skim the passage briefly before reading questions — get the general idea first.",
+      "Don't choose an answer just because it uses a word from the passage.",
+      "Negative factual questions (NOT mentioned) take more time — check each option carefully.",
+      "Vocabulary questions are quick — use context clues from surrounding sentences.",
+      "For 'paragraph relationship' questions, think about how ideas connect: Does paragraph 3 support, qualify, or contradict earlier paragraphs?",
+      "Topics are more relatable than the old TOEFL — think contemporary issues."
+    ],
+    "whatToExpect": [
+      "Passages of about 200 words on accessible academic topics.",
+      "5 questions per passage covering different question types.",
+      "Question types: Factual, Negative Factual, Vocabulary, Rhetorical Purpose, Inference, Paragraph Relationships, Important Idea.",
+      "No paragraph references in questions — you must find answers yourself.",
+      "Topics may include science, society, environment, psychology, technology."
+    ]
+  }

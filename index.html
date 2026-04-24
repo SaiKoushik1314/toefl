@@ -1,344 +1,164 @@
----
-layout: default
-title: TOEFL Reading Practice
-description: Free TOEFL-style reading practice — vocabulary, daily life, and academic passages.
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TOEFL Prep Hub – Free 2026 Practice</title>
+  <meta name="description" content="Free TOEFL iBT 2026 practice for Reading and Writing sections. New format, tips, instant feedback."/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .how-it-works { padding: 48px 20px; background: var(--surface2); }
+    .how-it-works h2 { text-align: center; font-size: 1.8rem; margin-bottom: 40px; }
+    .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; max-width: 1000px; margin: 0 auto; }
+    .step-card { background: var(--surface); border-radius: var(--radius); padding: 28px 24px; text-align: center; box-shadow: var(--shadow); }
+    .step-card .step-num { width: 48px; height: 48px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 800; margin: 0 auto 16px; }
+    .step-card h3 { margin-bottom: 8px; }
+    .step-card p { font-size: 0.88rem; color: var(--text-muted); }
+    .disclaimer { background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 16px 20px; font-size: 0.82rem; color: var(--text-muted); max-width: 900px; margin: 0 auto 32px; text-align: center; }
+  </style>
+</head>
+<body>
 
-<main id="top">
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">📘 <span>TOEFL</span> Prep Hub</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="reading.html">Reading</a></li>
+    <li><a href="writing.html">Writing</a></li>
+    <li><a href="mock-test.html">Mock Test</a></li>
+  </ul>
+  <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+</nav>
 
-  <!-- ══ HERO ══ -->
-  <section class="container hero">
-    <div class="hero-card">
-      <span class="eyebrow">Free TOEFL-style Reading Practice</span>
-      <h1>Actual practice flow.<br>Calm, familiar, and easy to use.</h1>
-      <p class="lead">
-        Practice all three reading task types: complete missing words from context, read short daily-life texts, and answer questions about academic passages. Every set includes explanations and quick strategy tips.
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#practice">Start practice</a>
-        <a class="btn btn-secondary" href="#tips">See reading tips</a>
+<!-- AD BANNER TOP -->
+<div class="container" style="padding-top:16px;">
+  <div class="ad-banner ad-banner-top">📢 Advertisement – Your Ad Here (Google AdSense)</div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>🎓 Ace the 2026 TOEFL iBT</h1>
+  <p>Free practice for the brand-new TOEFL format. Reading & Writing sections with tips, real-style questions, and instant feedback.</p>
+  <div class="btn-group">
+    <a href="reading.html" class="hero-btn-white">📖 Practice Reading</a>
+    <a href="writing.html" class="hero-btn-outline">✍️ Practice Writing</a>
+    <a href="mock-test.html" class="hero-btn-outline">🎯 Full Mock Test</a>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat"><div class="num">100%</div><div class="lbl">Free</div></div>
+  <div class="stat"><div class="num">2026</div><div class="lbl">New Format</div></div>
+  <div class="stat"><div class="num">50+</div><div class="lbl">Practice Questions</div></div>
+  <div class="stat"><div class="num">✓</div><div class="lbl">Instant Feedback</div></div>
+</div>
+
+<!-- SECTION CARDS -->
+<section style="background: var(--bg);">
+  <div class="container">
+    <h2 style="text-align:center; padding: 48px 0 8px; font-size: 1.8rem;">Choose a Section to Practice</h2>
+    <p style="text-align:center; color: var(--text-muted); margin-bottom: 0;">Each section has tips, walkthroughs, and scored practice questions.</p>
+  </div>
+  <div class="sections-grid">
+
+    <a href="reading.html" class="section-card reading">
+      <div class="icon">📖</div>
+      <h2>Reading Section</h2>
+      <p>Practice all three new reading task types with adaptive-style questions and full explanations.</p>
+      <div class="meta">
+        <span>⏱ 30 min</span>
+        <span>🧩 3 Task Types</span>
+        <span>50 Items</span>
+      </div>
+    </a>
+
+    <a href="writing.html" class="section-card writing">
+      <div class="icon">✍️</div>
+      <h2>Writing Section</h2>
+      <p>All three writing tasks – Build a Sentence, Write an Email, and Academic Discussion – with scoring rubrics.</p>
+      <div class="meta">
+        <span>⏱ 23 min</span>
+        <span>🧩 3 Task Types</span>
+        <span>12 Items</span>
+      </div>
+    </a>
+
+    <a href="mock-test.html" class="section-card mock">
+      <div class="icon">🎯</div>
+      <h2>Full Mock Test</h2>
+      <p>Timed end-to-end simulation of both Reading and Writing sections in one sitting. Test yourself!</p>
+      <div class="meta">
+        <span>⏱ 53 min</span>
+        <span>📊 Full Score</span>
+        <span>Complete Sim</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works">
+  <div class="container">
+    <h2>How It Works</h2>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Choose a Section</h3>
+        <p>Select Reading, Writing, or start a full Mock Test from the home page.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>Read the Tips</h3>
+        <p>Before each task type, get a quick strategy guide and example questions.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>Answer Questions</h3>
+        <p>Work through real-style TOEFL 2026 questions with a live countdown timer.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <h3>Get Feedback</h3>
+        <p>Receive instant feedback, correct answers, and tips to improve your score.</p>
       </div>
     </div>
-    <div class="hero-side">
-      <div class="stats-card">
-        <small>Total question bank</small>
-        <strong>90 questions across 9 practice sets</strong>
+  </div>
+</section>
+
+<!-- WHAT'S NEW IN 2026 -->
+<section style="padding: 48px 0; background: var(--surface);">
+  <div class="container">
+    <h2 style="text-align:center; font-size:1.8rem; margin-bottom:12px;">What's New in TOEFL 2026?</h2>
+    <p style="text-align:center; color:var(--text-muted); margin-bottom:32px; max-width:600px; margin-left:auto; margin-right:auto;">The TOEFL iBT changed completely on January 21, 2026. Here's what you need to know.</p>
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap:20px; max-width:900px; margin:0 auto 32px;">
+      <div class="card">
+        <div style="font-size:1.8rem; margin-bottom:10px;">📖</div>
+        <h3 style="margin-bottom:8px; color:var(--primary);">Reading – New Tasks</h3>
+        <p style="font-size:0.88rem; color:var(--text-muted);">New adaptive format with "Complete the Words," "Reading in Daily Life," and shorter Academic passages. 30 minutes total.</p>
       </div>
-      <div class="stats-card">
-        <small>Coverage</small>
-        <strong>Vocabulary, details, inference, main idea, and academic reading</strong>
+      <div class="card">
+        <div style="font-size:1.8rem; margin-bottom:10px;">✍️</div>
+        <h3 style="margin-bottom:8px; color:var(--secondary);">Writing – New Tasks</h3>
+        <p style="font-size:0.88rem; color:var(--text-muted);">"Build a Sentence" (word reordering), "Write an Email," and "Write for an Academic Discussion." 23 minutes total.</p>
       </div>
-      <div class="stats-card">
-        <small>Completely free</small>
-        <strong>Static site — no login required, progress saved locally</strong>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ TASK TYPE CARDS ══ -->
-  <section class="container section" id="modes">
-    <div class="section-head">
-      <h2>Reading task types</h2>
-      <p class="section-copy">Three TOEFL-style reading modes — each targeting different skills tested in the real exam.</p>
-    </div>
-    <div class="modes-grid">
-      {% for mode in site.data.modes %}
-      <article class="mode-card">
-        <span class="badge">{{ mode.id | replace: '-', ' ' | capitalize }}</span>
-        <h3>{{ mode.title }}</h3>
-        <p>{{ mode.description }}</p>
-      </article>
-      {% endfor %}
-    </div>
-  </section>
-
-  <!-- ══ PRACTICE SHELL ══ -->
-  <section class="container section" id="practice">
-    <div class="section-head">
-      <h2>Practice sets</h2>
-      <p class="section-copy">Choose a task type, then choose a set. Each set has 10 questions with instant explanations.</p>
-    </div>
-
-    <div class="practice-shell">
-      <div class="toolbar">
-        <div class="field">
-          <label for="modeSelect">Task type</label>
-          <select id="modeSelect"></select>
-        </div>
-        <div class="field">
-          <label for="setSelect">Practice set</label>
-          <select id="setSelect"></select>
-        </div>
-        <button class="btn btn-secondary" id="resetSetBtn" type="button">Reset answers</button>
-        <button class="btn btn-primary"  id="submitBtn"   type="button">Check answers</button>
-      </div>
-
-      <div class="info-row">
-        <span class="pill" id="pillType">Type: —</span>
-        <span class="pill" id="pillDifficulty">Level: —</span>
-        <span class="pill" id="pillCount">Questions: —</span>
-        <span class="pill" id="pillProgress">Saved best: —</span>
-      </div>
-
-      <div class="practice-grid">
-        <section class="panel">
-          <h3 id="setTitle">Choose a set</h3>
-          <p class="muted" id="setIntro" style="margin:8px 0 16px;line-height:1.7;">Your passage will appear here.</p>
-          <div class="passage" id="passageArea">Select a task type and a set to begin.</div>
-          <div class="footer-note">
-            <strong>Study tip:</strong> Read the whole passage first for purpose and structure. Then answer questions by returning to the exact sentence or paragraph that supports the answer.
-          </div>
-        </section>
-
-        <section class="panel">
-          <h3>Questions</h3>
-          <div id="questionArea" class="muted" style="margin-top:10px;">Questions will appear here.</div>
-          <div class="result-box" id="resultBox"></div>
-          <!-- Ad slot: shown after results -->
-          <div class="ad-slot" id="adSlot" style="display:none;">
-            <!-- Google AdSense code goes here -->
-            Advertisement
-          </div>
-        </section>
+      <div class="card">
+        <div style="font-size:1.8rem; margin-bottom:10px;">⚡</div>
+        <h3 style="margin-bottom:8px; color:var(--accent);">Shorter & Adaptive</h3>
+        <p style="font-size:0.88rem; color:var(--text-muted);">The test is now shorter overall. Reading uses a routing module — your performance determines which second module you get.</p>
       </div>
     </div>
-  </section>
+    <p class="disclaimer">⚠️ TOEFL® is a registered trademark of ETS. This site is not affiliated with or endorsed by ETS. All content is for practice purposes only.</p>
+  </div>
+</section>
 
-  <!-- ══ TIPS ══ -->
-  <section class="container section" id="tips">
-    <div class="section-head">
-      <h2>Tips for the reading section</h2>
-      <p class="section-copy">Read for purpose, locate evidence, eliminate weak choices, and use context for vocabulary.</p>
-    </div>
-    <div class="tips-grid">
-      <article class="tips-card">
-        <span class="badge">Before you answer</span>
-        <h3>Read for structure first</h3>
-        <p>Identify what the passage is mainly doing: describing a process, explaining a cause, comparing two ideas, or giving instructions.</p>
-        <ul class="mini-list">
-          <li>Circle signal words like <em>however</em>, <em>therefore</em>, <em>for example</em>, and <em>in contrast</em>.</li>
-          <li>Notice whether each paragraph has one clear job.</li>
-        </ul>
-      </article>
-      <article class="tips-card">
-        <span class="badge">During questions</span>
-        <h3>Find evidence before choosing</h3>
-        <p>Strong answers are supported by the text. Weak answers sound reasonable but are too broad, too extreme, or not stated.</p>
-        <ul class="mini-list">
-          <li>Return to the relevant sentence or paragraph.</li>
-          <li>Eliminate choices that add new information.</li>
-        </ul>
-      </article>
-      <article class="tips-card">
-        <span class="badge">For vocabulary</span>
-        <h3>Use context, not memory alone</h3>
-        <p>A familiar word may mean something different in a passage. Look at nearby words, tone, and sentence purpose before choosing.</p>
-        <ul class="mini-list">
-          <li>Replace the original word with each option mentally.</li>
-          <li>Check grammar and meaning together.</li>
-        </ul>
-      </article>
-    </div>
-  </section>
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 TOEFL Prep Hub – Free practice for the new TOEFL iBT format.</p>
+  <p style="margin-top:6px;">Not affiliated with ETS. TOEFL® is a registered trademark of Educational Testing Service.</p>
+</footer>
 
-  <!-- ══ RESOURCES / AFFILIATE ══ -->
-  <section class="container section" id="resources">
-    <div class="section-head">
-      <h2>Recommended resources</h2>
-      <p class="section-copy">Affiliate disclosure: links below may earn a small commission at no extra cost to you.</p>
-    </div>
-    <div class="resource-grid">
-      <article class="resource-card">
-        <span class="badge">Prep book</span>
-        <h3>Official TOEFL iBT Tests</h3>
-        <p>ETS's own practice tests — the closest material to the real exam. Includes full reading, listening, speaking, and writing sections.</p>
-        <!-- Replace href with your affiliate link -->
-        <a class="btn btn-secondary" href="https://www.amazon.com/s?k=official+toefl+ibt+tests" target="_blank" rel="noopener sponsored" style="margin-top:14px;display:inline-block;">View on Amazon →</a>
-      </article>
-      <article class="resource-card">
-        <span class="badge">Prep book</span>
-        <h3>Barron's TOEFL iBT</h3>
-        <p>Comprehensive strategies and practice for all four sections. Great for learners who want structured review plus extra vocabulary building.</p>
-        <a class="btn btn-secondary" href="https://www.amazon.com/s?k=barrons+toefl+ibt" target="_blank" rel="noopener sponsored" style="margin-top:14px;display:inline-block;">View on Amazon →</a>
-      </article>
-      <article class="resource-card">
-        <span class="badge">Coming soon</span>
-        <h3>More practice sets</h3>
-        <p>Listening, speaking, and writing sections are being developed. Sign up to be notified when new sections go live.</p>
-        <a class="btn btn-secondary" href="mailto:?subject=TOEFL Practice Updates" style="margin-top:14px;display:inline-block;">Get notified →</a>
-      </article>
-    </div>
-  </section>
-
-</main>
-
-<script>
-// ── DATA object baked in by Jekyll at build time ──────────────────────────
-const DATA = {
-  modes: [
-    {% for mode in site.data.modes %}
-    {
-      id: {{ mode.id | jsonify }},
-      title: {{ mode.title | jsonify }},
-      description: {{ mode.description | jsonify }},
-      sets: [
-        {% for set_id in mode.sets %}
-        {% assign set = site.data.sets[set_id] %}
-        {
-          id: {{ set.id | jsonify }},
-          name: {{ set.name | jsonify }},
-          difficulty: {{ set.difficulty | jsonify }},
-          intro: {{ set.intro | jsonify }},
-          passage: {{ set.passage | jsonify }},
-          questions: [
-            {% for q in set.questions %}
-            {
-              prompt: {{ q.prompt | jsonify }},
-              options: {{ q.options | jsonify }},
-              answer: {{ q.answer }},
-              explanation: {{ q.explanation | jsonify }}
-            }{% unless forloop.last %},{% endunless %}
-            {% endfor %}
-          ]
-        }{% unless forloop.last %},{% endunless %}
-        {% endfor %}
-      ]
-    }{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  ]
-};
-
-// ── DOM refs ──────────────────────────────────────────────────────────────
-const modeSelect   = document.getElementById('modeSelect');
-const setSelect    = document.getElementById('setSelect');
-const setTitle     = document.getElementById('setTitle');
-const setIntro     = document.getElementById('setIntro');
-const passageArea  = document.getElementById('passageArea');
-const questionArea = document.getElementById('questionArea');
-const resultBox    = document.getElementById('resultBox');
-const submitBtn    = document.getElementById('submitBtn');
-const resetSetBtn  = document.getElementById('resetSetBtn');
-const pillType     = document.getElementById('pillType');
-const pillDifficulty = document.getElementById('pillDifficulty');
-const pillCount    = document.getElementById('pillCount');
-const pillProgress = document.getElementById('pillProgress');
-const adSlot       = document.getElementById('adSlot');
-
-let currentMode = null;
-let currentSet  = null;
-let selectedAnswers = [];
-
-function bestKey(setId) { return `toefl-reading-best-${setId}`; }
-
-function loadModeOptions() {
-  modeSelect.innerHTML = DATA.modes.map(m =>
-    `<option value="${m.id}">${m.title}</option>`
-  ).join('');
-  currentMode = DATA.modes[0];
-  modeSelect.value = currentMode.id;
-  loadSetOptions();
-}
-
-function loadSetOptions() {
-  currentMode = DATA.modes.find(m => m.id === modeSelect.value);
-  setSelect.innerHTML = currentMode.sets.map(s =>
-    `<option value="${s.id}">${s.name}</option>`
-  ).join('');
-  currentSet = currentMode.sets[0];
-  setSelect.value = currentSet.id;
-  loadCurrentSet();
-}
-
-function loadCurrentSet() {
-  currentSet = currentMode.sets.find(s => s.id === setSelect.value);
-  selectedAnswers = new Array(currentSet.questions.length).fill(null);
-  resultBox.className = 'result-box';
-  resultBox.innerHTML = '';
-  adSlot.style.display = 'none';
-
-  setTitle.textContent      = currentSet.name;
-  setIntro.textContent      = currentSet.intro;
-  passageArea.innerHTML     = currentSet.passage;
-  pillType.textContent      = `Type: ${currentMode.title}`;
-  pillDifficulty.textContent = `Level: ${currentSet.difficulty}`;
-  pillCount.textContent     = `Questions: ${currentSet.questions.length}`;
-
-  const best = localStorage.getItem(bestKey(currentSet.id));
-  pillProgress.textContent  = `Saved best: ${best ? `${best}/${currentSet.questions.length}` : '—'}`;
-
-  renderQuestions(false);
-}
-
-function renderQuestions(showResults) {
-  questionArea.innerHTML = currentSet.questions.map((q, qi) => {
-    const opts = q.options.map((opt, oi) => {
-      let cls = 'option';
-      if (selectedAnswers[qi] === oi) cls += ' selected';
-      if (showResults) {
-        if (oi === q.answer) cls += ' correct';
-        if (selectedAnswers[qi] === oi && oi !== q.answer) cls += ' wrong';
-      }
-      return `<button type="button" class="${cls}" onclick="chooseAnswer(${qi},${oi})">${String.fromCharCode(65+oi)}. ${opt}</button>`;
-    }).join('');
-
-    return `
-      <div class="question-block">
-        <div class="question-title">${qi+1}. ${q.prompt}</div>
-        <div class="options">${opts}</div>
-        ${showResults ? `<div class="explanation"><strong>Explanation:</strong> ${q.explanation}</div>` : ''}
-      </div>`;
-  }).join('');
-}
-
-function chooseAnswer(qi, oi) {
-  selectedAnswers[qi] = oi;
-  renderQuestions(resultBox.classList.contains('show'));
-}
-
-function resetAnswers() {
-  selectedAnswers = new Array(currentSet.questions.length).fill(null);
-  resultBox.className = 'result-box';
-  resultBox.innerHTML = '';
-  adSlot.style.display = 'none';
-  renderQuestions(false);
-}
-
-function submitAnswers() {
-  if (selectedAnswers.some(a => a === null)) {
-    resultBox.className = 'result-box show';
-    resultBox.innerHTML = '<p class="muted">Please answer all questions before checking.</p>';
-    return;
-  }
-
-  let score = 0;
-  currentSet.questions.forEach((q, i) => { if (selectedAnswers[i] === q.answer) score++; });
-
-  const key = bestKey(currentSet.id);
-  const prev = Number(localStorage.getItem(key) || 0);
-  if (score > prev) localStorage.setItem(key, String(score));
-  pillProgress.textContent = `Saved best: ${Math.max(score, prev)}/${currentSet.questions.length}`;
-
-  const pct = Math.round((score / currentSet.questions.length) * 100);
-  let msg = 'Good start. Review the explanations and look closely at how the correct choice is supported by the text.';
-  if (pct >= 90) msg = 'Excellent work. Your choices match the passage very closely.';
-  else if (pct >= 70) msg = 'Strong result. Focus on the few questions where the passage wording or logic was subtle.';
-
-  resultBox.className = 'result-box show';
-  resultBox.innerHTML = `
-    <div class="score">${score}/${currentSet.questions.length}</div>
-    <p class="muted">You answered ${pct}% correctly.</p>
-    <div class="explanation"><strong>Tip for this set:</strong> ${msg}</div>`;
-
-  renderQuestions(true);
-  adSlot.style.display = 'flex';
-  document.getElementById('practice').scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-
-modeSelect.addEventListener('change', loadSetOptions);
-setSelect.addEventListener('change', loadCurrentSet);
-submitBtn.addEventListener('click', submitAnswers);
-resetSetBtn.addEventListener('click', resetAnswers);
-window.chooseAnswer = chooseAnswer;
-
-loadModeOptions();
-</script>
+</body>
+</html>
