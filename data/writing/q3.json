@@ -1,86 +1,386 @@
 {
-    "taskType": "academic-discussion",
-    "taskTitle": "Write for an Academic Discussion",
-    "timeSeconds": 600,
-    "instructions": "Read the professor's question and the two student responses. Write your own response contributing to the discussion. Aim for 120+ words.",
-    "prompts": [
-      {
-        "id": "ad-1",
-        "professor": {
-          "name": "Professor Williams",
-          "question": "This week we have been exploring the relationship between technology and human connection. Some argue that social media and messaging apps have made it easier for people to maintain friendships and stay connected across distances. Others believe these tools have actually made relationships more shallow and superficial. What do you think? Has technology improved or harmed the quality of human relationships? Why?"
-        },
-        "students": [
-          {
-            "name": "David",
-            "response": "Personally, I think technology has done more good than harm when it comes to relationships. My family lives in a different country, and without video calls and messaging apps, I would rarely be able to speak with them. Technology has allowed me to stay close to people I care about despite the distance. I think the key is how you use it."
-          },
-          {
-            "name": "Leila",
-            "response": "I disagree with David to some extent. In my experience, many people spend so much time communicating through screens that they neglect the people right in front of them. I've noticed that even when my friends are together in person, everyone is on their phone. This kind of behavior suggests to me that technology is reducing the depth of our connections."
-          }
-        ],
-        "sampleResponse": "While David makes a compelling point about maintaining long-distance relationships, I find myself agreeing more with Leila's concern about the impact of technology on the quality of our everyday interactions. In my view, technology has created an illusion of connection without necessarily fostering genuine closeness. For example, while we may send birthday messages to dozens of acquaintances online, we often fail to invest the time and effort needed to develop truly meaningful friendships. A recent study I read suggested that people who spend more time on social media report higher levels of loneliness, which seems paradoxical given how connected we appear to be. That said, I recognize that technology itself is not the problem — it is our relationship with it. We need to be more intentional about using digital tools to complement, rather than replace, face-to-face interaction.",
-        "keywords": ["technology", "relationships", "social media", "connection", "shallow", "meaningful", "in-person", "communication", "quality", "interaction"],
-        "topicHints": ["Give your own clear opinion", "Use a personal or hypothetical example", "Engage with what the students said", "Don't just repeat their arguments"]
+  "taskType": "academic-discussion",
+  "taskTitle": "Write for an Academic Discussion",
+  "timeSeconds": 600,
+  "instructions": "Read the professor's question and the two student responses. Write your own response contributing to the discussion. Aim for 120+ words.",
+  "prompts": [
+    {
+      "id": "ad-1",
+      "professor": {
+        "name": "Professor Williams",
+        "question": "This week we have been exploring the relationship between technology and human connection. Some argue that social media and messaging apps have made it easier for people to maintain friendships and stay connected across distances. Others believe these tools have actually made relationships more shallow and superficial. What do you think? Has technology improved or harmed the quality of human relationships? Why?"
       },
-      {
-        "id": "ad-2",
-        "professor": {
-          "name": "Professor Nguyen",
-          "question": "In recent years, many universities have introduced mandatory community service requirements for graduation. Supporters argue that requiring students to volunteer helps build civic responsibility and real-world skills. Critics say that forced volunteering is counterproductive and undermines the spirit of genuine service. Do you think universities should require students to complete community service? Why or why not?"
+      "students": [
+        {
+          "name": "David",
+          "response": "Personally, I think technology has done more good than harm when it comes to relationships. My family lives in a different country, and without video calls and messaging apps, I would rarely be able to speak with them. Technology has allowed me to stay close to people I care about despite the distance. I think the key is how you use it."
         },
-        "students": [
-          {
-            "name": "Marcus",
-            "response": "I support mandatory community service because many students simply would not volunteer on their own. A requirement ensures that everyone gets the experience of contributing to their community, which can be genuinely eye-opening. Some of my best memories from high school came from volunteer work I was initially reluctant to do."
-          },
-          {
-            "name": "Aisha",
-            "response": "I don't think forcing students to volunteer is a good idea. Volunteering should come from genuine desire to help others. When it becomes an obligation, it loses its meaning, and students may simply go through the motions without truly engaging or learning anything valuable from the experience."
-          }
-        ],
-        "sampleResponse": "I agree with Aisha's position that mandatory volunteering risks undermining the core purpose of community service. When students are compelled to volunteer simply to fulfill a graduation requirement, their motivation is external rather than intrinsic, which research in psychology suggests leads to lower quality engagement and less personal growth. In my own experience, I have seen classmates treat required service hours as just another task to check off, rushing through assignments without reflecting on the communities they were supposed to help. However, I think universities can find a middle ground. Rather than mandating a fixed number of hours, institutions could offer a range of experiential learning options — community service, internships, or research projects — allowing students to choose based on their own interests and values. This approach respects individual autonomy while still encouraging meaningful engagement with the wider world.",
-        "keywords": ["community service", "mandatory", "volunteering", "civic", "responsibility", "genuine", "motivation", "requirement", "graduation", "engagement"],
-        "topicHints": ["State your position clearly in the first or second sentence", "Use a specific example", "Try to engage with both students", "Save a few seconds to proofread"]
+        {
+          "name": "Leila",
+          "response": "I disagree with David to some extent. In my experience, many people spend so much time communicating through screens that they neglect the people right in front of them. I've noticed that even when my friends are together in person, everyone is on their phone. This kind of behavior suggests to me that technology is reducing the depth of our connections."
+        }
+      ],
+      "sampleResponse": "While David makes a compelling point about maintaining long-distance relationships, I find myself agreeing more with Leila's concern about the impact of technology on the quality of our everyday interactions. In my view, technology has created an illusion of connection without necessarily fostering genuine closeness. For example, while we may send birthday messages to dozens of acquaintances online, we often fail to invest the time and effort needed to develop truly meaningful friendships. A recent study I read suggested that people who spend more time on social media report higher levels of loneliness, which seems paradoxical given how connected we appear to be. That said, I recognize that technology itself is not the problem — it is our relationship with it. We need to be more intentional about using digital tools to complement, rather than replace, face-to-face interaction.",
+      "keywords": [
+        "technology",
+        "relationships",
+        "social media",
+        "connection",
+        "shallow",
+        "meaningful",
+        "in-person",
+        "communication",
+        "quality",
+        "interaction"
+      ],
+      "topicHints": [
+        "Give your own clear opinion",
+        "Use a personal or hypothetical example",
+        "Engage with what the students said",
+        "Don't just repeat their arguments"
+      ]
+    },
+    {
+      "id": "ad-2",
+      "professor": {
+        "name": "Professor Nguyen",
+        "question": "In recent years, many universities have introduced mandatory community service requirements for graduation. Supporters argue that requiring students to volunteer helps build civic responsibility and real-world skills. Critics say that forced volunteering is counterproductive and undermines the spirit of genuine service. Do you think universities should require students to complete community service? Why or why not?"
       },
-      {
-        "id": "ad-3",
-        "professor": {
-          "name": "Professor Ahmed",
-          "question": "As automation continues to reshape the global economy, many low-skill jobs are being replaced by machines and software. Some economists believe governments should introduce a universal basic income — a fixed monthly payment to all citizens regardless of employment — to address growing inequality. Others argue this would reduce the incentive to work and create long-term economic problems. What is your view on universal basic income? Should governments adopt this policy?"
+      "students": [
+        {
+          "name": "Marcus",
+          "response": "I support mandatory community service because many students simply would not volunteer on their own. A requirement ensures that everyone gets the experience of contributing to their community, which can be genuinely eye-opening. Some of my best memories from high school came from volunteer work I was initially reluctant to do."
         },
-        "students": [
-          {
-            "name": "Elena",
-            "response": "I strongly support universal basic income. As more jobs disappear due to automation, people will need a safety net to survive. UBI would ensure that everyone has their basic needs met, which would reduce poverty and allow people to pursue education or start small businesses without the fear of financial ruin."
-          },
-          {
-            "name": "Tom",
-            "response": "I am not convinced by UBI. Giving people money without requiring them to work could reduce motivation and lead to a shrinking workforce. Governments would also need to fund this somehow, likely through higher taxes, which could slow economic growth and harm businesses."
-          }
-        ],
-        "sampleResponse": "The debate around universal basic income touches on fundamental questions about the role of government and the future of work. While I appreciate Tom's concern about incentives and funding, I believe Elena's argument is more persuasive given the speed at which automation is advancing. The reality is that entire industries are being disrupted faster than workers can retrain, and traditional social safety nets — unemployment insurance, for example — were not designed for this scale of disruption. A universal basic income could provide the stability people need to adapt, retrain, and contribute productively to a changing economy. That said, I think the design of such a policy matters enormously. A modest, targeted UBI that supplements income rather than fully replacing work-based wages would be more fiscally sustainable and less likely to discourage employment. Countries like Finland have already piloted variations of this approach with encouraging results.",
-        "keywords": ["universal basic income", "automation", "inequality", "safety net", "employment", "government", "poverty", "economic", "workforce", "policy"],
-        "topicHints": ["Don't spend more than 90 seconds reading the question and responses", "120+ words is the target", "Include an example — personal or from the news", "Proofread at the end"]
-      }
-    ],
-    "tips": [
-      "Don't spend too long reading — skim the question and student responses, then write.",
-      "State your opinion clearly in the first sentence or two.",
-      "Aim for 120–130 words minimum. More is fine — there's no penalty.",
-      "Include a specific example (personal experience or hypothetical).",
-      "Use a mix of sentence types: simple, compound, and complex.",
-      "Avoid repeating the same words — use synonyms.",
-      "You can reference what the students said, but don't just repeat their arguments.",
-      "Save 30–60 seconds at the end to proofread for grammar errors."
-    ],
-    "whatToExpect": [
-      "A professor's question on an academic or social topic.",
-      "Two student responses showing different perspectives.",
-      "10 minutes to read and write your response.",
-      "Scored on: content relevance, grammar, vocabulary, and development.",
-      "Recommended length: 120+ words.",
-      "This task is the same format as the old TOEFL (2023–2025)."
-    ]
-  }
+        {
+          "name": "Aisha",
+          "response": "I don't think forcing students to volunteer is a good idea. Volunteering should come from genuine desire to help others. When it becomes an obligation, it loses its meaning, and students may simply go through the motions without truly engaging or learning anything valuable from the experience."
+        }
+      ],
+      "sampleResponse": "I agree with Aisha's position that mandatory volunteering risks undermining the core purpose of community service. When students are compelled to volunteer simply to fulfill a graduation requirement, their motivation is external rather than intrinsic, which research in psychology suggests leads to lower quality engagement and less personal growth. In my own experience, I have seen classmates treat required service hours as just another task to check off, rushing through assignments without reflecting on the communities they were supposed to help. However, I think universities can find a middle ground. Rather than mandating a fixed number of hours, institutions could offer a range of experiential learning options — community service, internships, or research projects — allowing students to choose based on their own interests and values. This approach respects individual autonomy while still encouraging meaningful engagement with the wider world.",
+      "keywords": [
+        "community service",
+        "mandatory",
+        "volunteering",
+        "civic",
+        "responsibility",
+        "genuine",
+        "motivation",
+        "requirement",
+        "graduation",
+        "engagement"
+      ],
+      "topicHints": [
+        "State your position clearly in the first or second sentence",
+        "Use a specific example",
+        "Try to engage with both students",
+        "Save a few seconds to proofread"
+      ]
+    },
+    {
+      "id": "ad-3",
+      "professor": {
+        "name": "Professor Ahmed",
+        "question": "As automation continues to reshape the global economy, many low-skill jobs are being replaced by machines and software. Some economists believe governments should introduce a universal basic income — a fixed monthly payment to all citizens regardless of employment — to address growing inequality. Others argue this would reduce the incentive to work and create long-term economic problems. What is your view on universal basic income? Should governments adopt this policy?"
+      },
+      "students": [
+        {
+          "name": "Elena",
+          "response": "I strongly support universal basic income. As more jobs disappear due to automation, people will need a safety net to survive. UBI would ensure that everyone has their basic needs met, which would reduce poverty and allow people to pursue education or start small businesses without the fear of financial ruin."
+        },
+        {
+          "name": "Tom",
+          "response": "I am not convinced by UBI. Giving people money without requiring them to work could reduce motivation and lead to a shrinking workforce. Governments would also need to fund this somehow, likely through higher taxes, which could slow economic growth and harm businesses."
+        }
+      ],
+      "sampleResponse": "The debate around universal basic income touches on fundamental questions about the role of government and the future of work. While I appreciate Tom's concern about incentives and funding, I believe Elena's argument is more persuasive given the speed at which automation is advancing. The reality is that entire industries are being disrupted faster than workers can retrain, and traditional social safety nets — unemployment insurance, for example — were not designed for this scale of disruption. A universal basic income could provide the stability people need to adapt, retrain, and contribute productively to a changing economy. That said, I think the design of such a policy matters enormously. A modest, targeted UBI that supplements income rather than fully replacing work-based wages would be more fiscally sustainable and less likely to discourage employment. Countries like Finland have already piloted variations of this approach with encouraging results.",
+      "keywords": [
+        "universal basic income",
+        "automation",
+        "inequality",
+        "safety net",
+        "employment",
+        "government",
+        "poverty",
+        "economic",
+        "workforce",
+        "policy"
+      ],
+      "topicHints": [
+        "Don't spend more than 90 seconds reading the question and responses",
+        "120+ words is the target",
+        "Include an example — personal or from the news",
+        "Proofread at the end"
+      ]
+    },
+    {
+      "id": "ad-4",
+      "professor": {
+        "name": "Professor Ramirez",
+        "question": "We have been studying the effects of social media on political discourse. Some researchers argue that social media has democratized political participation by giving ordinary citizens a platform to express their views and organize movements. Others contend that it has deepened political polarization by creating \"echo chambers\" in which people only encounter opinions that reinforce their own. What is your view? Has social media had a net positive or negative effect on political discourse?"
+      },
+      "students": [
+        {
+          "name": "Priya",
+          "response": "I think social media has been broadly positive for political participation. Movements like the Arab Spring and various environmental campaigns would not have been possible without platforms that allowed ordinary people to organize quickly and at low cost. Before social media, political discourse was dominated by a small number of media gatekeepers. Now anyone with a phone can contribute to the conversation."
+        },
+        {
+          "name": "James",
+          "response": "I see it very differently. While social media does allow more voices to be heard, the algorithms that power these platforms are designed to maximize engagement, not truth or balance. As a result, outrage and extreme viewpoints spread faster than measured, nuanced analysis. I think social media has made political conversations more emotionally charged and less productive."
+        }
+      ],
+      "sampleResponse": "Both Priya and James raise compelling points, but I think James's concern about algorithmic amplification is the more pressing issue. The problem is not social media per se but the incentive structures built into the platforms. When engagement — measured in likes, shares, and comments — is the primary metric, emotionally provocative content naturally outperforms thoughtful analysis. Research from MIT has demonstrated that false news spreads significantly faster on social media than true stories, which suggests that the architecture of these platforms actively undermines informed political discourse. That said, I do not want to dismiss Priya's point entirely. Social media has genuinely lowered the barriers to political participation, and for communities that were previously invisible to mainstream media, this matters enormously. My view is that the solution lies not in abandoning social media but in reforming the algorithmic systems that determine what users see — prioritizing credibility and balance over pure engagement metrics.",
+      "keywords": [
+        "social media",
+        "political",
+        "polarization",
+        "echo chambers",
+        "algorithms",
+        "engagement",
+        "discourse",
+        "participation",
+        "platforms",
+        "democracy"
+      ],
+      "topicHints": [
+        "Take a clear position early",
+        "Engage with both students by name",
+        "Include a specific example or statistic",
+        "Proofread before finishing"
+      ]
+    },
+    {
+      "id": "ad-5",
+      "professor": {
+        "name": "Professor Kim",
+        "question": "This week we explored the ethics of artificial intelligence in the workplace. As AI systems become capable of performing tasks previously done by humans, companies face difficult choices about automation. Some argue that businesses have an obligation to prioritize employment and should limit automation out of social responsibility. Others contend that companies have no such obligation and should be free to adopt technology that improves efficiency and lowers costs. What is your position? Do companies have a social responsibility to limit automation?"
+      },
+      "students": [
+        {
+          "name": "Sofia",
+          "response": "I believe companies do have a degree of social responsibility, especially large corporations that employ thousands of people. When a company automates roles that support entire communities, the social and economic consequences can be devastating. Businesses benefit enormously from the societies they operate in — using public infrastructure, educated workforces, and legal systems — and I think that creates some obligation to consider the community impact of their decisions."
+        },
+        {
+          "name": "Ben",
+          "response": "I disagree with Sofia. Companies are not charities. Their primary obligation is to shareholders and to providing goods and services efficiently. History shows that technological innovation, while disruptive in the short term, creates new industries and jobs over time. Trying to limit automation through corporate social responsibility policies would put companies at a competitive disadvantage and ultimately harm consumers through higher prices."
+        }
+      ],
+      "sampleResponse": "This is one of the most challenging ethical questions facing modern economies. While I find Ben's historical argument compelling — technological transitions have generally created new employment categories — I think it underestimates how rapidly current AI is advancing and how difficult it may be for displaced workers to transition into new roles. Sofia's point about the social contract between corporations and society is well-taken, but I would argue that voluntary corporate restraint is an insufficient response to a systemic challenge. My position is that companies should not unilaterally be expected to forgo competitive advantages, but governments should establish regulatory frameworks — such as automation taxes that fund retraining programs — that distribute the costs and benefits of AI more equitably. Individual corporate responsibility and smart public policy are not mutually exclusive, and both are needed.",
+      "keywords": [
+        "artificial intelligence",
+        "automation",
+        "employment",
+        "responsibility",
+        "companies",
+        "workers",
+        "technology",
+        "social",
+        "obligation",
+        "competitive"
+      ],
+      "topicHints": [
+        "State your position clearly",
+        "Engage with both students",
+        "Include a real or hypothetical example",
+        "Aim for 120+ words"
+      ]
+    },
+    {
+      "id": "ad-6",
+      "professor": {
+        "name": "Professor Okafor",
+        "question": "Our readings this week examined the role of arts education in schools. Budget pressures have led many school districts to reduce or eliminate music, visual arts, and drama programs in favor of subjects perceived as more economically relevant, such as STEM fields. Some argue this is a pragmatic response to limited resources and the demands of the modern job market. Others contend that arts education is essential for developing creativity, critical thinking, and emotional intelligence. Should arts education be a required part of the school curriculum? Why or why not?"
+      },
+      "students": [
+        {
+          "name": "Hannah",
+          "response": "Absolutely. Arts education develops skills that are increasingly valued even in technical fields — creativity, problem-solving, the ability to communicate complex ideas visually or narratively. Some of the most innovative technology companies actively look for employees with arts backgrounds because they bring different ways of thinking. Cutting arts programs is short-sighted, even from a purely economic perspective."
+        },
+        {
+          "name": "Carlos",
+          "response": "I understand the argument, but I think making arts education mandatory may not be the best approach. Students have different strengths and interests. Some will thrive with arts, others with sciences or trades. A more flexible curriculum that allows students to choose their electives based on their abilities and career goals might serve them better than a one-size-fits-all requirement."
+        }
+      ],
+      "sampleResponse": "I find myself sympathetic to both positions, but ultimately I agree more strongly with Hannah. The argument that arts education develops creativity and communication skills is well-supported by research — a longitudinal study by the National Endowment for the Arts found that students with high levels of arts engagement consistently demonstrated better academic outcomes and civic participation. Carlos raises a valid concern about curriculum flexibility, but I think the concern can be addressed without eliminating arts requirements altogether. A reasonable compromise would be to require some arts education at the primary and middle school levels, where students are still discovering their interests, while offering more choice at the high school level. This ensures all students benefit from arts exposure during developmentally critical years without imposing unnecessary constraints on older students who have clearer academic directions.",
+      "keywords": [
+        "arts education",
+        "creativity",
+        "curriculum",
+        "STEM",
+        "schools",
+        "required",
+        "skills",
+        "students",
+        "budget",
+        "development"
+      ],
+      "topicHints": [
+        "Take a clear position",
+        "Use a specific study or example",
+        "Address the compromise angle",
+        "Keep writing for the full time"
+      ]
+    },
+    {
+      "id": "ad-7",
+      "professor": {
+        "name": "Professor Walsh",
+        "question": "This week we discussed consumerism and its environmental impact. Some economists argue that consumer spending is the engine of economic growth and that discouraging consumption would harm employment and living standards. Environmental advocates, on the other hand, argue that the current model of consumerism is unsustainable and that individuals have a moral responsibility to consume less and make more environmentally conscious choices. Do individuals have a moral responsibility to reduce their consumption for the sake of the environment?"
+      },
+      "students": [
+        {
+          "name": "Amara",
+          "response": "Yes, I think individuals do bear some responsibility. Every purchasing decision has environmental consequences, and I think it is difficult to claim you care about climate change while making no effort to change your consumption habits. Even small changes — buying secondhand, reducing meat consumption, using public transport — add up when millions of people make them."
+        },
+        {
+          "name": "Felix",
+          "response": "I think placing the responsibility on individuals is largely a misdirection. The carbon footprint concept itself was popularized by BP to shift responsibility from corporations to consumers. The reality is that the top 100 companies are responsible for 71% of global emissions. Focusing on individual consumer choices while allowing corporations to pollute freely seems like a distraction from where real change needs to happen."
+        }
+      ],
+      "sampleResponse": "Felix makes an important point about structural responsibility that I think is often underappreciated in debates about individual behavior. The fact that BP popularized the \"personal carbon footprint\" concept is a useful reminder that framing responsibility as primarily individual can serve corporate interests. However, I do not think this entirely absolves individuals. Personal consumption choices aggregate into market signals that influence what corporations produce — the growth of plant-based food alternatives, for example, was driven largely by consumer demand. My view is that both individual and systemic responsibility are real and necessary. Individuals should make conscious choices where they can, but the emphasis in policy discussions should be on regulatory frameworks that change corporate behavior at scale — carbon taxes, stricter emissions standards, and subsidies for sustainable industries. Moral responsibility exists at both levels, but systemic leverage is far greater at the corporate and governmental level.",
+      "keywords": [
+        "consumerism",
+        "environment",
+        "responsibility",
+        "consumption",
+        "corporations",
+        "climate",
+        "individual",
+        "moral",
+        "emissions",
+        "sustainable"
+      ],
+      "topicHints": [
+        "Engage with the key tension between individual vs systemic responsibility",
+        "Reference a specific example or fact",
+        "State your position clearly",
+        "Aim for 130+ words"
+      ]
+    },
+    {
+      "id": "ad-8",
+      "professor": {
+        "name": "Professor Lindgren",
+        "question": "We have been exploring how cities are responding to population growth and housing shortages. Some urban planners advocate for building upward — constructing tall, high-density residential buildings — as the most efficient way to house more people in limited space. Others argue that high-density development destroys neighborhood character, increases traffic, and strains infrastructure. Should cities prioritize high-density development to address housing shortages? Why or why not?"
+      },
+      "students": [
+        {
+          "name": "Kenji",
+          "response": "Yes, I strongly support high-density development. Cities like Tokyo and Singapore have shown that tall, well-designed residential buildings can house millions of people sustainably without sprawling into the surrounding countryside. High-density cities also tend to have better public transportation and lower per-capita carbon emissions than sprawling low-density ones. The evidence strongly favors building up."
+        },
+        {
+          "name": "Sara",
+          "response": "I understand the efficiency arguments, but high-density development often harms existing communities. When developers build luxury high-rises in established neighborhoods, they tend to drive up property values and displace long-term residents who can no longer afford to live there. We should be cautious about prioritizing density without strong policies to protect affordable housing."
+        }
+      ],
+      "sampleResponse": "Kenji and Sara both make valid points, but I think their disagreement is partly about implementation rather than the fundamental goal of density. The question is not whether cities should build more densely — the evidence suggests they must, given the scale of housing shortages in most major cities — but how to ensure that new development serves a broad population rather than only wealthy residents. Sara's concern about displacement is well-founded and is supported by research on gentrification in cities from London to San Francisco. However, the solution is not to build less but to build differently — with stronger inclusionary zoning laws that require a percentage of units in new developments to be affordable. Cities like Vienna have demonstrated that high-density development can coexist with strong social housing programs. The key is political will, not a choice between density and community.",
+      "keywords": [
+        "housing",
+        "density",
+        "urban",
+        "development",
+        "cities",
+        "affordable",
+        "infrastructure",
+        "neighborhoods",
+        "population",
+        "planning"
+      ],
+      "topicHints": [
+        "Acknowledge both students before giving your view",
+        "Use a real city as an example",
+        "Focus on the implementation question",
+        "Check word count before finishing"
+      ]
+    },
+    {
+      "id": "ad-9",
+      "professor": {
+        "name": "Professor Navarro",
+        "question": "This week we examined the ethics of genetic engineering, particularly gene editing technologies such as CRISPR. Some scientists and ethicists support using gene editing to eliminate hereditary diseases, arguing this is a natural extension of medicine's goal to reduce suffering. Others warn of a slippery slope toward designer babies and a new form of eugenics. Should gene editing in human embryos be permitted for medical purposes? Where should the line be drawn?"
+      },
+      "students": [
+        {
+          "name": "Nadia",
+          "response": "I support gene editing for clear medical purposes — eliminating genes that cause fatal or severely debilitating conditions like Huntington's disease or Tay-Sachs. These conditions cause immense suffering, and if we have the technology to prevent them, it seems almost cruel not to use it. The key is that use should be strictly limited to conditions that cause serious harm."
+        },
+        {
+          "name": "Raj",
+          "response": "I am more cautious. Even with good intentions, who decides what counts as a serious enough condition? Deafness, for example, is viewed by many in the Deaf community not as a disability to be fixed but as a cultural identity. Once we open the door to editing embryos, the pressure to expand the range of permitted edits will be very difficult to resist."
+        }
+      ],
+      "sampleResponse": "Both Nadia and Raj identify the core tension in this debate: the genuine potential to reduce human suffering versus the risk of moving toward enhancement and eugenics. I find myself in a cautious middle position. I agree with Nadia that for conditions causing certain, severe suffering with no viable alternative treatment — like Huntington's disease — the ethical case for gene editing is strong. However, Raj is right that the line between treatment and enhancement is not always clear, and the Deaf community example illustrates how contested definitions of disability can be. My recommendation would be to permit gene editing only for monogenic diseases — those caused by a single gene mutation — with proven, severe, life-limiting consequences, while establishing an independent international ethics committee to review any proposals to expand those boundaries. This framework respects the potential of the technology while building in meaningful safeguards.",
+      "keywords": [
+        "gene editing",
+        "CRISPR",
+        "embryos",
+        "medical",
+        "ethics",
+        "hereditary",
+        "disability",
+        "eugenics",
+        "technology",
+        "disease"
+      ],
+      "topicHints": [
+        "Take a nuanced position — neither fully for nor against",
+        "Use the specific examples mentioned by students",
+        "Propose a framework or boundary",
+        "Aim for 130+ words"
+      ]
+    },
+    {
+      "id": "ad-10",
+      "professor": {
+        "name": "Professor Chen",
+        "question": "We have been discussing the concept of work-life balance. Some researchers argue that the modern emphasis on productivity and career success has created a culture of overwork that is harmful to mental and physical health. Others contend that ambition and hard work are personally fulfilling and socially valuable, and that the concept of work-life balance is overly simplistic. How do you think about work-life balance? Is striving for it important, and if so, how should individuals and employers approach it?"
+      },
+      "students": [
+        {
+          "name": "Mia",
+          "response": "I think work-life balance is genuinely important and increasingly difficult to achieve. The rise of remote work has made it harder to separate professional and personal life — when your laptop is always on your desk at home, it is very difficult to switch off. I have seen many people in high-pressure jobs develop anxiety and burnout, and I think employers have a real responsibility to set reasonable expectations."
+        },
+        {
+          "name": "Daniel",
+          "response": "I am a bit skeptical of the framing. \"Work-life balance\" implies that work and life are naturally in opposition, but for many people — especially those who are passionate about their careers — that is not how it feels. I think what matters is whether people feel in control of their time and energized by what they do, not whether they hit some prescribed ratio of work hours to personal time."
+        }
+      ],
+      "sampleResponse": "I think Daniel makes a perceptive point about framing — the binary of \"work\" and \"life\" can be misleading, and for people who find deep meaning in their careers, the concept of balance may feel irrelevant. However, I think his argument has limits. Not everyone has the privilege of a career they are passionate about, and even those who love their work can experience burnout if boundaries are entirely absent. Research consistently shows that beyond a certain threshold — roughly 50 hours per week — additional work hours produce diminishing and then negative returns in productivity. From a personal standpoint, I have found that deliberate boundaries — even small ones, like not checking email after 8 PM — significantly improve my focus and creativity during working hours. My view is that what matters is intentionality: knowing why you are working the hours you are and what you are protecting time for, rather than following a rigid formula. Employers can support this by modeling healthy boundaries at leadership level and measuring performance by outcomes rather than hours.",
+      "keywords": [
+        "work-life balance",
+        "productivity",
+        "burnout",
+        "remote work",
+        "mental health",
+        "ambition",
+        "boundaries",
+        "employers",
+        "wellbeing",
+        "career"
+      ],
+      "topicHints": [
+        "Engage with Daniel's reframing",
+        "Include a personal or research-based example",
+        "Address both individual and employer responsibility",
+        "Proofread at the end"
+      ]
+    }
+  ],
+  "tips": [
+    "Don't spend too long reading — skim the question and student responses, then write.",
+    "State your opinion clearly in the first sentence or two.",
+    "Aim for 120–130 words minimum. More is fine — there's no penalty.",
+    "Include a specific example (personal experience or hypothetical).",
+    "Use a mix of sentence types: simple, compound, and complex.",
+    "Avoid repeating the same words — use synonyms.",
+    "You can reference what the students said, but don't just repeat their arguments.",
+    "Save 30–60 seconds at the end to proofread for grammar errors."
+  ],
+  "whatToExpect": [
+    "A professor's question on an academic or social topic.",
+    "Two student responses showing different perspectives.",
+    "10 minutes to read and write your response.",
+    "Scored on: content relevance, grammar, vocabulary, and development.",
+    "Recommended length: 120+ words.",
+    "This task is the same format as the old TOEFL (2023–2025)."
+  ]
+}
