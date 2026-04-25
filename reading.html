@@ -14,6 +14,11 @@
     @media(max-width:900px){.page-layout{grid-template-columns:1fr;}}
     .progress-bar-track{background:var(--border);border-radius:99px;height:8px;overflow:hidden;margin-bottom:6px;}
     .progress-label{font-size:0.85rem;color:var(--text-muted);}
+    .guides-box{background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);padding:20px 24px;margin-top:16px;}
+    .guides-box h3{font-size:0.95rem;font-weight:700;margin-bottom:12px;color:var(--text);}
+    .guides-box ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;}
+    .guides-box li a{display:flex;align-items:center;gap:8px;color:var(--primary);font-size:0.9rem;text-decoration:none;font-weight:500;}
+    .guides-box li a:hover{text-decoration:underline;}
   </style>
 </head>
 <body>
@@ -53,17 +58,13 @@
 
 <!-- TOP LEADERBOARD -->
 <div style="text-align:center;padding:8px 0;background:var(--surface);border-bottom:1px solid var(--border);">
-  <ins class="adsbygoogle"
-       style="display:inline-block;width:728px;max-width:100%;height:90px"
-       data-ad-client="ca-pub-9028393226994516"
-       data-ad-slot="2179602083"></ins>
+  <ins class="adsbygoogle" style="display:inline-block;width:728px;max-width:100%;height:90px"
+       data-ad-client="ca-pub-9028393226994516" data-ad-slot="2179602083"></ins>
   <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 
 <div class="page-layout">
   <main>
-
-    <!-- TASK SELECTION -->
     <div id="taskSelection">
       <div class="section-intro">
         <h1>[R] Reading Section Practice</h1>
@@ -77,7 +78,6 @@
       </div>
 
       <h2 style="margin:0 0 16px;font-size:1.15rem;">Choose a Task Type</h2>
-
       <div class="sections-grid" style="padding:0;margin-bottom:24px;">
         <div class="section-card reading" onclick="loadTask('complete-the-words')" style="cursor:pointer;">
           <div class="icon">[W]</div>
@@ -99,13 +99,10 @@
         </div>
       </div>
 
-      <!-- IN-CONTENT AD between task cards and info -->
-      <ins class="adsbygoogle"
-           style="display:block;margin:8px 0 24px;"
-           data-ad-client="ca-pub-9028393226994516"
-           data-ad-slot="4417173607"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
+      <!-- IN-CONTENT AD -->
+      <ins class="adsbygoogle" style="display:block;margin:8px 0 24px;"
+           data-ad-client="ca-pub-9028393226994516" data-ad-slot="4417173607"
+           data-ad-format="auto" data-full-width-responsive="true"></ins>
       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
       <div class="tip-box">
@@ -117,13 +114,21 @@
           <li>Topics cover science, society, environment, psychology, and technology.</li>
         </ul>
       </div>
+
+      <!-- INTERNAL LINKS TO GUIDE PAGES -->
+      <div class="guides-box">
+        <h3>📚 Reading Task Guides</h3>
+        <ul>
+          <li><a href="reading/complete-the-words.html">📝 Complete the Words – Strategy &amp; Vocabulary Guide</a></li>
+          <li><a href="reading/reading-daily-life.html">📰 Reading in Daily Life – Question Types &amp; Tips</a></li>
+        </ul>
+      </div>
     </div>
 
-    <!-- PRACTICE AREA -->
     <div id="practiceArea" style="display:none;">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:10px;">
         <h2 id="taskHeading" style="font-size:1.15rem;margin:0;"></h2>
-        <div id="timerDisplay" class="timer-display">--:--</div>
+        <div id="timerDisplay" class="timer-display" style="display:none;">--:--</div>
       </div>
       <div style="margin-bottom:16px;">
         <div class="progress-bar-track">
@@ -139,16 +144,15 @@
       </div>
       <div id="scoreSummary" style="display:none;margin-top:24px;"></div>
     </div>
-
   </main>
 
-  <!-- SIDEBAR -->
   <aside class="sidebar">
     <div class="card">
       <h3 style="margin-bottom:10px;font-size:1rem;">Quick Links</h3>
       <ul style="list-style:none;padding:0;font-size:0.9rem;">
         <li style="padding:5px 0;"><a href="writing.html" style="color:var(--primary);">✍️ Writing Practice</a></li>
         <li style="padding:5px 0;"><a href="mock-test.html" style="color:var(--primary);">🎯 Full Mock Test</a></li>
+        <li style="padding:5px 0;"><a href="score-2026.html" style="color:var(--primary);">🏆 TOEFL Score 2026</a></li>
       </ul>
     </div>
     <div class="card">
@@ -158,34 +162,19 @@
         <div style="font-size:0.8rem;color:var(--text-muted);">Questions Correct</div>
       </div>
     </div>
-    <!-- SIDEBAR RECTANGLE -->
-    <ins class="adsbygoogle"
-         style="display:inline-block;width:300px;height:250px"
-         data-ad-client="ca-pub-9028393226994516"
-         data-ad-slot="7240357079"></ins>
+    <ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px"
+         data-ad-client="ca-pub-9028393226994516" data-ad-slot="7240357079"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </aside>
 </div>
 
-<footer>
-  <p>© 2026 TOEFL Prep Hub · Not affiliated with ETS · TOEFL® is a registered trademark of ETS</p>
-</footer>
-
-<!-- MOBILE ANCHOR -->
+<footer><p>© 2026 TOEFL Prep Hub · Not affiliated with ETS · TOEFL® is a registered trademark of ETS</p></footer>
 <div id="mobileAnchor" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--surface);border-top:1px solid var(--border);text-align:center;padding:4px 0;">
-  <ins class="adsbygoogle"
-       style="display:inline-block;width:320px;height:50px"
-       data-ad-client="ca-pub-9028393226994516"
-       data-ad-slot="1735169948"></ins>
+  <ins class="adsbygoogle" style="display:inline-block;width:320px;height:50px"
+       data-ad-client="ca-pub-9028393226994516" data-ad-slot="1735169948"></ins>
   <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-
 <script src="js/reading.js"></script>
-<script>
-if (window.innerWidth <= 768) {
-  document.getElementById('mobileAnchor').style.display = 'block';
-  document.body.style.paddingBottom = '60px';
-}
-</script>
+<script>if(window.innerWidth<=768){document.getElementById('mobileAnchor').style.display='block';document.body.style.paddingBottom='60px';}</script>
 </body>
 </html>
