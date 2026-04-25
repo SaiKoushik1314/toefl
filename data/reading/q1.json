@@ -1,58 +1,967 @@
 {
-    "taskType": "complete-the-words",
-    "taskTitle": "Complete the Words",
-    "timeSeconds": 240,
-    "passages": [
-      {
-        "id": "ctw-1",
-        "intro": "Fill in the missing letters to complete each word in the passage.",
-        "fullText": "Sociology is the scientific study of human society and social behavior, examining how individuals interact within groups and institutions. Researchers investi____ how peo____ form comm____ities and devel____ shared norms over time. It is esse____ial to anal____ data care____ and consi____ both large-scale structures and individual experi____ces. Understanding sociological concepts helps students recog____ patterns of inequality, cooperation, and change in modern society.",
-        "segments": [
-          { "before": "Sociology is the scientific study of human society and social behavior, examining how individuals interact within groups and institutions. Researchers ", "word": "investigate", "hint": "investi", "blanks": 4, "id": "w1" },
-          { "before": " how ", "word": "people", "hint": "peo", "blanks": 3, "id": "w2" },
-          { "before": " form ", "word": "communities", "hint": "comm", "blanks": 7, "id": "w3" },
-          { "before": " and ", "word": "develop", "hint": "devel", "blanks": 2, "id": "w4" },
-          { "before": " shared norms over time. It is ", "word": "essential", "hint": "esse", "blanks": 5, "id": "w5" },
-          { "before": " to ", "word": "analyze", "hint": "anal", "blanks": 3, "id": "w6" },
-          { "before": " data ", "word": "carefully", "hint": "care", "blanks": 5, "id": "w7" },
-          { "before": " and ", "word": "consider", "hint": "consi", "blanks": 3, "id": "w8" },
-          { "before": " both large-scale structures and individual ", "word": "experiences", "hint": "experi", "blanks": 5, "id": "w9" },
-          { "before": ". Understanding sociological concepts helps students ", "word": "recognize", "hint": "recog", "blanks": 4, "id": "w10" },
-          { "before": " patterns of inequality, cooperation, and change in modern society.", "word": "", "hint": "", "blanks": 0, "id": "end" }
-        ]
-      },
-      {
-        "id": "ctw-2",
-        "intro": "Fill in the missing letters to complete each word in the passage.",
-        "fullText": "Environmental science explores the relationships between living organisms and their surroundings. Scientists collec____ data by meas____ing factors such as temperature, humidity, and pollu____ levels in various ecosystems. They also invest____te how human activ____ies impact natural habitats and biodiv____ity. It is criti____ to interp____ findings accur____ly and apply critical think____ when developing solutions to environmental challenges.",
-        "segments": [
-          { "before": "Environmental science explores the relationships between living organisms and their surroundings. Scientists ", "word": "collect", "hint": "collec", "blanks": 1, "id": "w1" },
-          { "before": " data by ", "word": "measuring", "hint": "meas", "blanks": 5, "id": "w2" },
-          { "before": " factors such as temperature, humidity, and ", "word": "pollution", "hint": "pollu", "blanks": 4, "id": "w3" },
-          { "before": " levels in various ecosystems. They also ", "word": "investigate", "hint": "invest", "blanks": 5, "id": "w4" },
-          { "before": " how human ", "word": "activities", "hint": "activ", "blanks": 5, "id": "w5" },
-          { "before": " impact natural habitats and ", "word": "biodiversity", "hint": "biodiv", "blanks": 6, "id": "w6" },
-          { "before": ". It is ", "word": "critical", "hint": "criti", "blanks": 3, "id": "w7" },
-          { "before": " to ", "word": "interpret", "hint": "interp", "blanks": 3, "id": "w8" },
-          { "before": " findings ", "word": "accurately", "hint": "accur", "blanks": 5, "id": "w9" },
-          { "before": " and apply critical ", "word": "thinking", "hint": "think", "blanks": 3, "id": "w10" },
-          { "before": " when developing solutions to environmental challenges.", "word": "", "hint": "", "blanks": 0, "id": "end" }
-        ]
-      }
-    ],
-    "tips": [
-      "Quickly scan the full paragraph first — context activates your vocabulary.",
-      "Think about word stems and suffixes (e.g., -ly, -tion, -ing, -ity).",
-      "Ask yourself: is the missing word a noun, verb, adjective, or adverb?",
-      "If you're stuck, make your best guess and move on — don't waste time.",
-      "Words come from academic vocabulary — studying the Academic Word List helps.",
-      "The missing letters are always in the second half of the word."
-    ],
-    "whatToExpect": [
-      "One or two paragraphs of about 70 words each.",
-      "Ten words per paragraph have missing letters in their second half.",
-      "You type the missing letters into blank fields inline.",
-      "The topic is usually academic but not overly technical.",
-      "You get about 3–4 minutes per passage."
-    ]
-  }
+  "taskType": "complete-the-words",
+  "taskTitle": "Complete the Words",
+  "timeSeconds": 240,
+  "passages": [
+    {
+      "id": "ctw-1",
+      "intro": "Fill in the missing letters to complete each word in the passage.",
+      "fullText": "Sociology is the scientific study of human society and social behavior, examining how individuals interact within groups and institutions. Researchers investi____ how peo____ form comm____ities and devel____ shared norms over time. It is esse____ial to anal____ data care____ and consi____ both large-scale structures and individual experi____ces. Understanding sociological concepts helps students recog____ patterns of inequality, cooperation, and change in modern society.",
+      "segments": [
+        {
+          "before": "Sociology is the scientific study of human society and social behavior, examining how individuals interact within groups and institutions. Researchers ",
+          "word": "investigate",
+          "hint": "investi",
+          "blanks": 4,
+          "id": "w1"
+        },
+        {
+          "before": " how ",
+          "word": "people",
+          "hint": "peo",
+          "blanks": 3,
+          "id": "w2"
+        },
+        {
+          "before": " form ",
+          "word": "communities",
+          "hint": "comm",
+          "blanks": 7,
+          "id": "w3"
+        },
+        {
+          "before": " and ",
+          "word": "develop",
+          "hint": "devel",
+          "blanks": 2,
+          "id": "w4"
+        },
+        {
+          "before": " shared norms over time. It is ",
+          "word": "essential",
+          "hint": "esse",
+          "blanks": 5,
+          "id": "w5"
+        },
+        {
+          "before": " to ",
+          "word": "analyze",
+          "hint": "anal",
+          "blanks": 3,
+          "id": "w6"
+        },
+        {
+          "before": " data ",
+          "word": "carefully",
+          "hint": "care",
+          "blanks": 5,
+          "id": "w7"
+        },
+        {
+          "before": " and ",
+          "word": "consider",
+          "hint": "consi",
+          "blanks": 3,
+          "id": "w8"
+        },
+        {
+          "before": " both large-scale structures and individual ",
+          "word": "experiences",
+          "hint": "experi",
+          "blanks": 5,
+          "id": "w9"
+        },
+        {
+          "before": ". Understanding sociological concepts helps students ",
+          "word": "recognize",
+          "hint": "recog",
+          "blanks": 4,
+          "id": "w10"
+        },
+        {
+          "before": " patterns of inequality, cooperation, and change in modern society.",
+          "word": "",
+          "hint": "",
+          "blanks": 0,
+          "id": "end"
+        }
+      ]
+    },
+    {
+      "id": "ctw-2",
+      "intro": "Fill in the missing letters to complete each word in the passage.",
+      "fullText": "Environmental science explores the relationships between living organisms and their surroundings. Scientists collec____ data by meas____ing factors such as temperature, humidity, and pollu____ levels in various ecosystems. They also invest____te how human activ____ies impact natural habitats and biodiv____ity. It is criti____ to interp____ findings accur____ly and apply critical think____ when developing solutions to environmental challenges.",
+      "segments": [
+        {
+          "before": "Environmental science explores the relationships between living organisms and their surroundings. Scientists ",
+          "word": "collect",
+          "hint": "collec",
+          "blanks": 1,
+          "id": "w1"
+        },
+        {
+          "before": " data by ",
+          "word": "measuring",
+          "hint": "meas",
+          "blanks": 5,
+          "id": "w2"
+        },
+        {
+          "before": " factors such as temperature, humidity, and ",
+          "word": "pollution",
+          "hint": "pollu",
+          "blanks": 4,
+          "id": "w3"
+        },
+        {
+          "before": " levels in various ecosystems. They also ",
+          "word": "investigate",
+          "hint": "invest",
+          "blanks": 5,
+          "id": "w4"
+        },
+        {
+          "before": " how human ",
+          "word": "activities",
+          "hint": "activ",
+          "blanks": 5,
+          "id": "w5"
+        },
+        {
+          "before": " impact natural habitats and ",
+          "word": "biodiversity",
+          "hint": "biodiv",
+          "blanks": 6,
+          "id": "w6"
+        },
+        {
+          "before": ". It is ",
+          "word": "critical",
+          "hint": "criti",
+          "blanks": 3,
+          "id": "w7"
+        },
+        {
+          "before": " to ",
+          "word": "interpret",
+          "hint": "interp",
+          "blanks": 3,
+          "id": "w8"
+        },
+        {
+          "before": " findings ",
+          "word": "accurately",
+          "hint": "accur",
+          "blanks": 5,
+          "id": "w9"
+        },
+        {
+          "before": " and apply critical ",
+          "word": "thinking",
+          "hint": "think",
+          "blanks": 3,
+          "id": "w10"
+        },
+        {
+          "before": " when developing solutions to environmental challenges.",
+          "word": "",
+          "hint": "",
+          "blanks": 0,
+          "id": "end"
+        }
+      ]
+    },
+    {
+      "id": "ctw-3",
+      "intro": "Fill in the missing letters to complete each word in the passage.",
+      "fullText": "Psychology is the scientific study of behavior and mental processes, includ____ how people think, feel, and act in dif____ent situations. Researchers use a vari____ of methods to invest____te human and animal behav____. They may conduc____ experi____ents, observ____ participants in natural sett____gs, or admin____ter surveys to gather data. The goal is to under____nd and expla____ the complex processes that shape our daily experiences and interactions.",
+      "segments": [
+        {
+          "before": "Psychology is the scientific study of behavior and mental processes, ",
+          "word": "including",
+          "hint": "includ",
+          "blanks": 3,
+          "id": "w1"
+        },
+        {
+          "before": " how people think, feel, and act in dif",
+          "word": "different",
+          "hint": "dif",
+          "blanks": 6,
+          "id": "w2"
+        },
+        {
+          "before": " situations. Researchers use a vari",
+          "word": "variety",
+          "hint": "vari",
+          "blanks": 3,
+          "id": "w3"
+        },
+        {
+          "before": " of methods to invest",
+          "word": "investigate",
+          "hint": "invest",
+          "blanks": 5,
+          "id": "w4"
+        },
+        {
+          "before": " human and animal behav",
+          "word": "behavior",
+          "hint": "behav",
+          "blanks": 3,
+          "id": "w5"
+        },
+        {
+          "before": ". They may conduc",
+          "word": "conduct",
+          "hint": "conduc",
+          "blanks": 1,
+          "id": "w6"
+        },
+        {
+          "before": " experi",
+          "word": "experiments",
+          "hint": "experi",
+          "blanks": 5,
+          "id": "w7"
+        },
+        {
+          "before": ", observ",
+          "word": "observe",
+          "hint": "observ",
+          "blanks": 1,
+          "id": "w8"
+        },
+        {
+          "before": " participants in natural sett",
+          "word": "settings",
+          "hint": "sett",
+          "blanks": 4,
+          "id": "w9"
+        },
+        {
+          "before": "ings, or admin",
+          "word": "administer",
+          "hint": "admin",
+          "blanks": 5,
+          "id": "w10"
+        },
+        {
+          "before": " surveys to gather data. The goal is to under",
+          "word": "understand",
+          "hint": "under",
+          "blanks": 5,
+          "id": "w11"
+        },
+        {
+          "before": " and expla",
+          "word": "explain",
+          "hint": "expla",
+          "blanks": 2,
+          "id": "w12"
+        },
+        {
+          "before": " the complex processes that shape our daily experiences and interactions.",
+          "word": "",
+          "hint": "",
+          "blanks": 0,
+          "id": "end"
+        }
+      ]
+    },
+    {
+      "id": "ctw-4",
+      "intro": "Fill in the missing letters to complete each word in the passage.",
+      "fullText": "Economics is the social science that studies how individ____ls, businesses, and govern____ents make decis____ns about the alloc____tion of limited resources. Econom____sts analyze trends in product____n, distribu____on, and consump____on of goods and serv____es. They also exam____ne factors such as inflation, unemploy____nt, and economic growth to devel____p policies that promot____ prosperity and stability.",
+      "segments": [
+        {
+          "before": "Economics is the social science that studies how individ",
+          "word": "individuals",
+          "hint": "individ",
+          "blanks": 4,
+          "id": "w1"
+        },
+        {
+          "before": ", businesses, and govern",
+          "word": "governments",
+          "hint": "govern",
+          "blanks": 5,
+          "id": "w2"
+        },
+        {
+          "before": "ments make decis",
+          "word": "decisions",
+          "hint": "decis",
+          "blanks": 4,
+          "id": "w3"
+        },
+        {
+          "before": "ions about the alloc",
+          "word": "allocation",
+          "hint": "alloc",
+          "blanks": 5,
+          "id": "w4"
+        },
+        {
+          "before": "ation of limited resources. Econom",
+          "word": "economists",
+          "hint": "econom",
+          "blanks": 4,
+          "id": "w5"
+        },
+        {
+          "before": "ists analyze trends in product",
+          "word": "production",
+          "hint": "product",
+          "blanks": 3,
+          "id": "w6"
+        },
+        {
+          "before": "ion, distribu",
+          "word": "distribution",
+          "hint": "distribu",
+          "blanks": 4,
+          "id": "w7"
+        },
+        {
+          "before": "tion, and consump",
+          "word": "consumption",
+          "hint": "consump",
+          "blanks": 4,
+          "id": "w8"
+        },
+        {
+          "before": "tion of goods and serv",
+          "word": "services",
+          "hint": "serv",
+          "blanks": 4,
+          "id": "w9"
+        },
+        {
+          "before": "ices. They also exam",
+          "word": "examine",
+          "hint": "exam",
+          "blanks": 3,
+          "id": "w10"
+        },
+        {
+          "before": "ine factors such as inflation, unemploy",
+          "word": "unemployment",
+          "hint": "unemploy",
+          "blanks": 4,
+          "id": "w11"
+        },
+        {
+          "before": "ment, and economic growth to devel",
+          "word": "develop",
+          "hint": "devel",
+          "blanks": 2,
+          "id": "w12"
+        },
+        {
+          "before": "op policies that promot",
+          "word": "promote",
+          "hint": "promot",
+          "blanks": 1,
+          "id": "w13"
+        },
+        {
+          "before": " prosperity and stability.",
+          "word": "",
+          "hint": "",
+          "blanks": 0,
+          "id": "end"
+        }
+      ]
+    },
+    {
+      "id": "ctw-5",
+      "intro": "Fill in the missing letters to complete each word in the passage.",
+      "fullText": "Linguistics is the scientif____ study of language and its struc____re. Scholars in this field exam____ne how languages are acqui____d, how they change over time, and how they influ____ce thought and commun____tion. Modern linguists invest____te phonology, which concerns the sound syst____ms of languages, as well as syntax, semantics, and prag____tics. Understanding language is essen____al for fields ranging from education to artific____l intelligence.",
+      "segments": [
+        {
+          "before": "Linguistics is the scientif",
+          "word": "scientific",
+          "hint": "scientif",
+          "blanks": 2,
+          "id": "w1"
+        },
+        {
+          "before": "ic study of language and its struc",
+          "word": "structure",
+          "hint": "struc",
+          "blanks": 4,
+          "id": "w2"
+        },
+        {
+          "before": "re. Scholars in this field exam",
+          "word": "examine",
+          "hint": "exam",
+          "blanks": 3,
+          "id": "w3"
+        },
+        {
+          "before": "ine how languages are acqui",
+          "word": "acquired",
+          "hint": "acqui",
+          "blanks": 3,
+          "id": "w4"
+        },
+        {
+          "before": "red, how they change over time, and how they influ",
+          "word": "influence",
+          "hint": "influ",
+          "blanks": 4,
+          "id": "w5"
+        },
+        {
+          "before": "ence thought and commun",
+          "word": "communication",
+          "hint": "commun",
+          "blanks": 7,
+          "id": "w6"
+        },
+        {
+          "before": "ication. Modern linguists invest",
+          "word": "investigate",
+          "hint": "invest",
+          "blanks": 5,
+          "id": "w7"
+        },
+        {
+          "before": "igate phonology, which concerns the sound syst",
+          "word": "systems",
+          "hint": "syst",
+          "blanks": 3,
+          "id": "w8"
+        },
+        {
+          "before": "ems of languages, as well as syntax, semantics, and prag",
+          "word": "pragmatics",
+          "hint": "prag",
+          "blanks": 6,
+          "id": "w9"
+        },
+        {
+          "before": "matics. Understanding language is essen",
+          "word": "essential",
+          "hint": "essen",
+          "blanks": 4,
+          "id": "w10"
+        },
+        {
+          "before": "tial for fields ranging from education to artific",
+          "word": "artificial",
+          "hint": "artific",
+          "blanks": 3,
+          "id": "w11"
+        },
+        {
+          "before": "ial intelligence.",
+          "word": "",
+          "hint": "",
+          "blanks": 0,
+          "id": "end"
+        }
+      ]
+    },
+    {
+      "id": "ctw-6",
+      "intro": "Fill in the missing letters to complete each word in the passage.",
+      "fullText": "Anthropology is the compreh____sive study of human beings, encomp____ssing their biology, culture, and social organ____ation. Cultural anthrop____ogists examine beliefs, customs, and traditi____ns across different societies, while physical anthrop____ogists focus on human evol____tion and biological vari____tion. The discipline also includ____s archaeology, which invest____gates past human civil____ations through material remains.",
+      "segments": [
+        {
+          "before": "Anthropology is the compreh",
+          "word": "comprehensive",
+          "hint": "compreh",
+          "blanks": 6,
+          "id": "w1"
+        },
+        {
+          "before": "ensive study of human beings, encomp",
+          "word": "encompassing",
+          "hint": "encomp",
+          "blanks": 6,
+          "id": "w2"
+        },
+        {
+          "before": "assing their biology, culture, and social organ",
+          "word": "organization",
+          "hint": "organ",
+          "blanks": 7,
+          "id": "w3"
+        },
+        {
+          "before": "ization. Cultural anthrop",
+          "word": "anthropologists",
+          "hint": "anthrop",
+          "blanks": 8,
+          "id": "w4"
+        },
+        {
+          "before": "ologists examine beliefs, customs, and traditi",
+          "word": "traditions",
+          "hint": "traditi",
+          "blanks": 3,
+          "id": "w5"
+        },
+        {
+          "before": "ons across different societies, while physical anthrop",
+          "word": "anthropologists",
+          "hint": "anthrop",
+          "blanks": 8,
+          "id": "w6"
+        },
+        {
+          "before": "ologists focus on human evol",
+          "word": "evolution",
+          "hint": "evol",
+          "blanks": 5,
+          "id": "w7"
+        },
+        {
+          "before": "ution and biological vari",
+          "word": "variation",
+          "hint": "vari",
+          "blanks": 5,
+          "id": "w8"
+        },
+        {
+          "before": "ation. The discipline also includ",
+          "word": "includes",
+          "hint": "includ",
+          "blanks": 2,
+          "id": "w9"
+        },
+        {
+          "before": "es archaeology, which invest",
+          "word": "investigates",
+          "hint": "invest",
+          "blanks": 6,
+          "id": "w10"
+        },
+        {
+          "before": "igates past human civil",
+          "word": "civilizations",
+          "hint": "civil",
+          "blanks": 8,
+          "id": "w11"
+        },
+        {
+          "before": "izations through material remains.",
+          "word": "",
+          "hint": "",
+          "blanks": 0,
+          "id": "end"
+        }
+      ]
+    },
+    {
+      "id": "ctw-7",
+      "intro": "Fill in the missing letters to complete each word in the passage.",
+      "fullText": "Political science examin____s governments, political behav____or, and public pol____cy. Scholars in this field stud____y topics such as democ____acy, intern____ional relations, and polit____cal parties. They ana____yze how decisions are made at local, nation____l, and global levels. Political scient____sts also invest____gate the causes and consequences of conf____ict and cooper____tion between states and other actors on the world stage.",
+      "segments": [
+        {
+          "before": "Political science examin",
+          "word": "examines",
+          "hint": "examin",
+          "blanks": 2,
+          "id": "w1"
+        },
+        {
+          "before": "es governments, political behav",
+          "word": "behavior",
+          "hint": "behav",
+          "blanks": 3,
+          "id": "w2"
+        },
+        {
+          "before": "ior, and public pol",
+          "word": "policy",
+          "hint": "pol",
+          "blanks": 3,
+          "id": "w3"
+        },
+        {
+          "before": "icy. Scholars in this field stud",
+          "word": "study",
+          "hint": "stud",
+          "blanks": 1,
+          "id": "w4"
+        },
+        {
+          "before": "y topics such as democ",
+          "word": "democracy",
+          "hint": "democ",
+          "blanks": 4,
+          "id": "w5"
+        },
+        {
+          "before": "racy, intern",
+          "word": "international",
+          "hint": "intern",
+          "blanks": 7,
+          "id": "w6"
+        },
+        {
+          "before": "ational relations, and polit",
+          "word": "political",
+          "hint": "polit",
+          "blanks": 4,
+          "id": "w7"
+        },
+        {
+          "before": "ical parties. They ana",
+          "word": "analyze",
+          "hint": "ana",
+          "blanks": 4,
+          "id": "w8"
+        },
+        {
+          "before": "lyze how decisions are made at local, nation",
+          "word": "national",
+          "hint": "nation",
+          "blanks": 2,
+          "id": "w9"
+        },
+        {
+          "before": "al, and global levels. Political scient",
+          "word": "scientists",
+          "hint": "scient",
+          "blanks": 4,
+          "id": "w10"
+        },
+        {
+          "before": "ists also invest",
+          "word": "investigate",
+          "hint": "invest",
+          "blanks": 5,
+          "id": "w11"
+        },
+        {
+          "before": "igate the causes and consequences of conf",
+          "word": "conflict",
+          "hint": "conf",
+          "blanks": 4,
+          "id": "w12"
+        },
+        {
+          "before": "lict and cooper",
+          "word": "cooperation",
+          "hint": "cooper",
+          "blanks": 5,
+          "id": "w13"
+        },
+        {
+          "before": "ation between states and other actors on the world stage.",
+          "word": "",
+          "hint": "",
+          "blanks": 0,
+          "id": "end"
+        }
+      ]
+    },
+    {
+      "id": "ctw-8",
+      "intro": "Fill in the missing letters to complete each word.",
+      "fullText": "Neuroscience is the study of the nervous system, includ____ng the brain, spinal cord, and periph____al nerves. Scientists in this field investig____te how neurons commun____cate, how memories are form____d, and how brain injur____es affect behav____or. Advances in brain imag____ng technology have revol____tionized our understand____ng of conditions such as depression, anxiety, and neurod____generative diseases like Alzh____imer's.",
+      "segments": [
+        {
+          "before": "Neuroscience is the study of the nervous system, includ",
+          "word": "including",
+          "hint": "includ",
+          "blanks": 3,
+          "id": "w1"
+        },
+        {
+          "before": "ing the brain, spinal cord, and periph",
+          "word": "peripheral",
+          "hint": "periph",
+          "blanks": 4,
+          "id": "w2"
+        },
+        {
+          "before": "eral nerves. Scientists in this field investig",
+          "word": "investigate",
+          "hint": "investig",
+          "blanks": 3,
+          "id": "w3"
+        },
+        {
+          "before": "ate how neurons commun",
+          "word": "communicate",
+          "hint": "commun",
+          "blanks": 5,
+          "id": "w4"
+        },
+        {
+          "before": "icate, how memories are form",
+          "word": "formed",
+          "hint": "form",
+          "blanks": 2,
+          "id": "w5"
+        },
+        {
+          "before": "ed, and how brain injur",
+          "word": "injuries",
+          "hint": "injur",
+          "blanks": 3,
+          "id": "w6"
+        },
+        {
+          "before": "ies affect behav",
+          "word": "behavior",
+          "hint": "behav",
+          "blanks": 3,
+          "id": "w7"
+        },
+        {
+          "before": "ior. Advances in brain imag",
+          "word": "imaging",
+          "hint": "imag",
+          "blanks": 3,
+          "id": "w8"
+        },
+        {
+          "before": "ing technology have revol",
+          "word": "revolutionized",
+          "hint": "revol",
+          "blanks": 9,
+          "id": "w9"
+        },
+        {
+          "before": "utionized our understand",
+          "word": "understanding",
+          "hint": "understand",
+          "blanks": 3,
+          "id": "w10"
+        },
+        {
+          "before": "ing of conditions such as depression, anxiety, and neurod",
+          "word": "neurodegenerative",
+          "hint": "neurod",
+          "blanks": 11,
+          "id": "w11"
+        },
+        {
+          "before": "egenerative diseases like Alzh",
+          "word": "Alzheimer's",
+          "hint": "Alzh",
+          "blanks": 7,
+          "id": "w12"
+        },
+        {
+          "before": "imer's.",
+          "word": "",
+          "hint": "",
+          "blanks": 0,
+          "id": "end"
+        }
+      ]
+    },
+    {
+      "id": "ctw-9",
+      "intro": "Fill in the missing letters to complete each word.",
+      "fullText": "Geography explores the physical features of Earth as well as the patterns of human activ____ty across the globe. Physical geographers study land____rms, climat____c zones, and natural resour____es, while human geographers focus on how popul____tions settle, migr____te, and interact with their environ____ments. Geograph____c information systems, or GIS, allow researchers to visual____ze and analyz____ spatial data with great precis____on.",
+      "segments": [
+        {
+          "before": "Geography explores the physical features of Earth as well as the patterns of human activ",
+          "word": "activity",
+          "hint": "activ",
+          "blanks": 3,
+          "id": "w1"
+        },
+        {
+          "before": "ity across the globe. Physical geographers study land",
+          "word": "landforms",
+          "hint": "land",
+          "blanks": 5,
+          "id": "w2"
+        },
+        {
+          "before": "forms, climat",
+          "word": "climatic",
+          "hint": "climat",
+          "blanks": 2,
+          "id": "w3"
+        },
+        {
+          "before": "ic zones, and natural resour",
+          "word": "resources",
+          "hint": "resour",
+          "blanks": 3,
+          "id": "w4"
+        },
+        {
+          "before": "ces, while human geographers focus on how popul",
+          "word": "populations",
+          "hint": "popul",
+          "blanks": 6,
+          "id": "w5"
+        },
+        {
+          "before": "ations settle, migr",
+          "word": "migrate",
+          "hint": "migr",
+          "blanks": 3,
+          "id": "w6"
+        },
+        {
+          "before": "ate, and interact with their environ",
+          "word": "environments",
+          "hint": "environ",
+          "blanks": 5,
+          "id": "w7"
+        },
+        {
+          "before": "ments. Geograph",
+          "word": "Geographic",
+          "hint": "Geograph",
+          "blanks": 2,
+          "id": "w8"
+        },
+        {
+          "before": "ic information systems, or GIS, allow researchers to visual",
+          "word": "visualize",
+          "hint": "visual",
+          "blanks": 3,
+          "id": "w9"
+        },
+        {
+          "before": "ize and analyz",
+          "word": "analyze",
+          "hint": "analyz",
+          "blanks": 1,
+          "id": "w10"
+        },
+        {
+          "before": "e spatial data with great precis",
+          "word": "precision",
+          "hint": "precis",
+          "blanks": 3,
+          "id": "w11"
+        },
+        {
+          "before": "ion.",
+          "word": "",
+          "hint": "",
+          "blanks": 0,
+          "id": "end"
+        }
+      ]
+    },
+    {
+      "id": "ctw-10",
+      "intro": "Fill in the missing letters to complete each word.",
+      "fullText": "Public health is the science of protect____ng and improv____ng the health of commun____ties through education, policy, and research. Public health profess____onals monitor disease outbr____aks, design vacc____nation campaigns, and address health dispar____ties among different popul____tions. They work across disciplines, collabo____ating with doctors, policy makers, and commun____ty leaders to promot____ well-being and prev____nt illness on a large scale.",
+      "segments": [
+        {
+          "before": "Public health is the science of protect",
+          "word": "protecting",
+          "hint": "protect",
+          "blanks": 3,
+          "id": "w1"
+        },
+        {
+          "before": "ing and improv",
+          "word": "improving",
+          "hint": "improv",
+          "blanks": 3,
+          "id": "w2"
+        },
+        {
+          "before": "ing the health of commun",
+          "word": "communities",
+          "hint": "commun",
+          "blanks": 5,
+          "id": "w3"
+        },
+        {
+          "before": "ities through education, policy, and research. Public health profess",
+          "word": "professionals",
+          "hint": "profess",
+          "blanks": 6,
+          "id": "w4"
+        },
+        {
+          "before": "ionals monitor disease outbr",
+          "word": "outbreaks",
+          "hint": "outbr",
+          "blanks": 4,
+          "id": "w5"
+        },
+        {
+          "before": "eaks, design vacc",
+          "word": "vaccination",
+          "hint": "vacc",
+          "blanks": 7,
+          "id": "w6"
+        },
+        {
+          "before": "ination campaigns, and address health dispar",
+          "word": "disparities",
+          "hint": "dispar",
+          "blanks": 5,
+          "id": "w7"
+        },
+        {
+          "before": "ities among different popul",
+          "word": "populations",
+          "hint": "popul",
+          "blanks": 6,
+          "id": "w8"
+        },
+        {
+          "before": "ations. They work across disciplines, collabo",
+          "word": "collaborating",
+          "hint": "collabo",
+          "blanks": 6,
+          "id": "w9"
+        },
+        {
+          "before": "rating with doctors, policy makers, and commun",
+          "word": "community",
+          "hint": "commun",
+          "blanks": 3,
+          "id": "w10"
+        },
+        {
+          "before": "ity leaders to promot",
+          "word": "promote",
+          "hint": "promot",
+          "blanks": 1,
+          "id": "w11"
+        },
+        {
+          "before": "e well-being and prev",
+          "word": "prevent",
+          "hint": "prev",
+          "blanks": 3,
+          "id": "w12"
+        },
+        {
+          "before": "ent illness on a large scale.",
+          "word": "",
+          "hint": "",
+          "blanks": 0,
+          "id": "end"
+        }
+      ]
+    }
+  ],
+  "tips": [
+    "Quickly scan the full paragraph first — context activates your vocabulary.",
+    "Think about word stems and suffixes (e.g., -ly, -tion, -ing, -ity).",
+    "Ask yourself: is the missing word a noun, verb, adjective, or adverb?",
+    "If you're stuck, make your best guess and move on — don't waste time.",
+    "Words come from academic vocabulary — studying the Academic Word List helps.",
+    "The missing letters are always in the second half of the word."
+  ],
+  "whatToExpect": [
+    "One or two paragraphs of about 70 words each.",
+    "Ten words per paragraph have missing letters in their second half.",
+    "You type the missing letters into blank fields inline.",
+    "The topic is usually academic but not overly technical.",
+    "You get about 3–4 minutes per passage."
+  ]
+}
