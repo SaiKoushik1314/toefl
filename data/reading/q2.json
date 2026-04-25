@@ -1,154 +1,438 @@
 {
-    "taskType": "reading-daily-life",
-    "taskTitle": "Reading in Daily Life",
-    "timeSeconds": 420,
-    "passages": [
-      {
-        "id": "rdl-1",
-        "type": "short",
-        "label": "Text Message",
-        "text": "From: Marcus Chen\nTo: Priya Patel\n\nThe building manager just confirmed the elevator will be out of service this Friday from 8 a.m. to 3 p.m. for its annual inspection. Since we're on the 6th floor, could you let the delivery company know to reschedule our furniture order for a different day? I'll be in meetings all morning and can't make the call myself. Thanks!",
-        "questions": [
-          {
-            "id": "q1",
-            "text": "Why did Marcus send this message to Priya?",
-            "options": [
-              "To ask her to reschedule a delivery",
-              "To report an elevator malfunction",
-              "To invite her to a building inspection",
-              "To request furniture recommendations"
-            ],
-            "answer": 0,
-            "explanation": "Marcus explains the elevator situation and directly asks Priya to contact the delivery company to reschedule — that is the main purpose of the message."
-          },
-          {
-            "id": "q2",
-            "text": "What is the reason Marcus cannot make the phone call himself?",
-            "options": [
-              "He does not have the delivery company's number",
-              "He will be busy in meetings",
-              "He is not in the office that day",
-              "He is waiting for the building manager"
-            ],
-            "answer": 1,
-            "explanation": "Marcus states he'll be 'in meetings all morning and can't make the call myself.'"
-          }
-        ]
-      },
-      {
-        "id": "rdl-2",
-        "type": "long",
-        "label": "Official Notice",
-        "text": "Subject: Annual Campus Fitness Center Membership Renewal\n\nDear Student,\n\nWelcome back to the new semester! This is a reminder that your Fitness Center membership expired on August 31. To continue using the facility, you must renew your membership by September 15 to avoid the late renewal fee of $25.\n\nRenewal can be completed online through the Student Services Portal using your university login. You may choose from three membership tiers: Basic (gym access only), Standard (gym + group classes), or Premium (gym + classes + personal training sessions). Payment must be made in full at the time of renewal.\n\nOnce renewed, your membership card will be reactivated within 24 hours. Please note that the Fitness Center will be closed for maintenance on September 10 and 11. If you have any questions, contact the Student Services office at services@university.edu.\n\nWarm regards,\nStudent Services Office",
-        "questions": [
-          {
-            "id": "q1",
-            "text": "What is the main purpose of this notice?",
-            "options": [
-              "To announce the opening of a new fitness center",
-              "To remind students to renew their membership",
-              "To inform students of a fee increase",
-              "To describe new fitness classes available this semester"
-            ],
-            "answer": 1,
-            "explanation": "The notice is primarily a reminder about membership renewal, including the deadline and the process to renew."
-          },
-          {
-            "id": "q2",
-            "text": "What will happen if a student renews after September 15?",
-            "options": [
-              "Their membership will be permanently cancelled",
-              "They will need to visit the office in person",
-              "They will be charged an additional $25",
-              "Their access will be limited to gym only"
-            ],
-            "answer": 2,
-            "explanation": "The notice states students must renew by September 15 'to avoid the late renewal fee of $25.'"
-          },
-          {
-            "id": "q3",
-            "text": "Which membership tier would a student choose if they want group classes but NOT personal training?",
-            "options": [
-              "Basic",
-              "Standard",
-              "Premium",
-              "Any tier includes group classes"
-            ],
-            "answer": 1,
-            "explanation": "Standard includes 'gym + group classes' but not personal training, which is only in Premium."
-          },
-          {
-            "id": "q4",
-            "text": "When will a renewed membership card be usable again?",
-            "options": [
-              "Immediately after payment",
-              "After September 15",
-              "Within 24 hours of renewal",
-              "On the first day of the new month"
-            ],
-            "answer": 2,
-            "explanation": "The notice says 'your membership card will be reactivated within 24 hours' after renewal."
-          }
-        ]
-      },
-      {
-        "id": "rdl-3",
-        "type": "long",
-        "label": "Email",
-        "text": "From: Jordan Rivera\nTo: Neighborhood Watch Group\n\nHello everyone,\n\nI wanted to give a quick update following last week's community safety meeting. As discussed, we have agreed to launch a neighborhood watch schedule starting October 1. Volunteers will walk the main streets in pairs every Tuesday and Thursday evening from 7 to 9 p.m.\n\nTo sign up, please reply to this email with your preferred dates for October. Try to select at least two evenings. We have a total of eight slots to fill each month, and we want to make sure no single person is overloaded.\n\nFor those who could not attend the meeting, a summary of the new reporting procedures has been attached to this email. Please read it before your first patrol. All incidents should now be reported via the city's new app rather than by calling the non-emergency line.\n\nThank you for your continued support in keeping our neighborhood safe.\n\nBest,\nJordan Rivera\nNeighborhood Watch Coordinator",
-        "questions": [
-          {
-            "id": "q1",
-            "text": "What is Jordan asking recipients to do?",
-            "options": [
-              "Attend a community safety meeting",
-              "Download the city's new app",
-              "Reply with their availability for patrols",
-              "Read the reporting procedures and call the non-emergency line"
-            ],
-            "answer": 2,
-            "explanation": "Jordan asks everyone to 'reply to this email with your preferred dates for October' — that is the main action requested."
-          },
-          {
-            "id": "q2",
-            "text": "How should incidents be reported according to the new procedures?",
-            "options": [
-              "By calling the non-emergency police line",
-              "By contacting Jordan Rivera directly",
-              "Through the city's new app",
-              "By attending the next community meeting"
-            ],
-            "answer": 2,
-            "explanation": "Jordan states 'All incidents should now be reported via the city's new app rather than by calling the non-emergency line.'"
-          },
-          {
-            "id": "q3",
-            "text": "What does Jordan want to avoid by limiting each person to at least two evenings?",
-            "options": [
-              "Having the same people patrol too frequently",
-              "Leaving some slots empty",
-              "Overloading individual volunteers",
-              "Conflicts between patrol pairs"
-            ],
-            "answer": 2,
-            "explanation": "Jordan says 'we want to make sure no single person is overloaded,' which is why participation is managed."
-          }
-        ]
-      }
-    ],
-    "tips": [
-      "Scan the whole document quickly before reading questions — these are short!",
-      "Identify the purpose of the document: Why was this email/notice written?",
-      "Pay attention to who is doing what — keep roles and responsibilities clear.",
-      "Watch for tricky distractors that use words from the text but give wrong answers.",
-      "Make simple inferences — not everything is stated directly.",
-      "Answer quickly and move on; don't overthink short passages."
-    ],
-    "whatToExpect": [
-      "Short passages (40–50 words) with 2 questions.",
-      "Long passages (100–140 words) with 3–4 questions.",
-      "Content includes emails, notices, text messages, pamphlets, invoices.",
-      "Topics involve everyday campus or social situations.",
-      "Questions ask about main purpose, specific details, and simple inferences."
-    ]
-  }
+  "taskType": "reading-daily-life",
+  "taskTitle": "Reading in Daily Life",
+  "timeSeconds": 420,
+  "passages": [
+    {
+      "id": "rdl-1",
+      "type": "short",
+      "label": "Text Message",
+      "text": "From: Marcus Chen\nTo: Priya Patel\n\nThe building manager just confirmed the elevator will be out of service this Friday from 8 a.m. to 3 p.m. for its annual inspection. Since we're on the 6th floor, could you let the delivery company know to reschedule our furniture order for a different day? I'll be in meetings all morning and can't make the call myself. Thanks!",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "Why did Marcus send this message to Priya?",
+          "options": [
+            "To ask her to reschedule a delivery",
+            "To report an elevator malfunction",
+            "To invite her to a building inspection",
+            "To request furniture recommendations"
+          ],
+          "answer": 0,
+          "explanation": "Marcus explains the elevator situation and directly asks Priya to contact the delivery company to reschedule — that is the main purpose of the message."
+        },
+        {
+          "id": "q2",
+          "text": "What is the reason Marcus cannot make the phone call himself?",
+          "options": [
+            "He does not have the delivery company's number",
+            "He will be busy in meetings",
+            "He is not in the office that day",
+            "He is waiting for the building manager"
+          ],
+          "answer": 1,
+          "explanation": "Marcus states he'll be 'in meetings all morning and can't make the call myself.'"
+        }
+      ]
+    },
+    {
+      "id": "rdl-2",
+      "type": "long",
+      "label": "Official Notice",
+      "text": "Subject: Annual Campus Fitness Center Membership Renewal\n\nDear Student,\n\nWelcome back to the new semester! This is a reminder that your Fitness Center membership expired on August 31. To continue using the facility, you must renew your membership by September 15 to avoid the late renewal fee of $25.\n\nRenewal can be completed online through the Student Services Portal using your university login. You may choose from three membership tiers: Basic (gym access only), Standard (gym + group classes), or Premium (gym + classes + personal training sessions). Payment must be made in full at the time of renewal.\n\nOnce renewed, your membership card will be reactivated within 24 hours. Please note that the Fitness Center will be closed for maintenance on September 10 and 11. If you have any questions, contact the Student Services office at services@university.edu.\n\nWarm regards,\nStudent Services Office",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "What is the main purpose of this notice?",
+          "options": [
+            "To announce the opening of a new fitness center",
+            "To remind students to renew their membership",
+            "To inform students of a fee increase",
+            "To describe new fitness classes available this semester"
+          ],
+          "answer": 1,
+          "explanation": "The notice is primarily a reminder about membership renewal, including the deadline and the process to renew."
+        },
+        {
+          "id": "q2",
+          "text": "What will happen if a student renews after September 15?",
+          "options": [
+            "Their membership will be permanently cancelled",
+            "They will need to visit the office in person",
+            "They will be charged an additional $25",
+            "Their access will be limited to gym only"
+          ],
+          "answer": 2,
+          "explanation": "The notice states students must renew by September 15 'to avoid the late renewal fee of $25.'"
+        },
+        {
+          "id": "q3",
+          "text": "Which membership tier would a student choose if they want group classes but NOT personal training?",
+          "options": [
+            "Basic",
+            "Standard",
+            "Premium",
+            "Any tier includes group classes"
+          ],
+          "answer": 1,
+          "explanation": "Standard includes 'gym + group classes' but not personal training, which is only in Premium."
+        },
+        {
+          "id": "q4",
+          "text": "When will a renewed membership card be usable again?",
+          "options": [
+            "Immediately after payment",
+            "After September 15",
+            "Within 24 hours of renewal",
+            "On the first day of the new month"
+          ],
+          "answer": 2,
+          "explanation": "The notice says 'your membership card will be reactivated within 24 hours' after renewal."
+        }
+      ]
+    },
+    {
+      "id": "rdl-3",
+      "type": "long",
+      "label": "Email",
+      "text": "From: Jordan Rivera\nTo: Neighborhood Watch Group\n\nHello everyone,\n\nI wanted to give a quick update following last week's community safety meeting. As discussed, we have agreed to launch a neighborhood watch schedule starting October 1. Volunteers will walk the main streets in pairs every Tuesday and Thursday evening from 7 to 9 p.m.\n\nTo sign up, please reply to this email with your preferred dates for October. Try to select at least two evenings. We have a total of eight slots to fill each month, and we want to make sure no single person is overloaded.\n\nFor those who could not attend the meeting, a summary of the new reporting procedures has been attached to this email. Please read it before your first patrol. All incidents should now be reported via the city's new app rather than by calling the non-emergency line.\n\nThank you for your continued support in keeping our neighborhood safe.\n\nBest,\nJordan Rivera\nNeighborhood Watch Coordinator",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "What is Jordan asking recipients to do?",
+          "options": [
+            "Attend a community safety meeting",
+            "Download the city's new app",
+            "Reply with their availability for patrols",
+            "Read the reporting procedures and call the non-emergency line"
+          ],
+          "answer": 2,
+          "explanation": "Jordan asks everyone to 'reply to this email with your preferred dates for October' — that is the main action requested."
+        },
+        {
+          "id": "q2",
+          "text": "How should incidents be reported according to the new procedures?",
+          "options": [
+            "By calling the non-emergency police line",
+            "By contacting Jordan Rivera directly",
+            "Through the city's new app",
+            "By attending the next community meeting"
+          ],
+          "answer": 2,
+          "explanation": "Jordan states 'All incidents should now be reported via the city's new app rather than by calling the non-emergency line.'"
+        },
+        {
+          "id": "q3",
+          "text": "What does Jordan want to avoid by limiting each person to at least two evenings?",
+          "options": [
+            "Having the same people patrol too frequently",
+            "Leaving some slots empty",
+            "Overloading individual volunteers",
+            "Conflicts between patrol pairs"
+          ],
+          "answer": 2,
+          "explanation": "Jordan says 'we want to make sure no single person is overloaded,' which is why participation is managed."
+        }
+      ]
+    },
+    {
+      "id": "rdl-4",
+      "type": "short",
+      "label": "Text Message",
+      "text": "From: Dr. Chen\nTo: Study Group\n\nReminder that our weekly study session has been moved from Thursday to Friday this week due to the lab being reserved for a departmental event. Same time, 6 PM, same room. Please let anyone who isn't in this group chat know. See you then!",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "Why is the study session being moved?",
+          "options": [
+            "The room will be used for another event",
+            "Dr. Chen has a conflict on Thursday",
+            "The group voted to change the day",
+            "Friday is more convenient for everyone"
+          ],
+          "answer": 0,
+          "explanation": "Dr. Chen states the lab is \"reserved for a departmental event\" — that is the reason for the change."
+        },
+        {
+          "id": "q2",
+          "text": "What does Dr. Chen ask the recipients to do?",
+          "options": [
+            "Arrive early to reserve the room",
+            "Confirm their attendance by Thursday",
+            "Inform others not in the group chat",
+            "Reschedule the session to a different week"
+          ],
+          "answer": 2,
+          "explanation": "Dr. Chen asks them to \"let anyone who isn't in this group chat know\" about the change."
+        }
+      ]
+    },
+    {
+      "id": "rdl-5",
+      "type": "long",
+      "label": "Email",
+      "text": "Subject: Library Printing Services — Temporary Outage\n\nDear Library Users,\n\nPlease be advised that the library's printing services will be unavailable from Monday, May 5 through Wednesday, May 7 while our printing system undergoes a scheduled upgrade. During this period, students who need to print documents urgently are encouraged to use the printing kiosks located in the Student Union Building on the ground floor.\n\nOnce the upgrade is complete, users will benefit from faster print speeds, improved wireless printing from personal devices, and a new credit-based payment system that replaces the current card system. All existing print credits will be transferred automatically.\n\nWe apologize for any inconvenience this may cause. If you have any questions, please contact the library help desk at library@university.edu.\n\nLibrary Services Team",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "What is the main purpose of this email?",
+          "options": [
+            "To announce the permanent closure of library printing",
+            "To inform users about a temporary printing outage",
+            "To introduce a new student payment system",
+            "To advertise the Student Union Building services"
+          ],
+          "answer": 1,
+          "explanation": "The email's primary purpose is to inform users that printing will be unavailable from May 5–7 due to a scheduled upgrade."
+        },
+        {
+          "id": "q2",
+          "text": "Where can students print during the outage?",
+          "options": [
+            "The main library reference desk",
+            "Any computer lab on campus",
+            "The Student Union Building kiosks",
+            "The faculty resource center"
+          ],
+          "answer": 2,
+          "explanation": "The email directs students to \"the printing kiosks located in the Student Union Building on the ground floor.\""
+        },
+        {
+          "id": "q3",
+          "text": "What will happen to existing print credits after the upgrade?",
+          "options": [
+            "They will expire and need to be repurchased",
+            "They will be transferred automatically",
+            "Students must redeem them before the upgrade",
+            "They will be converted to library fines credit"
+          ],
+          "answer": 1,
+          "explanation": "The email states \"All existing print credits will be transferred automatically.\""
+        }
+      ]
+    },
+    {
+      "id": "rdl-6",
+      "type": "long",
+      "label": "Flyer",
+      "text": "INTERNATIONAL FOOD FESTIVAL — CAMPUS GREEN\nSaturday, April 19 | 11 AM – 5 PM\n\nJoin us for the 8th Annual International Food Festival, celebrating cuisines from over 30 countries! This free, family-friendly event features:\n\n• Live cooking demonstrations at 12 PM and 3 PM\n• Cultural performances throughout the day\n• Food stalls run by student cultural associations\n• A children's craft zone (ages 4–12)\n• Raffle prizes including airline vouchers and restaurant gift cards\n\nAll food purchases support student cultural association programming. No tickets required — just show up and enjoy!\n\nFor more information or to volunteer, visit: campus.edu/foodfestival",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "What is one way the event supports the university community?",
+          "options": [
+            "It provides free meals to all students",
+            "Food purchases fund student cultural programs",
+            "It distributes airline vouchers to attendees",
+            "It offers cooking classes for academic credit"
+          ],
+          "answer": 1,
+          "explanation": "The flyer states \"All food purchases support student cultural association programming.\""
+        },
+        {
+          "id": "q2",
+          "text": "Which of the following is NOT mentioned as a feature of the festival?",
+          "options": [
+            "Live cooking demonstrations",
+            "A children's craft zone",
+            "A photography competition",
+            "Cultural performances"
+          ],
+          "answer": 2,
+          "explanation": "The flyer lists demonstrations, a craft zone, and performances, but does not mention a photography competition."
+        },
+        {
+          "id": "q3",
+          "text": "How can someone participate as a volunteer?",
+          "options": [
+            "By emailing the cultural associations directly",
+            "By visiting the event website",
+            "By arriving early on the day of the event",
+            "By contacting the student services office"
+          ],
+          "answer": 1,
+          "explanation": "The flyer says \"to volunteer, visit: campus.edu/foodfestival\" — the website is the contact point."
+        }
+      ]
+    },
+    {
+      "id": "rdl-7",
+      "type": "short",
+      "label": "Notice",
+      "text": "PARKING NOTICE\nAll vehicles parked in Lot C must be removed by 7 AM on Saturday, March 22. The lot will be closed for resurfacing and will reopen Monday morning. Vehicles remaining after 7 AM will be towed at the owner's expense. For temporary parking, use the overflow lot on Pine Street (free on weekends).\n— Campus Facilities Management",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "What will happen to cars left in Lot C after 7 AM on Saturday?",
+          "options": [
+            "They will be ticketed but not moved",
+            "They will be towed at the owner's cost",
+            "They will be relocated to Pine Street",
+            "The deadline will be extended to Monday"
+          ],
+          "answer": 1,
+          "explanation": "The notice clearly states \"Vehicles remaining after 7 AM will be towed at the owner's expense.\""
+        },
+        {
+          "id": "q2",
+          "text": "What does the notice say about Pine Street parking on weekends?",
+          "options": [
+            "It requires a parking permit",
+            "It is free of charge",
+            "It is available for staff only",
+            "It closes at 5 PM"
+          ],
+          "answer": 1,
+          "explanation": "The notice specifies the Pine Street overflow lot is \"free on weekends.\""
+        }
+      ]
+    },
+    {
+      "id": "rdl-8",
+      "type": "long",
+      "label": "Email",
+      "text": "From: Academic Advising Office\nTo: All Undergraduate Students\nSubject: Course Registration — Important Reminders\n\nDear Students,\n\nAs the spring registration period approaches, we would like to remind you of several important policies.\n\nFirst, students must meet with their academic advisor before registering if they plan to take more than 18 credit hours in a single semester. An advisor approval form must be submitted to the registrar's office no later than November 1.\n\nSecond, students who have outstanding library fines or unpaid tuition balances will have a registration hold placed on their accounts. These holds must be cleared before registration can proceed.\n\nThird, please review your degree audit in the student portal before selecting courses to ensure you are meeting all graduation requirements. The advising office is available Monday through Friday, 9 AM to 4 PM, for walk-in appointments or scheduled consultations.\n\nWe look forward to helping you plan a successful semester.\n\nAcademic Advising Office",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "Who must meet with an advisor before registering?",
+          "options": [
+            "All undergraduate students",
+            "Students taking more than 18 credit hours",
+            "Students with unpaid library fines",
+            "First-year students only"
+          ],
+          "answer": 1,
+          "explanation": "The email specifies that students \"who plan to take more than 18 credit hours\" must meet with an advisor before registering."
+        },
+        {
+          "id": "q2",
+          "text": "What prevents a student from registering for courses?",
+          "options": [
+            "Not having declared a major",
+            "Missing the November 1 deadline",
+            "Having a hold due to unpaid fines or tuition",
+            "Failing to attend an orientation session"
+          ],
+          "answer": 2,
+          "explanation": "The email states that \"outstanding library fines or unpaid tuition balances will have a registration hold placed on their accounts.\""
+        },
+        {
+          "id": "q3",
+          "text": "What does the advising office recommend students do before choosing courses?",
+          "options": [
+            "Contact their professors for permission",
+            "Review their degree audit in the student portal",
+            "Submit a course preference form online",
+            "Attend an advising workshop"
+          ],
+          "answer": 2,
+          "explanation": "The email advises students to \"review your degree audit in the student portal before selecting courses.\""
+        },
+        {
+          "id": "q4",
+          "text": "When is the advising office available for walk-in appointments?",
+          "options": [
+            "Monday through Saturday, 8 AM to 5 PM",
+            "Monday through Friday, 9 AM to 4 PM",
+            "Weekdays only, by appointment only",
+            "Tuesday and Thursday, 10 AM to 3 PM"
+          ],
+          "answer": 1,
+          "explanation": "The email states the office is available \"Monday through Friday, 9 AM to 4 PM, for walk-in appointments or scheduled consultations.\""
+        }
+      ]
+    },
+    {
+      "id": "rdl-9",
+      "type": "short",
+      "label": "Text Message",
+      "text": "From: Maya\nTo: Lena\n\nHey! The professor just posted an update on the class portal — the essay deadline has been extended to next Friday because she said a lot of people had questions about the rubric. She's also added a FAQ document to the resources folder. You might want to read it before you start writing.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "Why was the essay deadline extended?",
+          "options": [
+            "The professor was ill and unavailable",
+            "Many students were confused about the rubric",
+            "The class portal had technical issues",
+            "Students requested more research time"
+          ],
+          "answer": 1,
+          "explanation": "Maya says the deadline was extended \"because she said a lot of people had questions about the rubric.\""
+        },
+        {
+          "id": "q2",
+          "text": "What does Maya suggest Lena do?",
+          "options": [
+            "Contact the professor directly",
+            "Read the FAQ document before writing",
+            "Submit a draft for early feedback",
+            "Check the portal for the new deadline"
+          ],
+          "answer": 1,
+          "explanation": "Maya tells Lena \"You might want to read it before you start writing,\" referring to the FAQ document."
+        }
+      ]
+    },
+    {
+      "id": "rdl-10",
+      "type": "long",
+      "label": "Official Notice",
+      "text": "CITY OF RIVERSIDE\nCOMMUNITY RECYCLING PROGRAM — UPDATED GUIDELINES\n\nEffective July 1, the City of Riverside is expanding its recycling program to include glass containers and rigid plastics marked with recycling codes 1 through 7. Please note the following changes:\n\n• Glass bottles and jars should be rinsed and placed in the blue recycling bin WITHOUT lids.\n• Rigid plastic containers (e.g., yogurt tubs, laundry detergent bottles) are now accepted.\n• Plastic bags and soft plastic wrapping are NOT accepted in curbside bins. Please take these to drop-off locations at participating grocery stores.\n• Paper and cardboard should continue to be flattened and placed in the bin separately from glass and plastic.\n\nContaminated recyclables (items with food residue) will cause entire loads to be sent to landfill. Please rinse all containers before recycling.\n\nFor a full list of accepted materials, visit riverside.gov/recycling.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "What is new about the recycling program as of July 1?",
+          "options": [
+            "Paper recycling is no longer accepted",
+            "Glass and certain plastics are now included",
+            "All plastic bags can now be recycled curbside",
+            "The recycling bin color has been changed"
+          ],
+          "answer": 1,
+          "explanation": "The notice states the program is \"expanding to include glass containers and rigid plastics\" — these are the new additions."
+        },
+        {
+          "id": "q2",
+          "text": "What should residents do with plastic bags?",
+          "options": [
+            "Place them in the blue recycling bin",
+            "Drop them off at participating grocery stores",
+            "Seal them in paper bags before recycling",
+            "Include them with cardboard items"
+          ],
+          "answer": 1,
+          "explanation": "The notice says plastic bags \"are NOT accepted in curbside bins\" and should be taken to \"drop-off locations at participating grocery stores.\""
+        },
+        {
+          "id": "q3",
+          "text": "Why might recyclables end up in a landfill?",
+          "options": [
+            "If they are placed in the wrong bin color",
+            "If they contain food residue",
+            "If glass lids are left on jars",
+            "If plastics are mixed with paper"
+          ],
+          "answer": 1,
+          "explanation": "The notice warns that \"contaminated recyclables (items with food residue) will cause entire loads to be sent to landfill.\""
+        }
+      ]
+    }
+  ],
+  "tips": [
+    "Scan the whole document quickly before reading questions — these are short!",
+    "Identify the purpose of the document: Why was this email/notice written?",
+    "Pay attention to who is doing what — keep roles and responsibilities clear.",
+    "Watch for tricky distractors that use words from the text but give wrong answers.",
+    "Make simple inferences — not everything is stated directly.",
+    "Answer quickly and move on; don't overthink short passages."
+  ],
+  "whatToExpect": [
+    "Short passages (40–50 words) with 2 questions.",
+    "Long passages (100–140 words) with 3–4 questions.",
+    "Content includes emails, notices, text messages, pamphlets, invoices.",
+    "Topics involve everyday campus or social situations.",
+    "Questions ask about main purpose, specific details, and simple inferences."
+  ]
+}
