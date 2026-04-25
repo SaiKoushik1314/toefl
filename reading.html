@@ -9,8 +9,36 @@
   <link rel="canonical" href="https://master-toefl.com/reading.html"/>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9028393226994516" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .page-layout{display:grid;grid-template-columns:1fr 300px;gap:28px;max-width:1200px;margin:0 auto;padding:32px 20px;align-items:start;}
+    @media(max-width:900px){.page-layout{grid-template-columns:1fr;}}
+    .progress-bar-track{background:var(--border);border-radius:99px;height:8px;overflow:hidden;margin-bottom:6px;}
+    .progress-label{font-size:0.85rem;color:var(--text-muted);}
+  </style>
 </head>
 <body>
+
+<!-- INTRO MODAL -->
+<div id="introOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:999;align-items:center;justify-content:center;padding:16px;">
+  <div style="background:var(--surface);border-radius:var(--radius);max-width:560px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:var(--shadow-lg);position:relative;">
+    <button onclick="closeIntroModal()" style="position:absolute;top:14px;right:14px;background:var(--surface2);border:1px solid var(--border);border-radius:50%;width:36px;height:36px;font-size:1rem;cursor:pointer;color:var(--text-muted);">✕</button>
+    <div style="background:linear-gradient(135deg,var(--primary),var(--secondary));padding:24px 28px;border-radius:var(--radius) var(--radius) 0 0;">
+      <span id="modalBadge" style="background:rgba(255,255,255,0.2);color:#fff;font-size:0.78rem;font-weight:700;padding:4px 12px;border-radius:99px;display:inline-block;margin-bottom:10px;"></span>
+      <h2 id="modalTitle" style="color:#fff;font-size:1.4rem;margin:0 0 6px;"></h2>
+      <p id="modalDesc" style="color:rgba(255,255,255,0.85);font-size:0.92rem;margin:0;"></p>
+    </div>
+    <div style="padding:24px 28px;">
+      <h4 style="margin-bottom:10px;font-size:0.9rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;">What to Expect</h4>
+      <ul id="modalExpect" style="list-style:none;padding:0;margin:0 0 20px;"></ul>
+      <h4 style="margin-bottom:10px;font-size:0.9rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;">Tips for Success</h4>
+      <ul id="modalTips" style="padding-left:18px;margin:0 0 24px;font-size:0.88rem;line-height:1.8;color:var(--text);"></ul>
+      <div style="display:flex;gap:12px;justify-content:flex-end;">
+        <button onclick="closeIntroModal()" class="btn btn-secondary btn-sm">Maybe Later</button>
+        <button onclick="startTask()" class="btn btn-primary btn-sm">Start Practice →</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <nav class="navbar">
   <a href="index.html" class="nav-logo">TOEFL <span>Prep Hub</span></a>
@@ -35,6 +63,7 @@
 <div class="page-layout">
   <main>
 
+    <!-- TASK SELECTION -->
     <div id="taskSelection">
       <div class="section-intro">
         <h1>[R] Reading Section Practice</h1>
@@ -48,6 +77,7 @@
       </div>
 
       <h2 style="margin:0 0 16px;font-size:1.15rem;">Choose a Task Type</h2>
+
       <div class="sections-grid" style="padding:0;margin-bottom:24px;">
         <div class="section-card reading" onclick="loadTask('complete-the-words')" style="cursor:pointer;">
           <div class="icon">[W]</div>
@@ -69,7 +99,7 @@
         </div>
       </div>
 
-      <!-- IN-CONTENT AD mid task selection -->
+      <!-- IN-CONTENT AD between task cards and info -->
       <ins class="adsbygoogle"
            style="display:block;margin:8px 0 24px;"
            data-ad-client="ca-pub-9028393226994516"
@@ -89,40 +119,30 @@
       </div>
     </div>
 
+    <!-- PRACTICE AREA -->
     <div id="practiceArea" style="display:none;">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:10px;">
         <h2 id="taskHeading" style="font-size:1.15rem;margin:0;"></h2>
         <div id="timerDisplay" class="timer-display">--:--</div>
       </div>
       <div style="margin-bottom:16px;">
-        <div style="background:var(--border);border-radius:99px;height:8px;overflow:hidden;margin-bottom:6px;">
+        <div class="progress-bar-track">
           <div class="progress-bar-fill" id="progressFill" style="width:0%"></div>
         </div>
-        <span id="qProgress" style="font-size:0.85rem;color:var(--text-muted);">Question 1 of 1</span>
+        <span id="qProgress" class="progress-label">Question 1 of 1</span>
       </div>
       <div id="questionArea"></div>
       <div id="navBtns" style="display:flex;gap:12px;margin-top:20px;flex-wrap:wrap;">
-        <button id="prevBtn" class="btn btn-secondary btn-sm" onclick="prevQ()" style="display:none;">← Previous</button>
-        <button id="nextBtn" class="btn btn-primary btn-sm" onclick="nextQ()" style="display:none;">Next →</button>
-        <button id="submitBtn" class="btn btn-success btn-sm" onclick="finishTask()" style="display:none;">Finish &amp; See Score</button>
+        <button id="prevBtn" class="btn btn-secondary btn-sm" onclick="prevQuestion()" style="display:none;">← Previous</button>
+        <button id="nextBtn" class="btn btn-primary btn-sm" onclick="nextQuestion()" style="display:none;">Next →</button>
+        <button id="submitBtn" class="btn btn-success btn-sm" onclick="submitTask()" style="display:none;">Finish &amp; See Score</button>
       </div>
-
-      <!-- IN-CONTENT AD shown after finishing -->
-      <div id="postTaskAd" style="display:none;margin-top:24px;">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-9028393226994516"
-             data-ad-slot="4417173607"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-      </div>
-
       <div id="scoreSummary" style="display:none;margin-top:24px;"></div>
     </div>
 
   </main>
 
+  <!-- SIDEBAR -->
   <aside class="sidebar">
     <div class="card">
       <h3 style="margin-bottom:10px;font-size:1rem;">Quick Links</h3>
