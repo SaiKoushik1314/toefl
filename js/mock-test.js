@@ -42,12 +42,6 @@
     }, 1000);
     ov._t = t;
   }
-  function closeAd() {
-    const ov = document.getElementById('videoAd');
-    clearInterval(ov._t);
-    ov.style.display = 'none';
-    if (typeof ov._cb === 'function') ov._cb();
-  }
   
   // ---- START MOCK ----
   async function startMock() {
