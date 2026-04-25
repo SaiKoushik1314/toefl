@@ -1,5 +1,6 @@
 /* =============================================
    TOEFL Prep Hub – Reading Section JS
+   Timer removed from practice mode.
    ============================================= */
 
    var currentTask = null;
@@ -7,8 +8,6 @@
    var questions = [];
    var currentQ = 0;
    var answers = {};
-   var timerInterval = null;
-   var timeLeft = 0;
    var totalCorrect = 0;
    
    var DATA_PATHS = {
@@ -76,13 +75,17 @@
    }
    
    // =============================================
-   // START TASK
+   // START TASK — no timer in practice mode
    // =============================================
    function startTask() {
      closeIntroModal();
      document.getElementById('taskSelection').style.display = 'none';
      var practiceArea = document.getElementById('practiceArea');
      practiceArea.style.display = 'block';
+   
+     // Hide timer — practice mode has no time limit
+     var timerEl = document.getElementById('timerDisplay');
+     if (timerEl) timerEl.style.display = 'none';
    
      if (!document.getElementById('backToTasksBtn')) {
        var backBtn = document.createElement('button');
@@ -98,13 +101,10 @@
      answers = {};
      totalCorrect = 0;
      document.getElementById('taskHeading').textContent = taskData.taskTitle;
-     timeLeft = taskData.timeSeconds;
-     startTimer();
      renderQuestion();
    }
    
    function backToTasks() {
-     stopTimer();
      document.getElementById('practiceArea').style.display = 'none';
      document.getElementById('taskSelection').style.display = 'block';
      document.getElementById('scoreSummary').style.display = 'none';
@@ -173,9 +173,6 @@
        '<div class="feedback-panel" id="clozeFeedback"></div>' +
        '</div>';
    
-     // Inject in-content ad after passage (only first passage shown)
-     injectAd(area);
-   
      var ct = document.getElementById('clozeText');
      var html = '';
      p.segments.forEach(function(seg, i) {
@@ -211,7 +208,6 @@
        '<p>You got <strong>' + correct + '/' + inputs.length + '</strong> words correct (' + pct + '%).</p>';
      answers['cloze-' + pi] = { correct: correct, total: inputs.length };
      updateSidebarScore();
-     // Inject ad after feedback shown
      injectAdAfter('clozeFeedback');
    }
    
@@ -231,10 +227,9 @@
      var saved = answers[q.id];
      var passHTML = '';
    
-     // Show passage only on first question
      if (item.qIdx === 0) {
        var lbl = p.label || p.title || 'Passage';
-       passHTML = '<div class="passage-box"><h4>' + lbl + '</h4><div style="white-space:pre-line;font-size:0.97rem;">' + p.text + '</div></div>';
+       passHTML = '<div class="passage-box" id="passageBox"><h4>' + lbl + '</h4><div style="white-space:pre-line;font-size:0.97rem;">' + p.text + '</div></div>';
      }
    
      var optHTML = (q.options || []).map(function(opt, i) {
@@ -253,8 +248,7 @@
          '<p>' + (q.explanation || '') + '</p></div>'
        : '<div class="feedback-panel" id="fb-' + q.id + '"></div>';
    
-     area.innerHTML =
-       passHTML +
+     area.innerHTML = passHTML +
        '<div class="question-card">' +
        '<div class="question-number">Q' + (item.qIdx + 1) + '</div>' +
        '<div class="question-text">' + q.text + '</div>' +
@@ -262,10 +256,8 @@
        fbHTML +
        '</div>';
    
-     // Inject ad between passage and question (only on first question)
      if (item.qIdx === 0 && passHTML) {
-       var passageEl = area.querySelector('.passage-box');
-       if (passageEl) injectAdAfterEl(passageEl);
+       injectAdAfter('passageBox');
      }
    }
    
@@ -284,7 +276,6 @@
        var q = questions[currentQ].question;
        fb.className = 'feedback-panel show ' + (selected === correct ? 'correct' : 'incorrect');
        fb.innerHTML = '<h4>' + (selected === correct ? '✅ Correct!' : '❌ Incorrect') + '</h4><p>' + (q.explanation || '') + '</p>';
-       // Inject ad after answer feedback
        injectAdAfter('fb-' + qId);
      }
    
@@ -293,35 +284,15 @@
    }
    
    // =============================================
-   // AD INJECTION HELPERS
+   // AD INJECTION
    // =============================================
    var AD_CLIENT = 'ca-pub-9028393226994516';
    var AD_SLOT   = '4417173607';
    
-   function injectAd(container) {
-     if (!container || container.querySelector('.injected-ad')) return;
-     var div = document.createElement('div');
-     div.className = 'injected-ad';
-     div.style.cssText = 'margin:20px 0;text-align:center;';
-     div.innerHTML =
-       '<ins class="adsbygoogle" style="display:block" ' +
-       'data-ad-client="' + AD_CLIENT + '" ' +
-       'data-ad-slot="' + AD_SLOT + '" ' +
-       'data-ad-format="auto" ' +
-       'data-full-width-responsive="true"></ins>';
-     container.appendChild(div);
-     (window.adsbygoogle = window.adsbygoogle || []).push({});
-   }
-   
    function injectAdAfter(elementId) {
      var el = document.getElementById(elementId);
      if (!el) return;
-     injectAdAfterEl(el);
-   }
-   
-   function injectAdAfterEl(el) {
-     // Don't double-inject
-     if (el.nextSibling && el.nextSibling.classList && el.nextSibling.classList.contains('injected-ad')) return;
+     if (el.nextSibling && el.nextSibling.className && el.nextSibling.className.indexOf('injected-ad') !== -1) return;
      var div = document.createElement('div');
      div.className = 'injected-ad';
      div.style.cssText = 'margin:20px 0;text-align:center;';
@@ -349,7 +320,6 @@
    // SUBMIT
    // =============================================
    function submitTask() {
-     stopTimer();
      var clozeCorrect = 0, clozeTotal = 0;
      Object.values(answers).forEach(function(v) {
        if (v && v.correct !== undefined) { clozeCorrect += v.correct; clozeTotal += v.total; }
@@ -378,32 +348,15 @@
        '<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">' +
        '<button class="btn btn-secondary" onclick="backToTasks()">Try Another Task</button>' +
        '<a href="mock-test.html" class="btn btn-primary">Full Mock Test</a>' +
-       '</div></div>';
-   
-     // Inject ad after score summary — high-value placement
-     injectAd(summary);
+       '</div></div>' +
+       '<div class="injected-ad" style="margin:20px 0;text-align:center;">' +
+       '<ins class="adsbygoogle" style="display:block" ' +
+       'data-ad-client="' + AD_CLIENT + '" data-ad-slot="' + AD_SLOT + '" ' +
+       'data-ad-format="auto" data-full-width-responsive="true"></ins>' +
+       '</div>';
+     (window.adsbygoogle = window.adsbygoogle || []).push({});
    }
    
-   // =============================================
-   // TIMER
-   // =============================================
-   function startTimer() {
-     updateTimerDisplay();
-     timerInterval = setInterval(function() {
-       timeLeft--;
-       updateTimerDisplay();
-       if (timeLeft <= 0) { stopTimer(); submitTask(); }
-     }, 1000);
-   }
-   function stopTimer() { clearInterval(timerInterval); timerInterval = null; }
-   function updateTimerDisplay() {
-     var m = Math.floor(timeLeft / 60);
-     var s = timeLeft % 60;
-     var el = document.getElementById('timerDisplay');
-     if (!el) return;
-     el.textContent = String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
-     el.className = 'timer-display' + (timeLeft < 60 ? ' danger' : timeLeft < 180 ? ' warning' : '');
-   }
    function updateSidebarScore() {
      var el = document.getElementById('sideScoreNum');
      if (el) el.textContent = totalCorrect || '-';
