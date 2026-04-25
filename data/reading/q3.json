@@ -1,156 +1,692 @@
 {
-    "taskType": "academic-reading",
-    "taskTitle": "Academic Reading",
-    "timeSeconds": 600,
-    "passages": [
-      {
-        "id": "ar-1",
-        "title": "Urban Bees",
-        "text": "Honeybees and other pollinators have long been associated with rural farmland, but in recent decades, cities have emerged as surprisingly hospitable environments for these insects. Urban gardens, flowering street trees, and rooftop green spaces provide a diverse and nearly continuous supply of nectar throughout the growing season, unlike monoculture farms that bloom only briefly. As a result, urban bee colonies have been found to produce more honey than their rural counterparts in certain regions.\n\nBeyond honey production, urban bees play a critical role in supporting local biodiversity. By pollinating a wide variety of flowering plants in parks and community gardens, they help sustain ecosystems that benefit both wildlife and human residents. Some cities have even introduced formal urban beekeeping programs, providing training and hive equipment to residents who wish to participate.\n\nHowever, urban beekeeping is not without challenges. The density of bee populations in cities can create competition for limited floral resources, particularly during dry summer months when fewer plants are in bloom. Additionally, urban bees are frequently exposed to pesticides used in private gardens and public green spaces, which can weaken colonies over time. Researchers are therefore calling for stricter regulation of pesticide use in urban areas and for city planners to prioritize the planting of bee-friendly flora in new developments.",
-        "questions": [
-          {
-            "id": "q1",
-            "text": "According to the passage, why do cities provide good conditions for bees?",
-            "options": [
-              "Cities have fewer natural predators than rural areas.",
-              "Urban areas have a consistent and varied supply of nectar.",
-              "City bees do not face competition from other insects.",
-              "Urban gardens are larger than rural farms."
-            ],
-            "answer": 1,
-            "explanation": "The passage states that urban gardens and green spaces 'provide a diverse and nearly continuous supply of nectar throughout the growing season,' unlike rural farms that bloom only briefly."
-          },
-          {
-            "id": "q2",
-            "text": "Which of the following is NOT mentioned as a benefit of urban bees?",
-            "options": [
-              "Supporting local biodiversity",
-              "Producing large quantities of honey",
-              "Reducing pesticide use in cities",
-              "Pollinating community garden plants"
-            ],
-            "answer": 2,
-            "explanation": "The passage does not say urban bees reduce pesticide use — in fact, it says bees are harmed by pesticides. The other three are mentioned as benefits."
-          },
-          {
-            "id": "q3",
-            "text": "Why does the author discuss dry summer months?",
-            "options": [
-              "To explain why beekeeping is more popular in summer",
-              "To show when urban honey production peaks",
-              "To illustrate when floral competition becomes a problem",
-              "To argue that cities should plant more trees"
-            ],
-            "answer": 2,
-            "explanation": "The passage mentions dry summer months as a time when fewer plants bloom, making competition for floral resources more intense — this supports the discussion of urban beekeeping challenges."
-          },
-          {
-            "id": "q4",
-            "text": "The word 'sustain' in the passage is closest in meaning to which word?",
-            "options": [
-              "Destroy",
-              "Maintain",
-              "Expand",
-              "Examine"
-            ],
-            "answer": 1,
-            "explanation": "'Sustain' means to keep something going or maintain it over time. In context, bees help 'sustain ecosystems,' meaning they help keep those ecosystems functioning."
-          },
-          {
-            "id": "q5",
-            "text": "How does paragraph 3 relate to paragraphs 1 and 2?",
-            "options": [
-              "It provides evidence that contradicts the claims in paragraphs 1 and 2.",
-              "It describes challenges that balance the benefits discussed earlier.",
-              "It gives examples of the honey production mentioned in paragraph 1.",
-              "It explains why urban beekeeping programs were introduced."
-            ],
-            "answer": 1,
-            "explanation": "Paragraphs 1 and 2 discuss the benefits of urban bees. Paragraph 3 introduces the challenges and problems, creating a balanced view — it does not contradict but qualifies the earlier content."
-          }
-        ]
-      },
-      {
-        "id": "ar-2",
-        "title": "The Psychology of Clutter",
-        "text": "Most people assume that clutter is simply a visual problem — an untidy space that can be easily ignored. However, research in environmental psychology suggests that living and working in cluttered spaces has measurable effects on mental health and cognitive performance. Studies have found that individuals in messy environments experience higher levels of the stress hormone cortisol compared to those in organized surroundings, and this effect is more pronounced in women than in men.\n\nClutter also appears to impair concentration. When the visual field is crowded with unnecessary objects, the brain must work harder to filter out irrelevant information, leaving fewer mental resources for the task at hand. This phenomenon, known as cognitive overload, has been linked to decreased productivity and increased rates of procrastination. Students studying in cluttered rooms, for instance, have been found to perform worse on memory tests than those in tidy environments.\n\nDespite these findings, researchers caution against concluding that all clutter is harmful. Some studies indicate that a degree of disorder can stimulate creative thinking by encouraging unconventional associations between objects and ideas. The key, researchers suggest, is intentionality — organizing spaces in a way that reflects one's goals and working style, rather than imposing a single standard of tidiness on everyone.",
-        "questions": [
-          {
-            "id": "q1",
-            "text": "What is the main idea of the passage?",
-            "options": [
-              "Clutter causes serious psychological disorders in most people.",
-              "Organized spaces are always better for mental health.",
-              "Clutter has real cognitive effects, but its impact is nuanced.",
-              "Women are more affected by clutter than men in all situations."
-            ],
-            "answer": 2,
-            "explanation": "The passage covers both the negative effects of clutter and the potential benefits of some disorder, concluding that intentionality matters — making the overall message nuanced."
-          },
-          {
-            "id": "q2",
-            "text": "According to the passage, what is cognitive overload?",
-            "options": [
-              "A condition caused by studying for too long",
-              "The brain's struggle to filter irrelevant visual information",
-              "A type of stress hormone released in cluttered spaces",
-              "Decreased performance on memory tests"
-            ],
-            "answer": 1,
-            "explanation": "The passage defines cognitive overload as what occurs 'when the visual field is crowded with unnecessary objects' and 'the brain must work harder to filter out irrelevant information.'"
-          },
-          {
-            "id": "q3",
-            "text": "Which of the following is NOT mentioned as a negative effect of clutter?",
-            "options": [
-              "Higher cortisol levels",
-              "Reduced creativity",
-              "Increased procrastination",
-              "Poorer memory test performance"
-            ],
-            "answer": 1,
-            "explanation": "The passage actually suggests clutter might increase creative thinking — it does NOT mention reduced creativity as a negative effect. The other three are explicitly stated."
-          },
-          {
-            "id": "q4",
-            "text": "The word 'pronounced' in the passage is closest in meaning to which word?",
-            "options": [
-              "Spoken",
-              "Surprising",
-              "Noticeable",
-              "Common"
-            ],
-            "answer": 2,
-            "explanation": "In this context, 'pronounced' means clearly noticeable or more intense. The stress effect is 'more pronounced in women,' meaning it is more noticeable."
-          },
-          {
-            "id": "q5",
-            "text": "What is the purpose of the third paragraph?",
-            "options": [
-              "To contradict the research presented in paragraphs 1 and 2",
-              "To introduce a qualification to the earlier findings",
-              "To explain why some people prefer cluttered spaces",
-              "To recommend specific organizational strategies"
-            ],
-            "answer": 1,
-            "explanation": "The third paragraph doesn't contradict earlier findings — it adds nuance by noting that some disorder can help with creativity, qualifying the claim that all clutter is harmful."
-          }
-        ]
-      }
-    ],
-    "tips": [
-      "Skim the passage briefly before reading questions — get the general idea first.",
-      "Don't choose an answer just because it uses a word from the passage.",
-      "Negative factual questions (NOT mentioned) take more time — check each option carefully.",
-      "Vocabulary questions are quick — use context clues from surrounding sentences.",
-      "For 'paragraph relationship' questions, think about how ideas connect: Does paragraph 3 support, qualify, or contradict earlier paragraphs?",
-      "Topics are more relatable than the old TOEFL — think contemporary issues."
-    ],
-    "whatToExpect": [
-      "Passages of about 200 words on accessible academic topics.",
-      "5 questions per passage covering different question types.",
-      "Question types: Factual, Negative Factual, Vocabulary, Rhetorical Purpose, Inference, Paragraph Relationships, Important Idea.",
-      "No paragraph references in questions — you must find answers yourself.",
-      "Topics may include science, society, environment, psychology, technology."
-    ]
-  }
+  "taskType": "academic-reading",
+  "taskTitle": "Academic Reading",
+  "timeSeconds": 600,
+  "passages": [
+    {
+      "id": "ar-1",
+      "title": "Urban Bees",
+      "text": "Honeybees and other pollinators have long been associated with rural farmland, but in recent decades, cities have emerged as surprisingly hospitable environments for these insects. Urban gardens, flowering street trees, and rooftop green spaces provide a diverse and nearly continuous supply of nectar throughout the growing season, unlike monoculture farms that bloom only briefly. As a result, urban bee colonies have been found to produce more honey than their rural counterparts in certain regions.\n\nBeyond honey production, urban bees play a critical role in supporting local biodiversity. By pollinating a wide variety of flowering plants in parks and community gardens, they help sustain ecosystems that benefit both wildlife and human residents. Some cities have even introduced formal urban beekeeping programs, providing training and hive equipment to residents who wish to participate.\n\nHowever, urban beekeeping is not without challenges. The density of bee populations in cities can create competition for limited floral resources, particularly during dry summer months when fewer plants are in bloom. Additionally, urban bees are frequently exposed to pesticides used in private gardens and public green spaces, which can weaken colonies over time. Researchers are therefore calling for stricter regulation of pesticide use in urban areas and for city planners to prioritize the planting of bee-friendly flora in new developments.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "According to the passage, why do cities provide good conditions for bees?",
+          "options": [
+            "Cities have fewer natural predators than rural areas.",
+            "Urban areas have a consistent and varied supply of nectar.",
+            "City bees do not face competition from other insects.",
+            "Urban gardens are larger than rural farms."
+          ],
+          "answer": 1,
+          "explanation": "The passage states that urban gardens and green spaces 'provide a diverse and nearly continuous supply of nectar throughout the growing season,' unlike rural farms that bloom only briefly."
+        },
+        {
+          "id": "q2",
+          "text": "Which of the following is NOT mentioned as a benefit of urban bees?",
+          "options": [
+            "Supporting local biodiversity",
+            "Producing large quantities of honey",
+            "Reducing pesticide use in cities",
+            "Pollinating community garden plants"
+          ],
+          "answer": 2,
+          "explanation": "The passage does not say urban bees reduce pesticide use — in fact, it says bees are harmed by pesticides. The other three are mentioned as benefits."
+        },
+        {
+          "id": "q3",
+          "text": "Why does the author discuss dry summer months?",
+          "options": [
+            "To explain why beekeeping is more popular in summer",
+            "To show when urban honey production peaks",
+            "To illustrate when floral competition becomes a problem",
+            "To argue that cities should plant more trees"
+          ],
+          "answer": 2,
+          "explanation": "The passage mentions dry summer months as a time when fewer plants bloom, making competition for floral resources more intense — this supports the discussion of urban beekeeping challenges."
+        },
+        {
+          "id": "q4",
+          "text": "The word 'sustain' in the passage is closest in meaning to which word?",
+          "options": [
+            "Destroy",
+            "Maintain",
+            "Expand",
+            "Examine"
+          ],
+          "answer": 1,
+          "explanation": "'Sustain' means to keep something going or maintain it over time. In context, bees help 'sustain ecosystems,' meaning they help keep those ecosystems functioning."
+        },
+        {
+          "id": "q5",
+          "text": "How does paragraph 3 relate to paragraphs 1 and 2?",
+          "options": [
+            "It provides evidence that contradicts the claims in paragraphs 1 and 2.",
+            "It describes challenges that balance the benefits discussed earlier.",
+            "It gives examples of the honey production mentioned in paragraph 1.",
+            "It explains why urban beekeeping programs were introduced."
+          ],
+          "answer": 1,
+          "explanation": "Paragraphs 1 and 2 discuss the benefits of urban bees. Paragraph 3 introduces the challenges and problems, creating a balanced view — it does not contradict but qualifies the earlier content."
+        }
+      ]
+    },
+    {
+      "id": "ar-2",
+      "title": "The Psychology of Clutter",
+      "text": "Most people assume that clutter is simply a visual problem — an untidy space that can be easily ignored. However, research in environmental psychology suggests that living and working in cluttered spaces has measurable effects on mental health and cognitive performance. Studies have found that individuals in messy environments experience higher levels of the stress hormone cortisol compared to those in organized surroundings, and this effect is more pronounced in women than in men.\n\nClutter also appears to impair concentration. When the visual field is crowded with unnecessary objects, the brain must work harder to filter out irrelevant information, leaving fewer mental resources for the task at hand. This phenomenon, known as cognitive overload, has been linked to decreased productivity and increased rates of procrastination. Students studying in cluttered rooms, for instance, have been found to perform worse on memory tests than those in tidy environments.\n\nDespite these findings, researchers caution against concluding that all clutter is harmful. Some studies indicate that a degree of disorder can stimulate creative thinking by encouraging unconventional associations between objects and ideas. The key, researchers suggest, is intentionality — organizing spaces in a way that reflects one's goals and working style, rather than imposing a single standard of tidiness on everyone.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "What is the main idea of the passage?",
+          "options": [
+            "Clutter causes serious psychological disorders in most people.",
+            "Organized spaces are always better for mental health.",
+            "Clutter has real cognitive effects, but its impact is nuanced.",
+            "Women are more affected by clutter than men in all situations."
+          ],
+          "answer": 2,
+          "explanation": "The passage covers both the negative effects of clutter and the potential benefits of some disorder, concluding that intentionality matters — making the overall message nuanced."
+        },
+        {
+          "id": "q2",
+          "text": "According to the passage, what is cognitive overload?",
+          "options": [
+            "A condition caused by studying for too long",
+            "The brain's struggle to filter irrelevant visual information",
+            "A type of stress hormone released in cluttered spaces",
+            "Decreased performance on memory tests"
+          ],
+          "answer": 1,
+          "explanation": "The passage defines cognitive overload as what occurs 'when the visual field is crowded with unnecessary objects' and 'the brain must work harder to filter out irrelevant information.'"
+        },
+        {
+          "id": "q3",
+          "text": "Which of the following is NOT mentioned as a negative effect of clutter?",
+          "options": [
+            "Higher cortisol levels",
+            "Reduced creativity",
+            "Increased procrastination",
+            "Poorer memory test performance"
+          ],
+          "answer": 1,
+          "explanation": "The passage actually suggests clutter might increase creative thinking — it does NOT mention reduced creativity as a negative effect. The other three are explicitly stated."
+        },
+        {
+          "id": "q4",
+          "text": "The word 'pronounced' in the passage is closest in meaning to which word?",
+          "options": [
+            "Spoken",
+            "Surprising",
+            "Noticeable",
+            "Common"
+          ],
+          "answer": 2,
+          "explanation": "In this context, 'pronounced' means clearly noticeable or more intense. The stress effect is 'more pronounced in women,' meaning it is more noticeable."
+        },
+        {
+          "id": "q5",
+          "text": "What is the purpose of the third paragraph?",
+          "options": [
+            "To contradict the research presented in paragraphs 1 and 2",
+            "To introduce a qualification to the earlier findings",
+            "To explain why some people prefer cluttered spaces",
+            "To recommend specific organizational strategies"
+          ],
+          "answer": 1,
+          "explanation": "The third paragraph doesn't contradict earlier findings — it adds nuance by noting that some disorder can help with creativity, qualifying the claim that all clutter is harmful."
+        }
+      ]
+    },
+    {
+      "id": "ar-3",
+      "title": "The Placebo Effect",
+      "text": "The placebo effect refers to the measurable improvement in a patient's condition that results from receiving an inactive treatment — such as a sugar pill — rather than an actual medication. Researchers have long studied this phenomenon, and recent work suggests it is more complex than previously believed. Brain imaging studies show that placebos can trigger real physiological responses, including the release of endorphins and changes in neural activity, even when patients are fully aware they are receiving a placebo.\n\nThe strength of the placebo effect varies depending on several factors, including the patient's expectations, the perceived authority of the medical provider, and the ritual surrounding the treatment. A study published in the New England Journal of Medicine found that patients who received sham acupuncture from a warm and attentive practitioner reported significantly greater pain relief than those who received the same treatment from a distant, clinical provider.\n\nThese findings have practical implications for medical care. Some researchers argue that deliberately harnessing the placebo effect — through better patient communication, optimistic framing of treatments, and warmer clinical environments — could enhance outcomes without any additional pharmaceutical intervention.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "According to the passage, what makes the placebo effect more complex than previously thought?",
+          "options": [
+            "Patients are rarely aware they are receiving placebos",
+            "Placebos can produce real physiological changes in the body",
+            "The effect only works for psychological conditions",
+            "It is stronger in younger patients than older ones"
+          ],
+          "answer": 1,
+          "explanation": "The passage states that brain imaging shows placebos can \"trigger real physiological responses\" including endorphin release and neural changes — even when patients know they're receiving placebos."
+        },
+        {
+          "id": "q2",
+          "text": "The word \"harnessing\" in the final paragraph is closest in meaning to which word?",
+          "options": [
+            "Controlling",
+            "Measuring",
+            "Discovering",
+            "Limiting"
+          ],
+          "answer": 0,
+          "explanation": "\"Harnessing\" means deliberately using or taking advantage of something. In context, researchers want to use the placebo effect beneficially."
+        },
+        {
+          "id": "q3",
+          "text": "What does the acupuncture study suggest about the placebo effect?",
+          "options": [
+            "Sham acupuncture is more effective than real acupuncture",
+            "The provider's manner affects how patients respond to treatment",
+            "Patients prefer clinical environments for pain treatment",
+            "Pain relief requires actual medical intervention"
+          ],
+          "answer": 1,
+          "explanation": "The study showed that a warm, attentive practitioner produced greater relief than a distant one — suggesting the provider's manner influences outcomes."
+        },
+        {
+          "id": "q4",
+          "text": "Which of the following is NOT mentioned as a factor affecting the strength of the placebo effect?",
+          "options": [
+            "Patient expectations",
+            "Provider authority",
+            "Treatment cost",
+            "Rituals surrounding the treatment"
+          ],
+          "answer": 2,
+          "explanation": "The passage lists expectations, provider authority, and ritual as factors. Treatment cost is not mentioned."
+        },
+        {
+          "id": "q5",
+          "text": "What is the main purpose of the final paragraph?",
+          "options": [
+            "To warn against over-reliance on placebos",
+            "To suggest practical applications of placebo research",
+            "To criticize current pharmaceutical practices",
+            "To introduce a new study about clinical environments"
+          ],
+          "answer": 1,
+          "explanation": "The final paragraph moves from research findings to implications, arguing that the placebo effect could be deliberately used to improve patient outcomes."
+        }
+      ]
+    },
+    {
+      "id": "ar-4",
+      "title": "Microplastics in the Ocean",
+      "text": "Microplastics — fragments of plastic smaller than five millimeters — have been detected in virtually every marine environment on Earth, from shallow coastal waters to the deepest ocean trenches. These particles originate from a variety of sources: the breakdown of larger plastic debris, the washing of synthetic fabrics, and the use of microbeads in personal care products.\n\nMarine organisms, from zooplankton to fish, routinely ingest microplastics, often mistaking them for food. Laboratory studies have shown that microplastic consumption can reduce feeding rates, impair reproduction, and increase mortality in small marine animals. As these particles move through food chains, they accumulate in the tissues of larger predators, a process known as biomagnification.\n\nThe impact on human health remains an active area of research. Microplastics have been detected in drinking water, seafood, and even human blood. While scientists have not yet established definitive links between microplastic exposure and specific diseases, early evidence suggests that certain chemical additives in plastics may interfere with hormonal systems. Researchers are calling for international agreements to reduce plastic production and improve waste management globally.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "According to the passage, what is biomagnification?",
+          "options": [
+            "The process by which plastics break down into smaller pieces",
+            "The accumulation of microplastics in the tissues of larger predators",
+            "The detection of plastics in human blood and drinking water",
+            "The reduction in feeding rates caused by plastic consumption"
+          ],
+          "answer": 1,
+          "explanation": "The passage defines biomagnification directly: as particles \"move through food chains, they accumulate in the tissues of larger predators.\""
+        },
+        {
+          "id": "q2",
+          "text": "The word \"ingest\" in paragraph 2 is closest in meaning to which word?",
+          "options": [
+            "Avoid",
+            "Consume",
+            "Detect",
+            "Produce"
+          ],
+          "answer": 1,
+          "explanation": "\"Ingest\" means to eat or swallow. Marine organisms \"ingest\" microplastics by consuming them accidentally."
+        },
+        {
+          "id": "q3",
+          "text": "What does the passage say about the impact of microplastics on human health?",
+          "options": [
+            "The link to disease has been conclusively proven",
+            "Research is ongoing and no definitive links have been established",
+            "Microplastics in food pose no significant risk",
+            "Scientists have identified specific diseases caused by microplastics"
+          ],
+          "answer": 1,
+          "explanation": "The passage states research is active and that scientists \"have not yet established definitive links between microplastic exposure and specific diseases.\""
+        },
+        {
+          "id": "q4",
+          "text": "Which of the following is NOT listed as a source of microplastics?",
+          "options": [
+            "Breakdown of larger plastic debris",
+            "Washing of synthetic fabrics",
+            "Industrial chemical runoff",
+            "Microbeads in personal care products"
+          ],
+          "answer": 2,
+          "explanation": "The passage lists debris breakdown, synthetic fabric washing, and microbeads as sources. Industrial chemical runoff is not mentioned."
+        },
+        {
+          "id": "q5",
+          "text": "How does paragraph 3 relate to paragraphs 1 and 2?",
+          "options": [
+            "It contradicts the findings described in earlier paragraphs",
+            "It shifts focus from marine impacts to potential human health concerns",
+            "It explains the origin of microplastics in greater detail",
+            "It provides solutions to the problems described earlier"
+          ],
+          "answer": 1,
+          "explanation": "Paragraphs 1 and 2 focus on the ocean and marine life. Paragraph 3 expands the scope to human health implications."
+        }
+      ]
+    },
+    {
+      "id": "ar-5",
+      "title": "The Rise of Remote Work",
+      "text": "Before 2020, remote work was relatively uncommon outside specific industries such as technology and consulting. The global pandemic accelerated its adoption dramatically, and by mid-2020, an estimated 60 percent of U.S. workers in knowledge-based roles were working from home at least part of the time. Even after restrictions lifted, many companies retained flexible working arrangements, fundamentally altering the relationship between employers and employees.\n\nResearch on the effects of remote work presents a mixed picture. Studies consistently show that many employees report higher job satisfaction and better work-life balance when working remotely. However, other research highlights drawbacks, including feelings of isolation, difficulty separating professional and personal life, and reduced opportunities for spontaneous collaboration with colleagues.\n\nOrganizations face the challenge of maintaining company culture and productivity in a distributed workforce. Some companies have responded by introducing hybrid models that combine in-office and remote work, aiming to preserve the benefits of both. Researchers note that the long-term effects of widespread remote work on urban economies, commercial real estate, and community cohesion remain uncertain and will likely be studied for decades.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "What does the passage say was the main cause of rapid growth in remote work?",
+          "options": [
+            "Advances in communication technology",
+            "The global pandemic",
+            "Employee demand for flexible schedules",
+            "Government policies encouraging remote work"
+          ],
+          "answer": 1,
+          "explanation": "The passage states \"the global pandemic accelerated its adoption dramatically.\""
+        },
+        {
+          "id": "q2",
+          "text": "According to the passage, which of the following is a disadvantage of remote work?",
+          "options": [
+            "Lower job satisfaction",
+            "Reduced work-life balance",
+            "Feelings of isolation",
+            "Longer commute times"
+          ],
+          "answer": 2,
+          "explanation": "The passage lists \"feelings of isolation\" as one of the drawbacks highlighted by research on remote work."
+        },
+        {
+          "id": "q3",
+          "text": "The word \"distributed\" in the final paragraph is closest in meaning to which word?",
+          "options": [
+            "Organized",
+            "Scattered",
+            "Productive",
+            "Temporary"
+          ],
+          "answer": 1,
+          "explanation": "A \"distributed workforce\" is one spread across different locations — scattered rather than centralized in one place."
+        },
+        {
+          "id": "q4",
+          "text": "What is the hybrid model mentioned in the final paragraph?",
+          "options": [
+            "A flexible salary arrangement for remote workers",
+            "A combination of in-office and remote work",
+            "A policy giving employees unlimited days off",
+            "A software system for managing remote teams"
+          ],
+          "answer": 1,
+          "explanation": "The passage explains that hybrid models \"combine in-office and remote work\" to preserve benefits of both approaches."
+        },
+        {
+          "id": "q5",
+          "text": "What is the main idea of the passage?",
+          "options": [
+            "Remote work is more productive than office work",
+            "The pandemic permanently eliminated office culture",
+            "Remote work has grown significantly and has both benefits and challenges",
+            "Companies should require all employees to work in-office"
+          ],
+          "answer": 2,
+          "explanation": "The passage covers the growth of remote work, its mixed effects on employees and organizations, and the ongoing uncertainty about its long-term impact."
+        }
+      ]
+    },
+    {
+      "id": "ar-6",
+      "title": "Sleep and Memory",
+      "text": "Scientists have long understood that sleep is essential for physical health, but research over the past two decades has revealed its equally important role in cognitive function, particularly memory consolidation. During sleep, the brain actively processes and organizes information acquired during waking hours, transferring memories from short-term storage to long-term structures.\n\nTwo stages of sleep appear most critical for memory. Slow-wave sleep, which occurs predominantly in the first half of the night, is associated with the consolidation of declarative memories — facts and events. REM sleep, which is more prevalent in the second half of the night, appears to be particularly important for procedural memories, such as learning a new physical skill, and for emotional memory processing.\n\nStudies on students consistently demonstrate that those who sleep well after studying outperform those who stay up late reviewing material. A well-known experiment at Harvard showed that participants who slept after learning a motor task performed 20 percent better the following day compared to those who remained awake. These findings have prompted educators and healthcare professionals to advocate for adequate sleep as an essential component of learning, not a luxury.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "According to the passage, what happens to memories during sleep?",
+          "options": [
+            "New memories are created from daily experiences",
+            "Short-term memories are transferred to long-term storage",
+            "The brain deletes unnecessary information",
+            "Emotional memories are permanently erased"
+          ],
+          "answer": 1,
+          "explanation": "The passage states the brain \"transferring memories from short-term storage to long-term structures\" during sleep."
+        },
+        {
+          "id": "q2",
+          "text": "Which type of sleep is most associated with learning a new physical skill?",
+          "options": [
+            "Slow-wave sleep",
+            "Light sleep",
+            "REM sleep",
+            "Deep dreamless sleep"
+          ],
+          "answer": 2,
+          "explanation": "The passage says REM sleep \"appears to be particularly important for procedural memories, such as learning a new physical skill.\""
+        },
+        {
+          "id": "q3",
+          "text": "The word \"consolidation\" in paragraph 1 is closest in meaning to which word?",
+          "options": [
+            "Deletion",
+            "Strengthening",
+            "Retrieval",
+            "Creation"
+          ],
+          "answer": 1,
+          "explanation": "Memory consolidation refers to the process of strengthening and stabilizing memories — making them more durable and accessible."
+        },
+        {
+          "id": "q4",
+          "text": "What was the result of the Harvard motor task experiment?",
+          "options": [
+            "Sleep had no effect on motor skill performance",
+            "Participants who stayed awake performed 20% better",
+            "Participants who slept performed 20% better",
+            "REM sleep was found to be harmful to motor learning"
+          ],
+          "answer": 2,
+          "explanation": "The passage states \"participants who slept after learning a motor task performed 20 percent better the following day compared to those who remained awake.\""
+        },
+        {
+          "id": "q5",
+          "text": "Why do educators advocate for adequate sleep according to the passage?",
+          "options": [
+            "Because sleep reduces stress during exams",
+            "Because it is a fundamental part of the learning process",
+            "Because students who sleep more have better social skills",
+            "Because it improves physical performance in sports"
+          ],
+          "answer": 1,
+          "explanation": "The passage says findings \"prompted educators and healthcare professionals to advocate for adequate sleep as an essential component of learning.\""
+        }
+      ]
+    },
+    {
+      "id": "ar-7",
+      "title": "Coral Reef Decline",
+      "text": "Coral reefs cover less than one percent of the ocean floor yet support approximately 25 percent of all marine species, earning them the nickname \"rainforests of the sea.\" However, these ecosystems are declining at an alarming rate. Scientists estimate that half of the world's coral reefs have been lost since the 1950s, with warming ocean temperatures identified as the primary driver of this decline.\n\nWhen ocean temperatures rise even slightly above their seasonal average, corals expel the symbiotic algae — called zooxanthellae — that live within their tissues and provide them with up to 90 percent of their energy through photosynthesis. This phenomenon, known as coral bleaching, leaves the coral white and vulnerable. If temperatures do not return to normal within weeks, the coral dies.\n\nBeyond climate change, reefs face additional stressors including ocean acidification, which impairs coral's ability to build its calcium carbonate skeleton, as well as overfishing and pollution from agricultural runoff. Restoration efforts, such as coral gardening and assisted evolution of heat-resistant strains, offer some hope, but scientists warn that meaningful reef recovery is impossible without significant reductions in greenhouse gas emissions.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "Why are coral reefs sometimes called \"rainforests of the sea\"?",
+          "options": [
+            "They produce oxygen like terrestrial rainforests",
+            "They are located in tropical regions near rainforests",
+            "They support a disproportionately large share of marine species",
+            "They are the largest ecosystems in the ocean"
+          ],
+          "answer": 2,
+          "explanation": "The nickname reflects that reefs \"support approximately 25 percent of all marine species\" despite covering less than 1% of the ocean floor."
+        },
+        {
+          "id": "q2",
+          "text": "What is coral bleaching?",
+          "options": [
+            "A restoration technique used to clean coral reefs",
+            "The expulsion of algae from coral tissue due to heat stress",
+            "A natural seasonal process that strengthens coral",
+            "The buildup of calcium carbonate on coral surfaces"
+          ],
+          "answer": 1,
+          "explanation": "Coral bleaching occurs when corals \"expel the symbiotic algae\" due to elevated temperatures, leaving them white and vulnerable."
+        },
+        {
+          "id": "q3",
+          "text": "The word \"impairs\" in the final paragraph is closest in meaning to which word?",
+          "options": [
+            "Improves",
+            "Damages",
+            "Measures",
+            "Increases"
+          ],
+          "answer": 1,
+          "explanation": "\"Impairs\" means to weaken or damage the ability to do something. Ocean acidification impairs — damages — coral's ability to build its skeleton."
+        },
+        {
+          "id": "q4",
+          "text": "Which of the following is NOT mentioned as a threat to coral reefs?",
+          "options": [
+            "Warming ocean temperatures",
+            "Ocean acidification",
+            "Underwater volcanic activity",
+            "Overfishing"
+          ],
+          "answer": 2,
+          "explanation": "The passage mentions warming, acidification, overfishing, and pollution. Underwater volcanic activity is not mentioned."
+        },
+        {
+          "id": "q5",
+          "text": "What does the passage suggest is the most important step for reef recovery?",
+          "options": [
+            "Expanding coral gardening programs globally",
+            "Banning fishing near reef ecosystems",
+            "Reducing greenhouse gas emissions significantly",
+            "Developing more heat-resistant coral strains"
+          ],
+          "answer": 2,
+          "explanation": "The final sentence states \"meaningful reef recovery is impossible without significant reductions in greenhouse gas emissions\" — making this the most critical condition."
+        }
+      ]
+    },
+    {
+      "id": "ar-8",
+      "title": "The Sharing Economy",
+      "text": "The sharing economy — a model in which individuals rent or share assets such as cars, homes, or labor through digital platforms — has grown from a niche concept into a global industry valued in the trillions of dollars. Companies like Airbnb and Uber have disrupted traditional industries by enabling peer-to-peer transactions at a scale that was previously impossible without the internet.\n\nProponents argue that the sharing economy creates economic opportunity for individuals who can monetize underused assets, offers consumers more affordable and flexible options, and promotes more efficient use of existing resources. A car that sits idle 95 percent of the time, for example, can generate income for its owner while reducing the total number of vehicles needed in a city.\n\nCritics, however, point to significant downsides. Workers in sharing economy platforms often lack the protections afforded to traditional employees, including minimum wage guarantees, health insurance, and paid leave. Additionally, platforms like Airbnb have been linked to rising housing costs in popular tourist cities, as landlords convert long-term rentals into short-term ones to earn higher profits. Governments around the world are still grappling with how to regulate these new economic models without stifling innovation.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "According to the passage, what made the sharing economy possible at a large scale?",
+          "options": [
+            "Changes in government regulations",
+            "The growth of the internet",
+            "Declining costs of car ownership",
+            "Increased urbanization"
+          ],
+          "answer": 1,
+          "explanation": "The passage states platforms enabled \"peer-to-peer transactions at a scale that was previously impossible without the internet.\""
+        },
+        {
+          "id": "q2",
+          "text": "Which of the following is given as an example of a benefit of the sharing economy?",
+          "options": [
+            "Lower housing costs in major cities",
+            "Increased protections for gig workers",
+            "More efficient use of underutilized assets",
+            "Standardized pricing across all platforms"
+          ],
+          "answer": 2,
+          "explanation": "The passage gives the example of an idle car generating income while \"reducing the total number of vehicles needed\" — illustrating efficient resource use."
+        },
+        {
+          "id": "q3",
+          "text": "The word \"grappling\" in the final sentence is closest in meaning to which word?",
+          "options": [
+            "Celebrating",
+            "Struggling",
+            "Ignoring",
+            "Proposing"
+          ],
+          "answer": 1,
+          "explanation": "\"Grappling with\" means struggling to deal with something difficult. Governments are struggling to figure out how to regulate these new models."
+        },
+        {
+          "id": "q4",
+          "text": "According to critics, how has Airbnb affected housing in some cities?",
+          "options": [
+            "It has made housing more affordable for renters",
+            "It has caused housing costs to rise",
+            "It has reduced the quality of tourist accommodations",
+            "It has driven traditional hotels out of business"
+          ],
+          "answer": 1,
+          "explanation": "Critics link Airbnb to \"rising housing costs in popular tourist cities\" as landlords shift to short-term rentals for higher profits."
+        },
+        {
+          "id": "q5",
+          "text": "What is the overall structure of the passage?",
+          "options": [
+            "A problem followed by proposed solutions",
+            "A definition, followed by benefits, followed by criticisms",
+            "A historical narrative about two companies",
+            "A comparison of traditional and modern industries"
+          ],
+          "answer": 1,
+          "explanation": "The passage defines the sharing economy, then presents proponents' arguments (benefits), then critics' arguments — a classic balanced analysis structure."
+        }
+      ]
+    },
+    {
+      "id": "ar-9",
+      "title": "The Science of Habits",
+      "text": "Habits — automatic behavioral patterns triggered by specific cues — are estimated to account for up to 45 percent of daily human actions. Understanding how habits form and how they can be changed has become a significant focus of behavioral science and neuroscience research.\n\nAccording to habit formation research, every habit follows a three-part loop: a cue that triggers the behavior, the routine itself, and a reward that reinforces the behavior. Over time, this loop becomes encoded in the basal ganglia, a brain region associated with automatic behavior, making the habit increasingly difficult to suppress consciously.\n\nBreaking unwanted habits is notoriously difficult precisely because the neural pathways that support them remain intact even after long periods of disuse. Research suggests the most effective strategy is not to eliminate a habit but to substitute it — keeping the same cue and reward while replacing the routine with a healthier alternative. Studies also show that environmental changes, such as rearranging one's workspace or changing a daily route, can disrupt automatic behavior and create opportunities to establish new patterns.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "According to the passage, approximately what fraction of daily actions are habits?",
+          "options": [
+            "About one quarter",
+            "About one third",
+            "About one half",
+            "About two thirds"
+          ],
+          "answer": 2,
+          "explanation": "The passage states habits \"account for up to 45 percent of daily human actions\" — closest to about one half."
+        },
+        {
+          "id": "q2",
+          "text": "What is the correct order of the habit loop described in the passage?",
+          "options": [
+            "Routine → Cue → Reward",
+            "Reward → Cue → Routine",
+            "Cue → Routine → Reward",
+            "Cue → Reward → Routine"
+          ],
+          "answer": 2,
+          "explanation": "The passage explicitly states the loop is: \"a cue that triggers the behavior, the routine itself, and a reward that reinforces the behavior.\""
+        },
+        {
+          "id": "q3",
+          "text": "The word \"suppress\" in paragraph 2 is closest in meaning to which word?",
+          "options": [
+            "Strengthen",
+            "Control",
+            "Identify",
+            "Repeat"
+          ],
+          "answer": 1,
+          "explanation": "\"Suppress\" means to restrain or hold back. The habit becomes \"difficult to suppress consciously\" — difficult to consciously control or stop."
+        },
+        {
+          "id": "q4",
+          "text": "According to the passage, what is the most effective way to break a bad habit?",
+          "options": [
+            "Eliminating the habit completely through willpower",
+            "Rewarding yourself for avoiding the habit",
+            "Substituting a new routine while keeping the same cue and reward",
+            "Changing your social environment"
+          ],
+          "answer": 2,
+          "explanation": "The passage states \"the most effective strategy is not to eliminate a habit but to substitute it — keeping the same cue and reward while replacing the routine.\""
+        },
+        {
+          "id": "q5",
+          "text": "How does paragraph 3 relate to paragraphs 1 and 2?",
+          "options": [
+            "It introduces a new theory that contradicts the habit loop model",
+            "It provides practical strategies based on the science explained earlier",
+            "It describes research that disproves the role of the basal ganglia",
+            "It argues that habits cannot be changed under any circumstances"
+          ],
+          "answer": 1,
+          "explanation": "After explaining how habits form (paragraphs 1–2), paragraph 3 applies that knowledge to practical habit-breaking strategies — a logical extension."
+        }
+      ]
+    },
+    {
+      "id": "ar-10",
+      "title": "Autonomous Vehicles",
+      "text": "Autonomous vehicles — cars capable of navigating roads without human input — have moved from science fiction to road-tested reality over the past decade. Using a combination of sensors, cameras, radar, and artificial intelligence, these vehicles can detect obstacles, interpret traffic signals, and make split-second decisions. Several companies, including Waymo and Cruise, have deployed autonomous taxis in limited areas of major U.S. cities.\n\nProponents of autonomous vehicles argue that they have the potential to dramatically reduce traffic accidents, 94 percent of which are attributed to human error. They also envision mobility benefits for elderly and disabled individuals who are currently unable to drive. Additionally, optimized autonomous driving patterns could reduce fuel consumption and ease traffic congestion.\n\nHowever, significant obstacles remain before widespread adoption is feasible. These include the high cost of the technology, questions about liability in the event of accidents, cybersecurity vulnerabilities, and public skepticism about safety. Regulatory frameworks vary widely across jurisdictions, creating a fragmented legal landscape. Most experts agree that a gradual, hybrid period — during which human drivers and autonomous vehicles share roads — is more likely than an abrupt transition.",
+      "questions": [
+        {
+          "id": "q1",
+          "text": "According to the passage, what percentage of traffic accidents are caused by human error?",
+          "options": [
+            "74 percent",
+            "84 percent",
+            "94 percent",
+            "64 percent"
+          ],
+          "answer": 2,
+          "explanation": "The passage states \"94 percent of which are attributed to human error\" when referring to traffic accidents."
+        },
+        {
+          "id": "q2",
+          "text": "The word \"fragmented\" in the final paragraph is closest in meaning to which word?",
+          "options": [
+            "Unified",
+            "Divided",
+            "Developing",
+            "Strict"
+          ],
+          "answer": 1,
+          "explanation": "\"Fragmented\" means broken into disconnected parts. The legal landscape is fragmented — divided and inconsistent across different areas."
+        },
+        {
+          "id": "q3",
+          "text": "Which of the following is NOT mentioned as a benefit of autonomous vehicles?",
+          "options": [
+            "Reduced traffic accidents",
+            "Improved mobility for disabled individuals",
+            "Lower insurance premiums",
+            "Reduced fuel consumption"
+          ],
+          "answer": 2,
+          "explanation": "The passage mentions accident reduction, mobility for disabled people, and fuel efficiency. Lower insurance premiums are not mentioned."
+        },
+        {
+          "id": "q4",
+          "text": "What do most experts believe about the transition to autonomous vehicles?",
+          "options": [
+            "It will happen suddenly within the next five years",
+            "A gradual period of coexistence with human drivers is more likely",
+            "Autonomous vehicles will replace public transportation first",
+            "The technology is too costly to be widely adopted"
+          ],
+          "answer": 1,
+          "explanation": "The passage states \"most experts agree that a gradual, hybrid period...is more likely than an abrupt transition.\""
+        },
+        {
+          "id": "q5",
+          "text": "What is the purpose of paragraph 2 in relation to paragraph 3?",
+          "options": [
+            "Paragraph 2 disproves the arguments in paragraph 3",
+            "Paragraph 2 presents benefits that paragraph 3 then qualifies with challenges",
+            "Paragraph 2 summarizes research while paragraph 3 presents new data",
+            "Paragraph 2 and 3 both argue for the same conclusion"
+          ],
+          "answer": 1,
+          "explanation": "Paragraph 2 presents the case for autonomous vehicles (benefits), and paragraph 3 presents the counterbalancing challenges — a classic benefit-then-obstacle structure."
+        }
+      ]
+    }
+  ],
+  "tips": [
+    "Skim the passage briefly before reading questions — get the general idea first.",
+    "Don't choose an answer just because it uses a word from the passage.",
+    "Negative factual questions (NOT mentioned) take more time — check each option carefully.",
+    "Vocabulary questions are quick — use context clues from surrounding sentences.",
+    "For 'paragraph relationship' questions, think about how ideas connect: Does paragraph 3 support, qualify, or contradict earlier paragraphs?",
+    "Topics are more relatable than the old TOEFL — think contemporary issues."
+  ],
+  "whatToExpect": [
+    "Passages of about 200 words on accessible academic topics.",
+    "5 questions per passage covering different question types.",
+    "Question types: Factual, Negative Factual, Vocabulary, Rhetorical Purpose, Inference, Paragraph Relationships, Important Idea.",
+    "No paragraph references in questions — you must find answers yourself.",
+    "Topics may include science, society, environment, psychology, technology."
+  ]
+}
