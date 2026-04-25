@@ -34,32 +34,32 @@
 </head>
 <body>
 <nav class="navbar">
-  <a href="index.html" class="nav-logo">📘 <span>TOEFL</span> Prep Hub</a>
+  <a href="index.html" class="nav-logo"> <span>TOEFL</span> Prep Hub</a>
   <ul class="nav-links" id="navLinks">
     <li><a href="index.html">Home</a></li>
     <li><a href="reading.html" class="active">Reading</a></li>
     <li><a href="writing.html">Writing</a></li>
     <li><a href="mock-test.html">Mock Test</a></li>
   </ul>
-  <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+  <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">&#9776;</button>
 </nav>
 <div class="video-ad-overlay" id="videoAd" style="display:none;">
   <div class="video-ad-box">
     <div class="video-ad-label">Advertisement</div>
-    <button class="video-ad-close-x" id="adCloseX" onclick="closeAd()" title="Close">✕</button>
-    <div class="video-ad-placeholder"><div class="ad-icon">📺</div><p>Video Ad<br><small>Google IMA</small></p></div>
+    <button class="video-ad-close-x" id="adCloseX" onclick="closeAd()" title="Close"></button>
+    <div class="video-ad-placeholder"><div class="ad-icon"></div><p>Video Ad<br><small>Google IMA</small></p></div>
   </div>
-  <div class="video-ad-timer">⏱ Ad ends in <span id="adCountdown">30</span>s</div>
+  <div class="video-ad-timer"> Ad ends in <span id="adCountdown">30</span>s</div>
   <button class="skip-btn" id="skipBtn" onclick="closeAd()">Skip Ad ›</button>
 </div>
 <div class="intro-overlay" id="introOverlay" style="display:none;">
   <div class="intro-modal">
-    <button class="modal-close-btn" onclick="closeIntroModal()" title="Close (Esc)">✕</button>
+    <button class="modal-close-btn" onclick="closeIntroModal()" title="Close (Esc)"></button>
     <div class="task-type-badge" id="modalBadge">Task Type</div>
     <h2 id="modalTitle">Task Overview</h2>
     <p id="modalDesc" style="color:var(--text-muted);margin-bottom:16px;font-size:0.93rem;"></p>
-    <div class="tip-box"><h3>💡 What to Expect</h3><ul id="modalExpect"></ul></div>
-    <div class="tip-box" style="border-color:var(--accent);"><h3 style="color:var(--accent);">🎯 Tips for Success</h3><ul id="modalTips"></ul></div>
+    <div class="tip-box"><h3> What to Expect</h3><ul id="modalExpect"></ul></div>
+    <div class="tip-box" style="border-color:var(--accent);"><h3 style="color:var(--accent);"> Tips for Success</h3><ul id="modalTips"></ul></div>
     <button class="btn btn-primary" style="margin-top:20px;width:100%;" onclick="startTask()">Start Practice →</button>
   </div>
 </div>
@@ -70,19 +70,19 @@
     <div>
       <div id="taskSelection">
         <div class="section-intro">
-          <h1>📖 Reading Section Practice</h1>
+          <h1>[R] Reading Section Practice</h1>
           <p>The 2026 TOEFL Reading section has three task types. Choose one to practice, or take all three in sequence.</p>
-          <div class="badges"><span class="badge">⏱ 30 min total</span><span class="badge">📝 50 items</span><span class="badge">🧩 3 task types</span><span class="badge">✓ Adaptive format</span></div>
+          <div class="badges"><span class="badge"> 30 min total</span><span class="badge"> 50 items</span><span class="badge">[S] 3 task types</span><span class="badge">&#10003; Adaptive format</span></div>
         </div>
         <h2 style="margin-bottom:16px;">Choose a Task Type</h2>
         <div class="task-selector">
-          <button class="task-btn" onclick="loadTask('complete-the-words')"><div class="t-icon">🔤</div><h3>Complete the Words</h3><p>Fill in missing letters to complete words in an academic paragraph.</p><div class="meta">~3–4 min per passage · 10 words each</div></button>
-          <button class="task-btn" onclick="loadTask('reading-daily-life')"><div class="t-icon">📧</div><h3>Reading in Daily Life</h3><p>Read short emails, notices, and messages then answer comprehension questions.</p><div class="meta">~7 min · 3 passages · 2–4 questions each</div></button>
-          <button class="task-btn" onclick="loadTask('academic-reading')"><div class="t-icon">📰</div><h3>Academic Reading</h3><p>Read 200-word academic passages and answer 5 question types.</p><div class="meta">~10 min per passage · 5 questions each</div></button>
+          <button class="task-btn" onclick="loadTask('complete-the-words')"><div class="t-icon">[W]</div><h3>Complete the Words</h3><p>Fill in missing letters to complete words in an academic paragraph.</p><div class="meta">~3–4 min per passage · 10 words each</div></button>
+          <button class="task-btn" onclick="loadTask('reading-daily-life')"><div class="t-icon">[E]</div><h3>Reading in Daily Life</h3><p>Read short emails, notices, and messages then answer comprehension questions.</p><div class="meta">~7 min · 3 passages · 2–4 questions each</div></button>
+          <button class="task-btn" onclick="loadTask('academic-reading')"><div class="t-icon">[A]</div><h3>Academic Reading</h3><p>Read 200-word academic passages and answer 5 question types.</p><div class="meta">~10 min per passage · 5 questions each</div></button>
         </div>
         <ins class="adsbygoogle" style="display:block;width:100%;min-height:100px;margin:24px 0;" data-ad-client="ca-pub-9028393226994516" data-ad-slot="auto" data-ad-format="fluid" data-ad-layout="in-article" data-full-width-responsive="true"></ins>
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        <div class="tip-box"><h3>📋 About the 2026 Reading Section</h3><ul>
+        <div class="tip-box"><h3> About the 2026 Reading Section</h3><ul>
           <li>Uses an <strong>adaptive format</strong>: routing module followed by easy or hard module.</li>
           <li>Navigate within a module, but not between modules.</li>
           <li>Aim for ~60% correct in routing to reach the hard module.</li>
@@ -92,12 +92,12 @@
       <div id="practiceArea">
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
           <div><h2 id="taskHeading" style="font-size:1.3rem;"></h2><p class="q-progress" id="qProgress"></p></div>
-          <div class="timer-display" id="timerDisplay">⏱ --:--</div>
+          <div class="timer-display" id="timerDisplay"> --:--</div>
         </div>
         <div class="progress-bar-wrap" style="margin-bottom:24px;"><div class="progress-bar-fill" id="progressFill" style="width:0%"></div></div>
         <div id="questionArea"></div>
         <div class="nav-btns">
-          <button class="btn btn-secondary" id="prevBtn" onclick="prevQuestion()" style="display:none;">← Previous</button>
+          <button class="btn btn-secondary" id="prevBtn" onclick="prevQuestion()" style="display:none;">&larr; Previous</button>
           <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()">Next →</button>
           <button class="btn btn-success" id="submitBtn" onclick="submitTask()" style="display:none;">Submit & See Score</button>
         </div>
@@ -106,8 +106,8 @@
     </div>
     <aside class="sidebar">
       <div class="ad-slot-sidebar"><ins class="adsbygoogle" style="display:block;width:100%;height:250px;" data-ad-client="ca-pub-9028393226994516" data-ad-slot="auto" data-ad-format="rectangle" data-full-width-responsive="false"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
-      <div class="card"><h3 style="margin-bottom:12px;font-size:1rem;">🔗 Quick Links</h3><ul style="list-style:none;display:flex;flex-direction:column;gap:8px;"><li><a href="writing.html" style="color:var(--primary);font-size:0.9rem;">✍️ Writing Practice</a></li><li><a href="mock-test.html" style="color:var(--primary);font-size:0.9rem;">🎯 Full Mock Test</a></li></ul></div>
-      <div class="card"><h3 style="margin-bottom:10px;font-size:1rem;">📊 Session Score</h3><div style="text-align:center;padding:10px 0;"><div style="font-size:2rem;font-weight:800;color:var(--primary);" id="sideScoreNum">—</div><div style="font-size:0.8rem;color:var(--text-muted);">Questions Correct</div></div></div>
+      <div class="card"><h3 style="margin-bottom:12px;font-size:1rem;"> Quick Links</h3><ul style="list-style:none;display:flex;flex-direction:column;gap:8px;"><li><a href="writing.html" style="color:var(--primary);font-size:0.9rem;"> Writing Practice</a></li><li><a href="mock-test.html" style="color:var(--primary);font-size:0.9rem;"> Full Mock Test</a></li></ul></div>
+      <div class="card"><h3 style="margin-bottom:10px;font-size:1rem;"> Session Score</h3><div style="text-align:center;padding:10px 0;"><div style="font-size:2rem;font-weight:800;color:var(--primary);" id="sideScoreNum">—</div><div style="font-size:0.8rem;color:var(--text-muted);">Questions Correct</div></div></div>
       <div class="ad-slot-sidebar"><ins class="adsbygoogle" style="display:block;width:100%;height:250px;" data-ad-client="ca-pub-9028393226994516" data-ad-slot="auto" data-ad-format="rectangle" data-full-width-responsive="false"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
     </aside>
   </div>
