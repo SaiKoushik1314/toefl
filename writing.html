@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TOEFL Writing Practice 2026 – Build a Sentence, Write an Email, Academic Discussion</title>
+  <title>TOEFL Writing Practice 2026 â Build a Sentence, Write an Email, Academic Discussion</title>
   <meta name="description" content="Free TOEFL 2026 Writing section practice. Build a Sentence, Write an Email, and Academic Discussion with tips, sample answers, and instant feedback."/>
   <meta name="keywords" content="TOEFL writing practice 2026, build a sentence TOEFL, write an email TOEFL, TOEFL academic discussion"/>
   <meta name="robots" content="index, follow"/>
@@ -26,38 +26,46 @@
     .task-btn .meta{margin-top:12px;font-size:0.78rem;color:var(--secondary);font-weight:600}
     #practiceArea{display:none}
   </style>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GSBM9HBCBB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GSBM9HBCBB');
+  </script>
 </head>
 <body>
 <nav class="navbar">
-  <a href="index.html" class="nav-logo">📘 <span>TOEFL</span> Prep Hub</a>
+  <a href="index.html" class="nav-logo">ð <span>TOEFL</span> Prep Hub</a>
   <ul class="nav-links" id="navLinks">
     <li><a href="index.html">Home</a></li>
     <li><a href="reading.html">Reading</a></li>
     <li><a href="writing.html" class="active">Writing</a></li>
     <li><a href="mock-test.html">Mock Test</a></li>
   </ul>
-  <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+  <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">â°</button>
 </nav>
 
 <div class="video-ad-overlay" id="videoAd" style="display:none;">
   <div class="video-ad-box">
     <div class="video-ad-label">Advertisement</div>
-    <button class="video-ad-close-x" id="adCloseX" onclick="closeAd()" title="Close">✕</button>
-    <div class="video-ad-placeholder"><div class="ad-icon">📺</div><p>Video Ad Placeholder<br><small>Your Google IMA ad will appear here</small></p></div>
+    <button class="video-ad-close-x" id="adCloseX" onclick="closeAd()" title="Close">â</button>
+    <div class="video-ad-placeholder"><div class="ad-icon">ðº</div><p>Video Ad Placeholder<br><small>Your Google IMA ad will appear here</small></p></div>
   </div>
-  <div class="video-ad-timer">⏱ Ad ends in <span id="adCountdown">30</span>s</div>
-  <button class="skip-btn" id="skipBtn" onclick="closeAd()">Skip Ad ›</button>
+  <div class="video-ad-timer">â± Ad ends in <span id="adCountdown">30</span>s</div>
+  <button class="skip-btn" id="skipBtn" onclick="closeAd()">Skip Ad âº</button>
 </div>
 
 <div class="intro-overlay" id="introOverlay" style="display:none;">
   <div class="intro-modal">
-    <button class="modal-close-btn" onclick="closeIntroModal()" title="Close (Esc)">✕</button>
+    <button class="modal-close-btn" onclick="closeIntroModal()" title="Close (Esc)">â</button>
     <div class="task-type-badge" id="modalBadge">Task Type</div>
     <h2 id="modalTitle">Task Overview</h2>
     <p id="modalDesc" style="color:var(--text-muted);margin-bottom:16px;font-size:0.93rem;"></p>
-    <div class="tip-box"><h3>📋 What to Expect</h3><ul id="modalExpect"></ul></div>
-    <div class="tip-box" style="border-color:var(--accent);"><h3 style="color:var(--accent);">🎯 Tips for Success</h3><ul id="modalTips"></ul></div>
-    <button class="btn btn-primary" style="margin-top:20px;width:100%;" onclick="startTask()">Start Practice →</button>
+    <div class="tip-box"><h3>ð What to Expect</h3><ul id="modalExpect"></ul></div>
+    <div class="tip-box" style="border-color:var(--accent);"><h3 style="color:var(--accent);">ð¯ Tips for Success</h3><ul id="modalTips"></ul></div>
+    <button class="btn btn-primary" style="margin-top:20px;width:100%;" onclick="startTask()">Start Practice â</button>
   </div>
 </div>
 
@@ -69,19 +77,19 @@
     <div>
       <div id="taskSelection">
         <div class="section-intro" style="background:linear-gradient(135deg,#0891b2,#06b6d4);">
-          <h1>✍️ Writing Section Practice</h1>
+          <h1>âï¸ Writing Section Practice</h1>
           <p>The 2026 TOEFL Writing section has three distinct tasks. Practice each with tips, examples, and instant scoring feedback.</p>
-          <div class="badges"><span class="badge">⏱ 23 min total</span><span class="badge">📝 3 task types</span><span class="badge">🤖 Rule-based feedback</span></div>
+          <div class="badges"><span class="badge">â± 23 min total</span><span class="badge">ð 3 task types</span><span class="badge">ð¤ Rule-based feedback</span></div>
         </div>
         <h2 style="margin-bottom:16px;">Choose a Writing Task</h2>
         <div class="task-selector">
-          <button class="task-btn" onclick="loadTask('build-a-sentence')"><div class="t-icon">🧩</div><h3>Build a Sentence</h3><p>Rearrange scrambled words into a correct sentence. One word may be extra.</p><div class="meta">~7 min · 10 sentences · Drag & Drop</div></button>
-          <button class="task-btn" onclick="loadTask('write-email')"><div class="t-icon">📧</div><h3>Write an Email</h3><p>Write a professional email addressing three required points.</p><div class="meta">~7 min per prompt · 130–140 words</div></button>
-          <button class="task-btn" onclick="loadTask('academic-discussion')"><div class="t-icon">💬</div><h3>Academic Discussion</h3><p>Read a professor's question and add your own contribution to the discussion.</p><div class="meta">~10 min per prompt · 120+ words</div></button>
+          <button class="task-btn" onclick="loadTask('build-a-sentence')"><div class="t-icon">ð§©</div><h3>Build a Sentence</h3><p>Rearrange scrambled words into a correct sentence. One word may be extra.</p><div class="meta">~7 min Â· 10 sentences Â· Drag & Drop</div></button>
+          <button class="task-btn" onclick="loadTask('write-email')"><div class="t-icon">ð§</div><h3>Write an Email</h3><p>Write a professional email addressing three required points.</p><div class="meta">~7 min per prompt Â· 130â140 words</div></button>
+          <button class="task-btn" onclick="loadTask('academic-discussion')"><div class="t-icon">ð¬</div><h3>Academic Discussion</h3><p>Read a professor's question and add your own contribution to the discussion.</p><div class="meta">~10 min per prompt Â· 120+ words</div></button>
         </div>
         <ins class="adsbygoogle" style="display:block;width:100%;min-height:100px;margin:24px 0;" data-ad-client="ca-pub-9028393226994516" data-ad-slot="auto" data-ad-format="fluid" data-ad-layout="in-article" data-full-width-responsive="true"></ins>
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        <div class="tip-box"><h3>✍️ About the 2026 Writing Section</h3><ul>
+        <div class="tip-box"><h3>âï¸ About the 2026 Writing Section</h3><ul>
           <li>Writing section lasts <strong>approximately 23 minutes</strong> total.</li>
           <li>"Build a Sentence" and "Write an Email" each take about 7 minutes.</li>
           <li>"Write for an Academic Discussion" takes about 10 minutes.</li>
@@ -92,13 +100,13 @@
       <div id="practiceArea">
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
           <div><h2 id="taskHeading" style="font-size:1.3rem;"></h2><p id="qProgress" style="font-size:0.85rem;color:var(--text-muted);"></p></div>
-          <div class="timer-display" id="timerDisplay">⏱ --:--</div>
+          <div class="timer-display" id="timerDisplay">â± --:--</div>
         </div>
         <div class="progress-bar-wrap" style="margin-bottom:24px;"><div class="progress-bar-fill" id="progressFill" style="width:0%"></div></div>
         <div id="questionArea"></div>
         <div style="display:flex;gap:12px;margin-top:20px;flex-wrap:wrap;" id="navBtns">
-          <button class="btn btn-secondary" id="prevBtn" onclick="prevQ()" style="display:none;">← Previous</button>
-          <button class="btn btn-primary" id="nextBtn" onclick="nextQ()">Next →</button>
+          <button class="btn btn-secondary" id="prevBtn" onclick="prevQ()" style="display:none;">â Previous</button>
+          <button class="btn btn-primary" id="nextBtn" onclick="nextQ()">Next â</button>
           <button class="btn btn-success" id="submitBtn" onclick="finishTask()" style="display:none;">Finish & See Score</button>
         </div>
         <div id="scoreSummary" style="display:none;margin-top:24px;"></div>
@@ -107,13 +115,13 @@
 
     <aside class="sidebar">
       <div class="ad-slot-sidebar"><ins class="adsbygoogle" style="display:block;width:100%;height:250px;" data-ad-client="ca-pub-9028393226994516" data-ad-slot="auto" data-ad-format="rectangle" data-full-width-responsive="false"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
-      <div class="card" id="rubricsCard" style="display:none;"><h3 style="margin-bottom:10px;font-size:1rem;">📊 Scoring Criteria</h3><ul style="list-style:none;font-size:0.82rem;color:var(--text-muted);" id="rubricList"></ul></div>
-      <div class="card"><h3 style="margin-bottom:10px;font-size:1rem;">🔗 Quick Links</h3><ul style="list-style:none;display:flex;flex-direction:column;gap:8px;"><li><a href="reading.html" style="color:var(--primary);font-size:0.9rem;">📖 Reading Practice</a></li><li><a href="mock-test.html" style="color:var(--primary);font-size:0.9rem;">🎯 Full Mock Test</a></li></ul></div>
+      <div class="card" id="rubricsCard" style="display:none;"><h3 style="margin-bottom:10px;font-size:1rem;">ð Scoring Criteria</h3><ul style="list-style:none;font-size:0.82rem;color:var(--text-muted);" id="rubricList"></ul></div>
+      <div class="card"><h3 style="margin-bottom:10px;font-size:1rem;">ð Quick Links</h3><ul style="list-style:none;display:flex;flex-direction:column;gap:8px;"><li><a href="reading.html" style="color:var(--primary);font-size:0.9rem;">ð Reading Practice</a></li><li><a href="mock-test.html" style="color:var(--primary);font-size:0.9rem;">ð¯ Full Mock Test</a></li></ul></div>
       <div class="ad-slot-sidebar"><ins class="adsbygoogle" style="display:block;width:100%;height:250px;" data-ad-client="ca-pub-9028393226994516" data-ad-slot="auto" data-ad-format="rectangle" data-full-width-responsive="false"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
     </aside>
   </div>
 </div>
-<footer><p>© 2026 TOEFL Prep Hub · Not affiliated with ETS · TOEFL® is a registered trademark of ETS</p></footer>
+<footer><p>Â© 2026 TOEFL Prep Hub Â· Not affiliated with ETS Â· TOEFLÂ® is a registered trademark of ETS</p></footer>
 <script src="js/writing.js"></script>
 </body>
 </html>
