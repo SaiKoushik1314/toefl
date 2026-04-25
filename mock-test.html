@@ -46,14 +46,14 @@
 <body>
 
 <nav class="navbar">
-  <a href="index.html" class="nav-logo">📘 <span>TOEFL</span> Prep Hub</a>
+  <a href="index.html" class="nav-logo"> <span>TOEFL</span> Prep Hub</a>
   <ul class="nav-links" id="navLinks">
     <li><a href="index.html">Home</a></li>
     <li><a href="reading.html">Reading</a></li>
     <li><a href="writing.html">Writing</a></li>
     <li><a href="mock-test.html" class="active">Mock Test</a></li>
   </ul>
-  <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+  <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">&#9776;</button>
 </nav>
 
 <!-- VIDEO AD OVERLAY -->
@@ -61,11 +61,11 @@
   <div class="video-ad-box">
     <div class="video-ad-label">Advertisement</div>
     <div class="video-ad-placeholder">
-      <div class="ad-icon">📺</div>
+      <div class="ad-icon"></div>
       <p>Video Ad Placeholder<br><small>Your Google IMA ad will appear here</small></p>
     </div>
   </div>
-  <div class="video-ad-timer">⏱ Ad ends in <span id="adCountdown">30</span>s</div>
+  <div class="video-ad-timer"> Ad ends in <span id="adCountdown">30</span>s</div>
   <button class="skip-btn" id="skipBtn" onclick="closeAd()">Skip Ad ›</button>
 </div>
 
@@ -83,25 +83,25 @@
   <!-- INTRO -->
   <div id="mockIntro" class="mock-intro">
     <div class="section-intro" style="background: linear-gradient(135deg, #f59e0b, #f97316);">
-      <h1>🎯 Full Mock Test</h1>
+      <h1> Full Mock Test</h1>
       <p>Simulate the complete 2026 TOEFL Reading and Writing sections under timed conditions. A video ad will play between each section.</p>
       <div class="badges">
-        <span class="badge">⏱ ~53 minutes</span>
-        <span class="badge">📖 Reading + ✍️ Writing</span>
-        <span class="badge">🎯 Full Score Report</span>
+        <span class="badge"> ~53 minutes</span>
+        <span class="badge">[R] Reading +  Writing</span>
+        <span class="badge"> Full Score Report</span>
       </div>
     </div>
 
     <h2 style="margin: 32px 0 16px;">Test Structure</h2>
     <div class="section-block">
-      <div class="s-icon">📖</div>
+      <div class="s-icon">[R]</div>
       <div><h3>Section 1 – Reading</h3><p>Complete the Words · Reading in Daily Life · Academic Reading<br><strong>Time: 30 minutes</strong></p></div>
     </div>
     <div class="section-block" style="border: 2px dashed var(--border); justify-content:center; padding:16px;">
-      <div style="text-align:center;"><div style="font-size:1.5rem;">📺</div><p style="margin:4px 0; font-size:0.85rem; color:var(--text-muted);">Video ad break (30 seconds)</p></div>
+      <div style="text-align:center;"><div style="font-size:1.5rem;"></div><p style="margin:4px 0; font-size:0.85rem; color:var(--text-muted);">Video ad break (30 seconds)</p></div>
     </div>
     <div class="section-block">
-      <div class="s-icon">✍️</div>
+      <div class="s-icon"></div>
       <div><h3>Section 2 – Writing</h3><p>Build a Sentence · Write an Email · Academic Discussion<br><strong>Time: 23 minutes</strong></p></div>
     </div>
 
@@ -116,7 +116,7 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
     <div class="mock-rules">
-      <h3>📋 Before You Begin</h3>
+      <h3> Before You Begin</h3>
       <ul style="padding-left:20px;">
         <li>Set aside at least 60 minutes in a quiet environment.</li>
         <li>Do not use any external resources during the test.</li>
@@ -126,7 +126,7 @@
       </ul>
     </div>
 
-    <button class="btn btn-primary btn-lg" onclick="startMock()" style="width:100%;">🚀 Start Mock Test</button>
+    <button class="btn btn-primary btn-lg" onclick="startMock()" style="width:100%;"> Start Mock Test</button>
   </div>
 
   <!-- TEST AREA -->
@@ -137,14 +137,14 @@
         <h2 id="testHeading" style="font-size:1.3rem;"></h2>
         <p id="testProgress" style="font-size:0.85rem; color:var(--text-muted);"></p>
       </div>
-      <div class="timer-display" id="testTimer">⏱ --:--</div>
+      <div class="timer-display" id="testTimer"> --:--</div>
     </div>
     <div class="progress-bar-wrap" style="margin-bottom:24px;">
       <div class="progress-bar-fill" id="testProgressFill" style="width:0%"></div>
     </div>
     <div id="testQuestionArea"></div>
     <div style="display:flex; gap:12px; margin-top:20px; flex-wrap:wrap;">
-      <button class="btn btn-secondary" id="testPrevBtn" onclick="testPrev()" style="display:none;">← Previous</button>
+      <button class="btn btn-secondary" id="testPrevBtn" onclick="testPrev()" style="display:none;">&larr; Previous</button>
       <button class="btn btn-primary" id="testNextBtn" onclick="testNext()">Next →</button>
       <button class="btn btn-success" id="testSubmitBtn" onclick="submitSection()" style="display:none;">Submit Section →</button>
     </div>
@@ -153,7 +153,7 @@
   <!-- TRANSITION -->
   <div id="transitionArea" style="display:none;">
     <div class="transition-screen">
-      <div class="big-icon" id="transIcon">🎉</div>
+      <div class="big-icon" id="transIcon"></div>
       <h2 id="transTitle">Section Complete!</h2>
       <p id="transMsg"></p>
       <button class="btn btn-primary btn-lg" id="transContinueBtn" onclick="continueToNext()">Continue →</button>
