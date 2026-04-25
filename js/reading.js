@@ -60,7 +60,7 @@
        'academic-reading':    null
      };
      var guideBtn = document.getElementById('modalGuideBtn');
-     var guideUrl = guideUrls[taskType] || null;
+     var guideUrl = guideUrls[data.taskType] || null;
      if (guideBtn) {
        if (guideUrl) {
          guideBtn.href = guideUrl;
