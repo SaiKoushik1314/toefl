@@ -12,7 +12,7 @@ function showIntroModal(data){
   document.getElementById('modalTitle').textContent='About: '+data.taskTitle;
   document.getElementById('modalDesc').textContent=({'complete-the-words':'Read academic paragraphs with hidden words. Type the missing letters to complete each word.','reading-daily-life':'Read everyday texts like emails and notices, then answer comprehension questions.','academic-reading':'Read 200-word academic passages and answer five question types including paragraph relationships.'})[data.taskType]||'';
   const el=document.getElementById('modalExpect');el.innerHTML='';
-  (data.whatToExpect||[]).forEach(t=>{const li=document.createElement('li');li.innerHTML='<span style="color:var(--success)">✓</span> '+t;li.style.cssText='display:flex;gap:8px;padding:6px 0;border-bottom:1px solid var(--border);font-size:0.88rem;';el.appendChild(li);});
+  (data.whatToExpect||[]).forEach(t=>{const li=document.createElement('li');li.innerHTML='<span style="color:var(--success)">&#10003;</span> '+t;li.style.cssText='display:flex;gap:8px;padding:6px 0;border-bottom:1px solid var(--border);font-size:0.88rem;';el.appendChild(li);});
   const tl=document.getElementById('modalTips');tl.innerHTML='';
   (data.tips||[]).forEach(t=>{const li=document.createElement('li');li.textContent=t;tl.appendChild(li);});
   const ov=document.getElementById('introOverlay');ov.style.display='flex';
@@ -27,7 +27,7 @@ function startTask(){
   closeIntroModal();
   document.getElementById('taskSelection').style.display='none';
   const pa=document.getElementById('practiceArea');pa.style.display='block';
-  if(!document.getElementById('backToTasksBtn')){const b=document.createElement('button');b.id='backToTasksBtn';b.className='back-to-tasks-btn';b.innerHTML='← Back to Tasks';b.onclick=backToTasks;pa.insertBefore(b,pa.firstChild);}
+  if(!document.getElementById('backToTasksBtn')){const b=document.createElement('button');b.id='backToTasksBtn';b.className='back-to-tasks-btn';b.innerHTML='&larr; Back to Tasks';b.onclick=backToTasks;pa.insertBefore(b,pa.firstChild);}
   buildQuestions();currentQ=0;answers={};totalCorrect=0;
   document.getElementById('taskHeading').textContent=taskData.taskTitle;
   timeLeft=taskData.timeSeconds;startTimer();renderQuestion();
@@ -66,7 +66,7 @@ function renderQuestion(){
 
 function renderCloze(area,q){
   const p=q.passage;
-  area.innerHTML='<div class="question-card"><div class="question-number">'+(q.passageIdx+1)+'</div><p style="margin-bottom:16px;font-weight:600;">Fill in the missing letters to complete each word.</p><div class="cloze-text" id="clozeText"></div><div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap;"><button class="btn btn-primary btn-sm" onclick="checkCloze('+q.passageIdx+')">✓ Check Answers</button><button class="btn btn-secondary btn-sm" onclick="revealCloze('+q.passageIdx+')">👁 Reveal Answers</button></div><div class="feedback-panel" id="clozeFeedback"></div></div>';
+  area.innerHTML='<div class="question-card"><div class="question-number">'+(q.passageIdx+1)+'</div><p style="margin-bottom:16px;font-weight:600;">Fill in the missing letters to complete each word.</p><div class="cloze-text" id="clozeText"></div><div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap;"><button class="btn btn-primary btn-sm" onclick="checkCloze('+q.passageIdx+')">&#10003; Check Answers</button><button class="btn btn-secondary btn-sm" onclick="revealCloze('+q.passageIdx+')"> Reveal Answers</button></div><div class="feedback-panel" id="clozeFeedback"></div></div>';
   const ct=document.getElementById('clozeText');let html='';
   p.segments.forEach((seg,i)=>{html+=seg.before;if(seg.word){const m=seg.word.slice(seg.hint.length);html+='<strong>'+seg.hint+'</strong><input class="cloze-input" id="cloze-'+q.passageIdx+'-'+i+'" data-answer="'+m+'" style="width:'+Math.max(60,m.length*16)+'px" placeholder="'+'_'.repeat(m.length)+'" autocomplete="off" autocorrect="off" spellcheck="false"/>';}});
   ct.innerHTML=html;
@@ -77,7 +77,7 @@ function checkCloze(pi){
   inputs.forEach(inp=>{inp.classList.remove('correct-ans','wrong-ans');if(inp.value.trim().toLowerCase()===inp.dataset.answer.toLowerCase()){inp.classList.add('correct-ans');correct++;}else inp.classList.add('wrong-ans');});
   const pct=Math.round(correct/inputs.length*100),fb=document.getElementById('clozeFeedback');
   fb.className='feedback-panel show '+(pct>=70?'correct':pct>=40?'partial':'incorrect');
-  fb.innerHTML='<h4>'+(pct>=70?'🎉 Great job!':pct>=40?'👍 Decent effort!':'📚 Keep practicing!')+'</h4><p>You got <strong>'+correct+'/'+inputs.length+'</strong> words correct ('+pct+'%).</p>';
+  fb.innerHTML='<h4>'+(pct>=70?' Great job!':pct>=40?' Decent effort!':' Keep practicing!')+'</h4><p>You got <strong>'+correct+'/'+inputs.length+'</strong> words correct ('+pct+'%).</p>';
   answers['cloze-'+pi]={correct,total:inputs.length};updateSidebarScore();
 }
 
@@ -86,9 +86,9 @@ function revealCloze(pi){document.querySelectorAll('[id^="cloze-'+pi+'-"]').forE
 function renderMCQ(area,item){
   const q=item.question,p=item.passage,saved=answers[q.id];
   let passHTML='';
-  if(item.qIdx===0){const lbl=p.label||p.title||'Passage';passHTML='<div class="passage-box"><h4>📄 '+lbl+'</h4><div style="white-space:pre-line;font-size:0.97rem;">'+p.text+'</div></div>';}
+  if(item.qIdx===0){const lbl=p.label||p.title||'Passage';passHTML='<div class="passage-box"><h4> '+lbl+'</h4><div style="white-space:pre-line;font-size:0.97rem;">'+p.text+'</div></div>';}
   const optHTML=(q.options||[]).map((opt,i)=>{let cls='';if(saved!==undefined){if(i===q.answer)cls='correct';else if(i===saved)cls='incorrect';}return '<li class="option-item '+cls+'" onclick="selectAnswer(''+q.id+'','+i+','+q.answer+')" id="opt-'+q.id+'-'+i+'"><span class="option-letter">'+String.fromCharCode(65+i)+'</span><span>'+opt+'</span></li>';}).join('');
-  const fbHTML=saved!==undefined?'<div class="feedback-panel show '+(saved===q.answer?'correct':'incorrect')+'"><h4>'+(saved===q.answer?'✅ Correct!':'❌ Incorrect')+'</h4><p>'+(q.explanation||'')+'</p></div>':'<div class="feedback-panel" id="fb-'+q.id+'"></div>';
+  const fbHTML=saved!==undefined?'<div class="feedback-panel show '+(saved===q.answer?'correct':'incorrect')+'"><h4>'+(saved===q.answer?'&#10003; Correct!':'&#10007; Incorrect')+'</h4><p>'+(q.explanation||'')+'</p></div>':'<div class="feedback-panel" id="fb-'+q.id+'"></div>';
   area.innerHTML=passHTML+'<div class="question-card"><div class="question-number">Q'+(item.qIdx+1)+'</div><div class="question-text">'+q.text+'</div><ul class="options-list">'+optHTML+'</ul>'+fbHTML+'</div>';
 }
 
@@ -96,7 +96,7 @@ function selectAnswer(qId,selected,correct){
   if(answers[qId]!==undefined)return;answers[qId]=selected;
   document.querySelectorAll('[id^="opt-'+qId+'-"]').forEach((el,i)=>{el.onclick=null;if(i===correct)el.classList.add('correct');else if(i===selected)el.classList.add('incorrect');});
   const fb=document.getElementById('fb-'+qId);
-  if(fb){const q=questions[currentQ].question;fb.className='feedback-panel show '+(selected===correct?'correct':'incorrect');fb.innerHTML='<h4>'+(selected===correct?'✅ Correct!':'❌ Incorrect')+'</h4><p>'+(q.explanation||'')+'</p>';}
+  if(fb){const q=questions[currentQ].question;fb.className='feedback-panel show '+(selected===correct?'correct':'incorrect');fb.innerHTML='<h4>'+(selected===correct?'&#10003; Correct!':'&#10007; Incorrect')+'</h4><p>'+(q.explanation||'')+'</p>';}
   if(selected===correct)totalCorrect++;updateSidebarScore();
 }
 
@@ -113,11 +113,11 @@ function submitTask(){
   document.getElementById('submitBtn').style.display='none';
   const bb=document.getElementById('backToTasksBtn');if(bb)bb.style.display='none';
   const summary=document.getElementById('scoreSummary');summary.style.display='block';
-  summary.innerHTML='<div class="score-summary"><h2>'+(pct>=80?'🎉 Excellent!':pct>=60?'👍 Good Work!':'📚 Keep Practicing!')+'</h2><div class="score-circle" style="background:conic-gradient(var(--primary) '+pct+'%,var(--surface2) 0%);"><div class="score-inner"><span class="score-num">'+pct+'%</span><span class="score-label">Score</span></div></div><p style="margin-bottom:24px;color:var(--text-muted);">You answered <strong>'+finalCorrect+' out of '+finalTotal+'</strong> correctly.</p><div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;"><button class="btn btn-secondary" onclick="backToTasks()">← Try Another Task</button><a href="mock-test.html" class="btn btn-primary">🎯 Full Mock Test</a></div></div>';
+  summary.innerHTML='<div class="score-summary"><h2>'+(pct>=80?' Excellent!':pct>=60?' Good Work!':' Keep Practicing!')+'</h2><div class="score-circle" style="background:conic-gradient(var(--primary) '+pct+'%,var(--surface2) 0%);"><div class="score-inner"><span class="score-num">'+pct+'%</span><span class="score-label">Score</span></div></div><p style="margin-bottom:24px;color:var(--text-muted);">You answered <strong>'+finalCorrect+' out of '+finalTotal+'</strong> correctly.</p><div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;"><button class="btn btn-secondary" onclick="backToTasks()">&larr; Try Another Task</button><a href="mock-test.html" class="btn btn-primary"> Full Mock Test</a></div></div>';
   showVideoAd(()=>{});
 }
 
 function startTimer(){updateTimerDisplay();timerInterval=setInterval(()=>{timeLeft--;updateTimerDisplay();if(timeLeft<=0){stopTimer();submitTask();}},1000);}
 function stopTimer(){clearInterval(timerInterval);timerInterval=null;}
-function updateTimerDisplay(){const m=Math.floor(timeLeft/60),s=timeLeft%60,el=document.getElementById('timerDisplay');if(!el)return;el.textContent='⏱ '+String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');el.className='timer-display'+(timeLeft<60?' danger':timeLeft<180?' warning':'');}
+function updateTimerDisplay(){const m=Math.floor(timeLeft/60),s=timeLeft%60,el=document.getElementById('timerDisplay');if(!el)return;el.textContent=' '+String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');el.className='timer-display'+(timeLeft<60?' danger':timeLeft<180?' warning':'');}
 function updateSidebarScore(){const el=document.getElementById('sideScoreNum');if(el)el.textContent=totalCorrect||'—';}
