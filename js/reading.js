@@ -53,6 +53,22 @@
        tipsList.appendChild(li);
      });
    
+     // Set guide button URL based on task type
+     var guideUrls = {
+       'complete-the-words':  'reading/complete-the-words.html',
+       'reading-daily-life':  'reading/reading-daily-life.html',
+       'academic-reading':    null
+     };
+     var guideBtn = document.getElementById('modalGuideBtn');
+     var guideUrl = guideUrls[taskType] || null;
+     if (guideBtn) {
+       if (guideUrl) {
+         guideBtn.href = guideUrl;
+         guideBtn.style.display = 'inline-flex';
+       } else {
+         guideBtn.style.display = 'none';
+       }
+     }
      var overlay = document.getElementById('introOverlay');
      overlay.style.display = 'flex';
      overlay.onclick = function(e) { if (e.target === overlay) closeIntroModal(); };

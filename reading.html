@@ -37,8 +37,12 @@
       <ul id="modalExpect" style="list-style:none;padding:0;margin:0 0 20px;"></ul>
       <h4 style="margin-bottom:10px;font-size:0.9rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;">Tips for Success</h4>
       <ul id="modalTips" style="padding-left:18px;margin:0 0 24px;font-size:0.88rem;line-height:1.8;color:var(--text);"></ul>
-      <div style="display:flex;gap:12px;justify-content:flex-end;">
-        <button onclick="closeIntroModal()" class="btn btn-secondary btn-sm">Maybe Later</button>
+      <div style="background:#fffbeb;border:1px solid #fcd34d;border-radius:8px;padding:14px 16px;margin-bottom:16px;font-size:0.88rem;color:#92400e;">
+        💡 <strong>New here?</strong> We recommend reading the guide before practicing — it covers exactly what to expect and how to score well.
+      </div>
+      <div style="display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap;">
+        <button onclick="closeIntroModal();startTask()" class="btn btn-secondary btn-sm" style="font-size:0.83rem;">Skip Guide →</button>
+        <a id="modalGuideBtn" href="#" target="_blank" class="btn btn-primary btn-sm" style="display:none;align-items:center;gap:6px;text-decoration:none;">📖 Read Guide First</a>
         <button onclick="startTask()" class="btn btn-primary btn-sm">Start Practice →</button>
       </div>
     </div>
