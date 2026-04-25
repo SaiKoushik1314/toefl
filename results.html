@@ -48,14 +48,14 @@
 <body>
 
 <nav class="navbar">
-  <a href="index.html" class="nav-logo">📘 <span>TOEFL</span> Prep Hub</a>
+  <a href="index.html" class="nav-logo"> <span>TOEFL</span> Prep Hub</a>
   <ul class="nav-links" id="navLinks">
     <li><a href="index.html">Home</a></li>
     <li><a href="reading.html">Reading</a></li>
     <li><a href="writing.html">Writing</a></li>
     <li><a href="mock-test.html">Mock Test</a></li>
   </ul>
-  <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+  <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">&#9776;</button>
 </nav>
 
 <div class="container">
@@ -93,13 +93,13 @@ const raw = sessionStorage.getItem('toeflResults');
 if (!raw) {
   wrap.innerHTML = `
     <div class="empty-state">
-      <div class="icon">📋</div>
+      <div class="icon"></div>
       <h2>No Results Yet</h2>
       <p style="max-width:400px;margin:0 auto 24px;">Complete a practice section or full mock test to see your results here.</p>
       <div class="action-row">
-        <a href="reading.html" class="btn btn-primary">📖 Practice Reading</a>
-        <a href="writing.html" class="btn btn-secondary">✍️ Practice Writing</a>
-        <a href="mock-test.html" class="btn btn-secondary">🎯 Mock Test</a>
+        <a href="reading.html" class="btn btn-primary">[R] Practice Reading</a>
+        <a href="writing.html" class="btn btn-secondary"> Practice Writing</a>
+        <a href="mock-test.html" class="btn btn-secondary"> Mock Test</a>
       </div>
     </div>`;
 } else {
@@ -107,7 +107,7 @@ if (!raw) {
 }
 
 function scoreColor(pct) { return pct >= 80 ? 'good' : pct >= 55 ? 'ok' : 'poor'; }
-function emoji(pct) { return pct >= 80 ? '🎉' : pct >= 60 ? '👍' : '📚'; }
+function emoji(pct) { return pct >= 80 ? '' : pct >= 60 ? '' : ''; }
 
 function feedbackForScore(pct, section) {
   if (section === 'Reading') {
@@ -135,15 +135,15 @@ function renderResults(data) {
       <div class="big-score">${overallPct}%</div>
       <div class="big-score-label">Overall Score</div>
       <div style="display:flex;gap:6px;justify-content:center;flex-wrap:wrap;">
-        <span class="badge">✅ ${totalC} correct</span>
-        <span class="badge">📝 ${totalT} total</span>
+        <span class="badge">&#10003; ${totalC} correct</span>
+        <span class="badge"> ${totalT} total</span>
       </div>
     </div>`;
 
   sections.forEach(sec => {
     const pct = sec.total > 0 ? Math.round((sec.correct / sec.total) * 100) : 0;
     const tips = feedbackForScore(pct, sec.name);
-    const icon = sec.name === 'Reading' ? '📖' : '✍️';
+    const icon = sec.name === 'Reading' ? '[R]' : '';
     const filledSegs = Math.round(pct / 20);
     html += `
       <div class="section-result">
@@ -154,10 +154,10 @@ function renderResults(data) {
         <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:14px;">${sec.correct} / ${sec.total} correct</p>
         ${(sec.tasks||[]).map(t=>{
           const tp=t.total>0?Math.round((t.correct/t.total)*100):null;
-          return `<div class="task-row"><span>${t.name}</span><span class="task-score ${tp!==null?scoreColor(tp):''}">${tp!==null?tp+'%':'Written ✓'}</span></div>`;
+          return `<div class="task-row"><span>${t.name}</span><span class="task-score ${tp!==null?scoreColor(tp):''}">${tp!==null?tp+'%':'Written &#10003;'}</span></div>`;
         }).join('')}
         <div class="feedback-summary">
-          <h3>💡 Feedback & Tips</h3>
+          <h3> Feedback & Tips</h3>
           <ul>${tips.map(t=>`<li>${t}</li>`).join('')}</ul>
         </div>
       </div>`;
@@ -176,12 +176,12 @@ function renderResults(data) {
 
   html += `
     <div class="action-row">
-      <a href="mock-test.html" class="btn btn-primary">🔄 Retake Mock Test</a>
-      <a href="reading.html" class="btn btn-secondary">📖 Practice Reading</a>
-      <a href="writing.html" class="btn btn-secondary">✍️ Practice Writing</a>
-      <a href="index.html" class="btn btn-secondary">🏠 Home</a>
+      <a href="mock-test.html" class="btn btn-primary"> Retake Mock Test</a>
+      <a href="reading.html" class="btn btn-secondary">[R] Practice Reading</a>
+      <a href="writing.html" class="btn btn-secondary"> Practice Writing</a>
+      <a href="index.html" class="btn btn-secondary"> Home</a>
     </div>
-    <p class="disclaimer">⚠️ This score is for practice only and does not reflect your official TOEFL iBT score.</p>`;
+    <p class="disclaimer">! This score is for practice only and does not reflect your official TOEFL iBT score.</p>`;
 
   wrap.innerHTML = html;
 }
