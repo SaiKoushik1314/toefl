@@ -563,23 +563,3 @@
          '<div style="font-size:0.85rem;font-weight:600;margin-bottom:8px;">Detailed Feedback:</div>'+feedbackHtml+'</div>';
      }
    };
-   
-   // =============================================
-   // AD MANAGEMENT
-   // =============================================
-   function showVideoAd(cb) {
-     var ov = document.getElementById('videoAd'); if (!ov) { if (cb) cb(); return; }
-     ov.style.display = 'flex'; ov._cb = cb; var s = 30;
-     document.getElementById('adCountdown').textContent = s;
-     var skip = document.getElementById('skipBtn'); skip.classList.remove('visible');
-     var t = setInterval(function() {
-       s--; document.getElementById('adCountdown').textContent = s;
-       if (s <= 5) skip.classList.add('visible');
-       if (s <= 0) { clearInterval(t); closeAd(); }
-     }, 1000);
-     ov._t = t;
-   }
-   function closeAd() {
-     var ov = document.getElementById('videoAd'); clearInterval(ov._t); ov.style.display = 'none';
-     if (typeof ov._cb === 'function') ov._cb();
-   }
